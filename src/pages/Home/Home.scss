@@ -1,0 +1,105 @@
+$title_home_header_color: #f5f5f5;
+// start home page header styles
+.container_home_header {
+  padding: 0rem 3.5rem;
+  margin-top: 0.5rem;
+  height: 90.5vh;
+  .wrapper_home_header {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    .title_home_header {
+      position: absolute;
+      opacity: 0;
+      top: 6rem;
+      left: 10rem;
+      font-size: 17rem;
+      font-family: "Playfair Display", serif;
+      font-weight: 500;
+      z-index: 2;
+      color: $title_home_header_color;
+    }
+    .image_home_header {
+      position: absolute;
+      top: -18rem;
+      left: 0rem;
+      width: 110%;
+      filter: brightness(0.8);
+    }
+    .arrow_hex {
+      opacity: 0;
+      font-size: 3rem;
+      position: absolute;
+      bottom: 0rem;
+      transform: rotate(90deg);
+      left: 48rem;
+      color: $title_home_header_color;
+    }
+    .home_title_ticker_header {
+      opacity: 0;
+      position: absolute;
+      overflow: hidden;
+      width: 80%;
+      bottom: 5rem;
+      left: 10rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid aliceblue;
+      border-left-width: 0px;
+      border-right-width: 0px;
+      padding: 1.5rem 0rem;
+      .inner_content {
+        animation: scrollTicker infinite 14s linear;
+        transform: translateX(150%);
+        white-space: nowrap;
+        span {
+          font-size: 2rem;
+          font-family: "Montserrat", sans-serif;
+          color: $title_home_header_color;
+          text-transform: capitalize;
+          display: inline-block;
+          opacity: 0.8;
+          margin: 0 3rem;
+          white-space: nowrap;
+        }
+      }
+      .inner_content2 {
+        animation: scrollTicker2 infinite 14s linear;
+        animation-delay: 5.9s;
+        white-space: nowrap;
+        transform: translateX(55%);
+        span {
+          font-size: 2rem;
+          font-family: "Montserrat", sans-serif;
+          color: $title_home_header_color;
+          text-transform: capitalize;
+          display: inline-block;
+          opacity: 0.8;
+          margin: 0 3rem;
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+}
+
+@keyframes scrollTicker {
+  0% {
+    transform: translateX(150%);
+  }
+  100% {
+    transform: translateX(-55%);
+  }
+}
+@keyframes scrollTicker2 {
+  0% {
+    transform: translateX(55%);
+  }
+  100% {
+    transform: translateX(-150%);
+  }
+}
+
+// end home page header style
