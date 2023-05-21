@@ -1,6 +1,7 @@
 import "./Home.scss";
 import NavBar from "../../components/NavBar";
 import Header from "./Header";
+import StopBreath from "./StopBreath";
 
 export default function Home() {
   return (
@@ -17,6 +18,8 @@ export default function Home() {
           <Header />
         </div>
       </div>
+      {/* stop breath home page */}
+      <StopBreath />
     </>
   );
 }
