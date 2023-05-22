@@ -20,11 +20,6 @@ export default function StopBreath() {
         trigger: titleStopBreath.current,
         start: "top 30%",
         end: "bottom 10%",
-        markers: {
-          startColor: "#ffd700",
-          endColor: "#000",
-          fontSize: "25px",
-        },
       },
     });
 
@@ -36,7 +31,7 @@ export default function StopBreath() {
         y: 0,
         clipPath: "inset(0% 0% 0% 0%)",
         duration: 0.4,
-        stagger: 0.17,
+        stagger: 0.1,
         ease: CustomEase.create(
           "custom",
           "M0,0 C0,0 0.026,0.172 0.126,0.4 0.191,0.548 0.238,0.644 0.334,0.748 0.395,0.815 0.432,0.872 0.568,0.946 0.697,1.016 1,1 1,1 "

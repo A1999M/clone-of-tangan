@@ -107,7 +107,6 @@ $title_home_header_color: #f5f5f5;
 //
 
 // start stop breath section styles
-
 .stop_breath {
   margin-top: 10rem;
   padding: 0 3rem !important;
@@ -146,3 +145,40 @@ $title_home_header_color: #f5f5f5;
   }
 }
 // ens stop breath section styles
+
+// start imgages section styles
+.images_section {
+  margin-top: 10rem;
+  .wrapper_left_image {
+    position: relative;
+    margin-top: 21rem;
+    width: 606px;
+    height: 604px;
+    overflow: hidden !important;
+    margin-left: 3rem;
+    img {
+      width: 100%;
+      display: inline-block;
+      position: absolute;
+      height: 160%;
+      top: 0rem;
+      left: 0rem;
+    }
+  }
+  .wrapper_right_image {
+    position: relative;
+    margin-left: auto;
+    margin-right: 3rem;
+    width: 550px;
+    height: 390px;
+    overflow: hidden !important;
+    img {
+      position: absolute;
+      top: 0rem;
+      right: 0rem;
+      width: 100%;
+      display: inline-block;
+    }
+  }
+}
+// end imgages section styles
