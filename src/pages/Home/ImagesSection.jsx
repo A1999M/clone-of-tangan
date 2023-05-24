@@ -17,11 +17,6 @@ export default function ImagesSection() {
         start: "top 35%",
         end: "bottom 1%",
         toggleActions: "play reverse restart none",
-        markers: {
-          startColor: "#ffd700",
-          endColor: "#000",
-          fontSize: "20px",
-        },
       },
     });
 

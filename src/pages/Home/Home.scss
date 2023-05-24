@@ -145,6 +145,7 @@ $title_home_header_color: #f5f5f5;
   }
 }
 // ens stop breath section styles
+//
 
 // start imgages section styles
 .images_section {
@@ -182,3 +183,402 @@ $title_home_header_color: #f5f5f5;
   }
 }
 // end imgages section styles
+
+// start techniques section
+.techniquess {
+  margin-top: 8rem;
+  padding-top: 10rem;
+  height: 2000vh;
+  .wrapper_number3 {
+    text-align: center;
+    svg {
+      transform: scale(1.1);
+    }
+  }
+  .wrapper_techniques {
+    .title_techniques {
+      font-family: "Playfair Display", serif;
+      text-transform: capitalize;
+      font-size: 6rem;
+      line-height: 6.5rem;
+      width: 85%;
+      color: white;
+    }
+    .desc_techniques {
+      font-size: 15px;
+      color: white;
+      font-family: "Montserrat", sans-serif;
+      text-transform: capitalize;
+      line-height: 1.5rem;
+      width: 75%;
+      margin-top: 5rem;
+    }
+  }
+  .home_title_ticker_techniquess {
+    overflow: hidden;
+    width: 100%;
+    left: 0rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid aliceblue;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    margin-top: 12rem;
+    .inner_content {
+      animation: scrollTicker3 infinite 19.8s linear;
+      transform: translateX(153%);
+      white-space: nowrap;
+      span {
+        font-size: 2rem;
+        font-family: "Montserrat", sans-serif;
+        color: $title_home_header_color;
+        text-transform: capitalize;
+        display: inline-block;
+        opacity: 0.8;
+        margin: 0 5rem;
+        white-space: nowrap;
+      }
+    }
+    .inner_content2 {
+      animation: scrollTicker4 infinite 20s linear;
+      animation-delay: 9.7s;
+      white-space: nowrap;
+      transform: translateX(53%);
+      span {
+        font-size: 2rem;
+        font-family: "Montserrat", sans-serif;
+        color: $title_home_header_color;
+        text-transform: capitalize;
+        display: inline-block;
+        opacity: 0.8;
+        margin: 0 5rem;
+        white-space: nowrap;
+      }
+    }
+  }
+
+  @keyframes scrollTicker3 {
+    0% {
+      transform: translateX(153%);
+    }
+    100% {
+      transform: translateX(-53%);
+    }
+  }
+  @keyframes scrollTicker4 {
+    0% {
+      transform: translateX(53%);
+    }
+    100% {
+      transform: translateX(-153%);
+    }
+  }
+}
+
+// end techniques section
+
+// start sticky section styles
+.sticky_section {
+  border-bottom: 1px solid aliceblue;
+  .wrapper_sticky_descs {
+    width: 100%;
+    position: relative;
+    padding-top: 10rem;
+    overflow: hidden;
+    height: 100vh;
+    .border_right {
+      position: absolute;
+      top: 0;
+      right: 0rem;
+      width: 1px;
+      height: 0%;
+      content: "";
+      background-color: aliceblue;
+    }
+    .descs1 {
+      margin-bottom: 1.5rem;
+      margin-left: 10rem;
+      .numbers {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        height: 50px;
+        span {
+          position: absolute;
+          // // // //
+          &:nth-child(1) {
+            top: 0rem;
+            left: 0rem;
+            font-size: 30px;
+            font-family: "Playfair Display", serif;
+            color: #cfcfcf;
+          }
+          &:nth-child(2) {
+            top: 1.6rem;
+            left: 2.5rem;
+            width: 25px;
+            height: 2px;
+            background-color: #cfcfcf;
+            display: inline-block;
+          }
+          &:nth-child(3) {
+            top: 0rem;
+            left: 4.7rem;
+            font-size: 30px;
+            font-family: "Playfair Display", serif;
+            color: #cfcfcf;
+          }
+          // // // //
+          &:nth-child(4) {
+            top: 3rem;
+            left: 0rem;
+            font-size: 30px;
+            font-family: "Playfair Display", serif;
+            color: #cfcfcf;
+          }
+          &:nth-child(5) {
+            top: 4.6rem;
+            left: 2.5rem;
+            width: 25px;
+            height: 2px;
+            background-color: #cfcfcf;
+            display: inline-block;
+          }
+          &:nth-child(6) {
+            top: 3rem;
+            left: 4.7rem;
+            font-size: 30px;
+            font-family: "Playfair Display", serif;
+            color: #cfcfcf;
+          }
+          // // // //
+          &:nth-child(7) {
+            top: 3rem;
+            left: 0rem;
+            font-size: 30px;
+            font-family: "Playfair Display", serif;
+            color: #cfcfcf;
+          }
+          &:nth-child(8) {
+            top: 4.6rem;
+            left: 2.5rem;
+            width: 25px;
+            height: 2px;
+            background-color: #cfcfcf;
+            display: inline-block;
+          }
+          &:nth-child(9) {
+            top: 3rem;
+            left: 4.7rem;
+            font-size: 30px;
+            font-family: "Playfair Display", serif;
+            color: #cfcfcf;
+          }
+          // // // //
+        }
+      }
+      .titles {
+        position: relative;
+        width: 100%;
+        height: 235px;
+        overflow: hidden;
+        p {
+          position: absolute;
+          &:nth-child(1) {
+            top: 0rem;
+            left: 0rem;
+            font-size: 6rem;
+            color: aliceblue;
+            font-family: "Playfair Display", serif;
+            font-weight: 500;
+            text-transform: capitalize;
+          }
+          &:nth-child(2) {
+            top: 7rem;
+            left: 0rem;
+            font-size: 6rem;
+            color: aliceblue;
+            font-family: "Playfair Display", serif;
+            font-weight: 500;
+            text-transform: capitalize;
+          }
+          // // //
+          &:nth-child(3) {
+            top: 15rem;
+            left: 0rem;
+            font-size: 6rem;
+            color: aliceblue;
+            font-family: "Playfair Display", serif;
+            font-weight: 500;
+            text-transform: capitalize;
+          }
+          &:nth-child(4) {
+            top: 15rem;
+            left: 0rem;
+            font-size: 6rem;
+            color: aliceblue;
+            font-family: "Playfair Display", serif;
+            font-weight: 500;
+            text-transform: capitalize;
+          }
+          // // //
+          &:nth-child(5) {
+            top: 15rem;
+            left: 0rem;
+            font-size: 6rem;
+            color: aliceblue;
+            font-family: "Playfair Display", serif;
+            font-weight: 500;
+            text-transform: capitalize;
+          }
+        }
+      }
+      .descs {
+        overflow: hidden;
+        position: relative;
+        margin-top: 2.5rem;
+        width: 100%;
+        height: 120px;
+        p {
+          position: absolute;
+          &:nth-child(1) {
+            top: 0rem;
+            left: 0rem;
+            font-size: 16px;
+            color: rgb(213 220 223);
+            text-transform: capitalize;
+            width: 500px;
+            line-height: 26px;
+            font-family: "Playfair Display", serif;
+          }
+          &:nth-child(2) {
+            top: 15rem;
+            left: 0rem;
+            font-size: 16px;
+            color: rgb(213 220 223);
+            text-transform: capitalize;
+            width: 500px;
+            line-height: 26px;
+            font-family: "Playfair Display", serif;
+          }
+          &:nth-child(3) {
+            top: 15rem;
+            left: 0rem;
+            font-size: 16px;
+            color: rgb(213 220 223);
+            text-transform: capitalize;
+            width: 500px;
+            line-height: 26px;
+            font-family: "Playfair Display", serif;
+          }
+        }
+      }
+    }
+  }
+  .wrapper_sticky_images {
+    .wrapper_image1 {
+      height: 380px;
+      width: 100%;
+      margin-top: 35rem;
+      overflow: hidden;
+      position: relative;
+      z-index: -1;
+      .image1_bt {
+        position: absolute;
+        top: 0rem;
+        left: 0rem;
+        content: "";
+        width: 0%;
+        height: 1px;
+        background-color: aliceblue;
+      }
+      .image1_bbottom {
+        position: absolute;
+        bottom: 0rem;
+        left: 0rem;
+        content: "";
+        width: 100%;
+        height: 1px;
+        background-color: aliceblue;
+      }
+      .bgImage1 {
+        background-image: url("https://uploads-ssl.webflow.com/5bc989248743153705f137da/6041025d0a4449ca9a54c916_home__thumb__reflexologie.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .wrapper_image2 {
+      position: relative;
+      z-index: -1;
+      height: 380px;
+      width: 100%;
+      margin-top: 18rem;
+      overflow: hidden;
+      .bgImage2 {
+        background-image: url("https://uploads-ssl.webflow.com/5bc989248743153705f137da/604100ee99552d6f4f7efd38_home__thumb__massage.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 100%;
+        height: 100%;
+      }
+      .image2_bt {
+        position: absolute;
+        top: 0rem;
+        left: 0rem;
+        content: "";
+        width: 0%;
+        height: 1px;
+        background-color: aliceblue;
+      }
+      .image2_bbottom {
+        position: absolute;
+        bottom: 0rem;
+        left: 0rem;
+        content: "";
+        width: 100%;
+        height: 1px;
+        background-color: aliceblue;
+      }
+    }
+    .wrapper_image3 {
+      position: relative;
+      z-index: -1;
+      height: 380px;
+      width: 100%;
+      margin-top: 18rem;
+      overflow: hidden;
+      .bgImage3 {
+        width: 100%;
+        height: 100%;
+        background-image: url("https://uploads-ssl.webflow.com/5bc989248743153705f137da/604102b8c5383159a6010a21_home__thumb__physioscan.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+      .image3_bt {
+        position: absolute;
+        top: 0rem;
+        left: 0rem;
+        content: "";
+        width: 0%;
+        height: 1px;
+        background-color: aliceblue;
+      }
+      .image3_bbottom {
+        position: absolute;
+        bottom: 0rem;
+        left: 0rem;
+        content: "";
+        width: 100%;
+        height: 1px;
+        background-color: aliceblue;
+      }
+    }
+  }
+}
+// end sticky section styles

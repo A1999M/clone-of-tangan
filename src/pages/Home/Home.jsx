@@ -3,6 +3,7 @@ import NavBar from "../../components/NavBar";
 import Header from "./Header";
 import StopBreath from "./StopBreath";
 import ImagesSection from "./ImagesSection";
+import Techniques from "./Techniques";
 
 export default function Home() {
   return (
@@ -23,6 +24,8 @@ export default function Home() {
       <StopBreath />
       {/* images section  home page */}
       <ImagesSection />
+      {/* Techniques section home page */}
+      <Techniques />
     </>
   );
 }

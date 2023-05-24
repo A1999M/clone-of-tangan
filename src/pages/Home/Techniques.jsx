@@ -1,0 +1,1012 @@
+import React, { useLayoutEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import SplitText from "../../plugins/splitText";
+
+export default function Techniques() {
+  let techniquessRef = useRef();
+  let titleRef = useRef();
+  let descRef = useRef();
+  let triggerStickyRef = useRef();
+  let scopeRef = useRef();
+  let imageScroll1 = useRef();
+  let imageScroll2 = useRef();
+  let imageScroll3 = useRef();
+  let borderRef = useRef();
+  let TopBorder1Ref = useRef();
+  let TopBorder2Ref = useRef();
+  let TopBorder3Ref = useRef();
+  let number01 = useRef();
+  let number02 = useRef();
+  let number03 = useRef();
+  let title0101 = useRef();
+  let title0102 = useRef();
+  let title0201 = useRef();
+  let title0202 = useRef();
+  let title03 = useRef();
+  let descText01 = useRef();
+  let descText02 = useRef();
+  let descText03 = useRef();
+
+  useLayoutEffect(() => {
+    gsap.set(title0101.current, {
+      y: -140,
+      opacity: 0,
+      clipPath: "inset(0% 0% 100% 0%)",
+    });
+    gsap.set(title0102.current, {
+      y: 90,
+      opacity: 0,
+      clipPath: "inset(0% 0% 100% 0%)",
+    });
+    gsap.set(title0201.current, {
+      y: -140,
+      opacity: 0,
+      clipPath: "inset(0% 0% 100% 0%)",
+    });
+    gsap.set(title03.current, {
+      y: "-25rem",
+      opacity: 0,
+      clipPath: "inset(0% 0% 100% 0%)",
+    });
+    gsap.set(descText01.current, {
+      y: 135,
+      opacity: 0,
+      clipPath: "inset(% 0% 100% 0%)",
+    });
+
+    let enterImage1 = () => {
+      let tl = gsap.timeline();
+      tl.to(title0101.current, {
+        opacity: 1,
+        y: 0,
+        clipPath: "inset(0% 0% 0% 0%)",
+        duration: 1,
+        ease: "Expo.easeOut",
+      });
+      tl.to(
+        title0102.current,
+        {
+          opacity: 1,
+          y: 0,
+          clipPath: "inset(0% 0% 0% 0%)",
+          duration: 1,
+          ease: "Expo.easeOut",
+        },
+        "<0"
+      );
+      tl.to(
+        descText01.current,
+        {
+          opacity: 1,
+          y: 0,
+          clipPath: "inset(0% 0% 0% 0%)",
+          duration: 1,
+          ease: "Expo.easeOut",
+        },
+        "<0"
+      );
+    };
+    let leaveImage1 = () => {
+      let tl = gsap.timeline();
+      tl.to(number01.current, {
+        opacity: 0,
+        y: -80,
+        duration: 0.4,
+        ease: "Expo.easeOut",
+      });
+      tl.to(
+        number02.current,
+        {
+          opacity: 1,
+          y: "-3rem",
+          duration: 1,
+          ease: "Expo.easeOut",
+        },
+        "<0"
+      );
+      tl.to(
+        title0101.current,
+        {
+          opacity: 0,
+          y: -140,
+          clipPath: "inset(0% 0% 100% 0%)",
+          duration: 0.4,
+          ease: "Expo.easeOut",
+        },
+        "<0"
+      );
+      tl.to(
+        title0201.current,
+        {
+          opacity: 1,
+          y: "-15rem",
+          clipPath: "inset(0% 0% 0% 0%)",
+          duration: 1,
+          ease: "Expo.easeOut",
+        },
+        "<0"
+      );
+      tl.to(
+        title0102.current,
+        {
+          opacity: 0,
+          y: 90,
+          clipPath: "inset(0% 0% 100% 0%)",
+          duration: 0.4,
+          ease: "Expo.easeOut",
+        },
+        "<0"
+      );
+      tl.to(
+        title0202.current,
+        {
+          opacity: 1,
+          y: "-8.5rem",
+          clipPath: "inset(0% 0% 0% 0%)",
+          duration: 1,
+          ease: "Expo.easeOut",
+        },
+        "<0"
+      );
+      tl.to(
+        descText01.current,
+        {
+          opacity: 0,
+          y: 135,
+          clipPath: "inset(0% 0% 100% 0%)",
+          duration: 0.4,
+          ease: "Expo.easeOut",
+        },
+        "<0"
+      );
+      tl.to(
+        descText02.current,
+        {
+          opacity: 1,
+          y: "-15rem",
+          clipPath: "inset(0% 0% 0% 0%)",
+          duration: 1,
+          ease: "Expo.easeOut",
+        },
+        "<0"
+      );
+    };
+    let enterBackImage1 = () => {
+      let tl = gsap.timeline();
+      tl.to(number02.current, {
+        opacity: 0,
+        y: -80,
+        duration: 0.4,
+        ease: "Expo.easeOut",
+      });
+      tl.to(
+        number01.current,
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          ease: "Expo.easeOut",
+        },
+        "<0"
+      );
+      tl.to(
+        title0201.current,
+        {
+          opacity: 0,
+          y: -140,
+          clipPath: "inset(0% 0% 100% 0%)",
+          duration: 0.4,
+          ease: "Expo.easeOut",
+        },
+        "<0"
+      );
+      tl.to(
+        title0202.current,
+        {
+          opacity: 0,
+          y: 90,
+          clipPath: "inset(0% 0% 100% 0%)",
+          duration: 0.4,
+          ease: "Expo.easeOut",
+        },
+        "<0"
+      );
+      tl.to(
+        descText02.current,
+        {
+          opacity: 0,
+          y: 135,
+          clipPath: "inset(0% 0% 100% 0%)",
+          duration: 0.4,
+          ease: "Expo.easeOut",
+        },
+        "<0"
+      );
+      tl.to(
+        title0101.current,
+        {
+          opacity: 1,
+          y: 0,
+          clipPath: "inset(0% 0% 0% 0%)",
+          duration: 1,
+          ease: "Expo.easeOut",
+        },
+        "<0"
+      );
+      tl.to(
+        title0102.current,
+        {
+          opacity: 1,
+          y: 0,
+          clipPath: "inset(0% 0% 0% 0%)",
+          duration: 1,
+          ease: "Expo.easeOut",
+        },
+        "<0"
+      );
+      tl.to(
+        descText01.current,
+        {
+          opacity: 1,
+          y: 0,
+          clipPath: "inset(0% 0% 0% 0%)",
+          duration: 1,
+          ease: "Expo.easeOut",
+        },
+        "<0"
+      );
+    };
+    // let leaveBackImage1 = () => {
+    //   let tl = gsap.timeline();
+    //   tl.to(title0101.current, {
+    //     opacity: 0,
+    //     y: -140,
+    //     clipPath: "inset(0% 0% 100% 0%)",
+    //     duration: 0.4,
+    //     ease: "Expo.easeOut",
+    //   });
+    //   tl.to(
+    //     title0102.current,
+    //     {
+    //       opacity: 0,
+    //       y: 90,
+    //       clipPath: "inset(0% 0% 100% 0%)",
+    //       duration: 0.4,
+    //       ease: "Expo.easeOut",
+    //     },
+    //     "<0"
+    //   );
+    //   tl.to(
+    //     descText01.current,
+    //     {
+    //       opacity: 0,
+    //       y: 135,
+    //       clipPath: "inset(0% 0% 100% 0%)",
+    //       duration: 0.4,
+    //       ease: "Expo.easeOut",
+    //     },
+    //     "<0"
+    //   );
+    // };
+    let enterImage2 = () => {
+      let tl = gsap.timeline();
+      tl.to(number01.current, {
+        opacity: 0,
+        y: -80,
+        duration: 0.4,
+        ease: "Expo.easeOut",
+      });
+      tl.to(
+        number02.current,
+        {
+          opacity: 1,
+          y: "-3rem",
+          duration: 1,
+          ease: "Expo.easeOut",
+        },
+        "<0"
+      );
+      tl.to(
+        title0101.current,
+        {
+          opacity: 0,
+          y: -140,
+          clipPath: "inset(0% 0% 100% 0%)",
+          duration: 0.4,
+          ease: "Expo.easeOut",
+        },
+        "<0"
+      );
+      tl.to(
+        title0201.current,
+        {
+          opacity: 1,
+          y: "-15rem",
+          clipPath: "inset(0% 0% 0% 0%)",
+          duration: 1,
+          ease: "Expo.easeOut",
+        },
+        "<0"
+      );
+      tl.to(
+        title0102.current,
+        {
+          opacity: 0,
+          y: 90,
+          clipPath: "inset(0% 0% 100% 0%)",
+          duration: 0.4,
+          ease: "Expo.easeOut",
+        },
+        "<0"
+      );
+      tl.to(
+        title0202.current,
+        {
+          opacity: 1,
+          y: "-8.5rem",
+          clipPath: "inset(0% 0% 0% 0%)",
+          duration: 1,
+          ease: "Expo.easeOut",
+        },
+        "<0"
+      );
+      tl.to(
+        descText01.current,
+        {
+          opacity: 0,
+          y: 135,
+          clipPath: "inset(0% 0% 100% 0%)",
+          duration: 0.4,
+          ease: "Expo.easeOut",
+        },
+        "<0"
+      );
+      tl.to(
+        descText02.current,
+        {
+          opacity: 1,
+          y: "-15rem",
+          clipPath: "inset(0% 0% 0% 0%)",
+          duration: 1,
+          ease: "Expo.easeOut",
+        },
+        "<0"
+      );
+    };
+    let leaveImage2 = () => {
+      let tl = gsap.timeline();
+      tl.to(number02.current, {
+        opacity: 0,
+        y: -80,
+        duration: 0.4,
+        ease: "Expo.easeOut",
+      });
+      tl.to(
+        title0201.current,
+        {
+          opacity: 0,
+          y: -140,
+          clipPath: "inset(0% 0% 100% 0%)",
+          duration: 0.4,
+          ease: "Expo.easeOut",
+        },
+        "<0"
+      );
+      tl.to(
+        title0202.current,
+        {
+          opacity: 0,
+          y: 90,
+          clipPath: "inset(0% 0% 100% 0%)",
+          duration: 0.4,
+          ease: "Expo.easeOut",
+        },
+        "<0"
+      );
+      tl.to(
+        descText02.current,
+        {
+          opacity: 0,
+          y: 135,
+          clipPath: "inset(0% 0% 100% 0%)",
+          duration: 0.4,
+          ease: "Expo.easeOut",
+        },
+        "<0"
+      );
+      tl.to(
+        number03.current,
+        {
+          opacity: 1,
+          y: "-3rem",
+          duration: 1,
+          ease: "Expo.easeOut",
+        },
+        "<0"
+      );
+      tl.to(
+        title03.current,
+        {
+          opacity: 1,
+          y: "-10rem",
+          clipPath: "inset(0% 0% 0% 0%)",
+          duration: 1,
+          ease: "Expo.easeOut",
+        },
+        "<0"
+      );
+      tl.to(
+        descText03.current,
+        {
+          opacity: 1,
+          y: "-15rem",
+          clipPath: "inset(0% 0% 0% 0%)",
+          duration: 1,
+          ease: "Expo.easeOut",
+        },
+        "<0"
+      );
+    };
+    let enterBackImage2 = () => {
+      let tl = gsap.timeline();
+      tl.to(number03.current, {
+        opacity: 0,
+        y: -80,
+        duration: 0.4,
+        ease: "Expo.easeOut",
+      });
+      tl.to(
+        number02.current,
+        {
+          opacity: 1,
+          y: "-3rem",
+          duration: 1,
+          ease: "Expo.easeOut",
+        },
+        "<0"
+      );
+      tl.to(
+        title03.current,
+        {
+          opacity: 0,
+          y: "-25rem",
+          clipPath: "inset(0% 0% 100% 0%)",
+          duration: 0.4,
+          ease: "Expo.easeOut",
+        },
+        "<0"
+      );
+      tl.to(
+        title0201.current,
+        {
+          opacity: 1,
+          y: "-15rem",
+          clipPath: "inset(0% 0% 0% 0%)",
+          duration: 1,
+          ease: "Expo.easeOut",
+        },
+        "<0"
+      );
+      tl.to(
+        title0202.current,
+        {
+          opacity: 1,
+          y: "-8.5rem",
+          clipPath: "inset(0% 0% 0% 0%)",
+          duration: 1,
+          ease: "Expo.easeOut",
+        },
+        "<0"
+      );
+      tl.to(
+        descText03.current,
+        {
+          opacity: 0,
+          y: 135,
+          clipPath: "inset(0% 0% 100% 0%)",
+          duration: 0.4,
+          ease: "Expo.easeOut",
+        },
+        "<0"
+      );
+      tl.to(
+        descText02.current,
+        {
+          opacity: 1,
+          y: "-15rem",
+          clipPath: "inset(0% 0% 0% 0%)",
+          duration: 1,
+          ease: "Expo.easeOut",
+        },
+        "<0"
+      );
+    };
+    let leaveBackImage2 = () => {
+      let tl = gsap.timeline();
+      tl.to(number02.current, {
+        opacity: 0,
+        y: -80,
+        duration: 0.4,
+        ease: "Expo.easeOut",
+      });
+      tl.to(title0201.current, {
+        opacity: 0,
+        y: -140,
+        clipPath: "inset(0% 0% 100% 0%)",
+        duration: 0.4,
+        ease: "Expo.easeOut",
+      });
+      tl.to(
+        title0202.current,
+        {
+          opacity: 0,
+          y: 90,
+          clipPath: "inset(0% 0% 100% 0%)",
+          duration: 0.4,
+          ease: "Expo.easeOut",
+        },
+        "<0"
+      );
+      tl.to(
+        descText02.current,
+        {
+          opacity: 0,
+          y: 135,
+          clipPath: "inset(0% 0% 100% 0%)",
+          duration: 0.4,
+          ease: "Expo.easeOut",
+        },
+        "<0"
+      );
+    };
+    let enterImage3 = () => {
+      let tl = gsap.timeline();
+      tl.to(number02.current, {
+        opacity: 0,
+        y: -80,
+        duration: 0.4,
+        ease: "Expo.easeOut",
+      });
+      tl.to(
+        number03.current,
+        {
+          opacity: 1,
+          y: "-3rem",
+          duration: 1,
+          ease: "Expo.easeOut",
+        },
+        "<0"
+      );
+      tl.to(
+        title0201.current,
+        {
+          opacity: 0,
+          y: -140,
+          clipPath: "inset(0% 0% 100% 0%)",
+          duration: 0.4,
+          ease: "Expo.easeOut",
+        },
+        "<0"
+      );
+      tl.to(
+        title03.current,
+        {
+          opacity: 1,
+          y: "-10rem",
+          clipPath: "inset(0% 0% 0% 0%)",
+          duration: 1,
+          ease: "Expo.easeOut",
+        },
+        "<0"
+      );
+      tl.to(
+        title0202.current,
+        {
+          opacity: 0,
+          y: 90,
+          clipPath: "inset(0% 0% 100% 0%)",
+          duration: 0.4,
+          ease: "Expo.easeOut",
+        },
+        "<0"
+      );
+      tl.to(
+        descText02.current,
+        {
+          opacity: 0,
+          y: 135,
+          clipPath: "inset(0% 0% 100% 0%)",
+          duration: 0.4,
+          ease: "Expo.easeOut",
+        },
+        "<0"
+      );
+      tl.to(
+        descText03.current,
+        {
+          opacity: 1,
+          y: "-15rem",
+          clipPath: "inset(0% 0% 0% 0%)",
+          duration: 1,
+          ease: "Expo.easeOut",
+        },
+        "<0"
+      );
+    };
+    let leaveImage3 = () => {
+      let tl = gsap.timeline();
+      tl.to(number03.current, {
+        opacity: 0,
+        y: -80,
+        duration: 0.4,
+        ease: "Expo.easeOut",
+      });
+      tl.to(title03.current, {
+        opacity: 0,
+        y: -140,
+        clipPath: "inset(0% 0% 100% 0%)",
+        duration: 0.4,
+        ease: "Expo.easeOut",
+      });
+      tl.to(
+        descText03.current,
+        {
+          opacity: 0,
+          y: 135,
+          clipPath: "inset(0% 0% 100% 0%)",
+          duration: 0.4,
+          ease: "Expo.easeOut",
+        },
+        "<0"
+      );
+    };
+
+    gsap.registerPlugin(ScrollTrigger, SplitText);
+    let tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: titleRef.current,
+        start: "top 70%",
+        end: "bottom 0%",
+        toggleActions: "restart reverse restart reverse",
+      },
+    });
+    gsap.to(document.body, {
+      backgroundColor: "#000",
+      duration: 0.35,
+      ease: "ease",
+      scrollTrigger: {
+        trigger: techniquessRef.current,
+        endTrigger: techniquessRef.current,
+        start: "top 50%",
+        toggleActions: "play none restart reverse",
+      },
+    });
+    let ctx = gsap.context(() => {
+      gsap.to(triggerStickyRef.current, {
+        duration: 0.5,
+        scrollTrigger: {
+          trigger: triggerStickyRef.current,
+          endTrigger: imageScroll3.current,
+          start: "top 0%",
+          end: "bottom 120%",
+          pin: true,
+          // markers: {
+          //   startColor: "#fff",
+          //   endColor: "#fff",
+          //   fontSize: "20px",
+          // },
+        },
+      });
+    }, scopeRef);
+
+    let splitTitle = new SplitText(titleRef.current, { type: "chars" });
+    let splitDesc = new SplitText(descRef.current, { type: "lines" });
+    gsap.set(splitTitle.chars, {
+      opacity: 0,
+      perspective: 200,
+      scale: 0,
+      x: 30,
+      y: -80,
+    });
+    gsap.set(splitDesc.lines, {
+      opacity: 0,
+      perspective: 200,
+      scaleY: 0,
+      rotate: "5deg",
+      y: 100,
+    });
+
+    tl.to(splitTitle.chars, {
+      opacity: 1,
+      perspective: 0,
+      scale: 1,
+      x: 0,
+      y: 0,
+      duration: 0.5,
+      stagger: 0.04,
+      ease: "Back.easeOut.config(1.4)",
+    });
+    tl.to(
+      splitDesc.lines,
+      {
+        opacity: 1,
+        perspective: 0,
+        scaleY: 1,
+        y: 0,
+        rotate: "0deg",
+        duration: 1,
+        stagger: 0.05,
+        ease: "Expo.easeOut",
+      },
+      "<0.5"
+    );
+
+    // scroll images section animations
+
+    gsap.set(imageScroll1.current, {
+      opacity: 0,
+      scale: 3,
+      clipPath: "inset(0% 0% 100% 0%)",
+    });
+    gsap.set(imageScroll2.current, {
+      opacity: 0,
+      scale: 3,
+      clipPath: "inset(0% 0% 100% 0%)",
+    });
+    gsap.set(imageScroll3.current, {
+      opacity: 0,
+      scale: 3,
+      clipPath: "inset(0% 0% 100% 0%)",
+    });
+
+    gsap.to(borderRef.current, {
+      height: "100%",
+      duration: 0.7,
+      ease: "ease",
+      scrollTrigger: {
+        trigger: borderRef.current,
+        start: "top 0%",
+        end: "bottom 0%",
+      },
+    });
+
+    gsap.to(TopBorder1Ref.current, {
+      width: "100%",
+      duration: 0.5,
+      scrollTrigger: {
+        trigger: TopBorder1Ref.current,
+        start: "top 65%",
+        end: "top 0%",
+        toggleActions: "restart reverse restart reverse",
+      },
+    });
+    gsap.to(TopBorder2Ref.current, {
+      width: "100%",
+      duration: 0.5,
+      scrollTrigger: {
+        trigger: TopBorder2Ref.current,
+        start: "top 65%",
+        end: "top 0%",
+        toggleActions: "restart reverse restart reverse",
+        // markers: {
+        //   startColor: "#fff",
+        //   endColor: "#fff",
+        //   fontSize: "20px",
+        // },
+      },
+    });
+    gsap.to(TopBorder3Ref.current, {
+      width: "100%",
+      duration: 0.5,
+      scrollTrigger: {
+        trigger: TopBorder3Ref.current,
+        start: "top 65%",
+        end: "top 0%",
+        toggleActions: "restart reverse restart reverse",
+        // markers: {
+        //   startColor: "#fff",
+        //   endColor: "#fff",
+        //   fontSize: "20px",
+        // },
+      },
+    });
+
+    gsap.to(imageScroll1.current, {
+      opacity: 1,
+      scale: 1,
+      clipPath: "inset(0% 0% 0% 0%)",
+      duration: 1.5,
+      ease: "Expo.easeOut",
+      scrollTrigger: {
+        trigger: imageScroll1.current,
+        start: "center 73%",
+        end: "+=200 10%",
+        toggleActions: "restart reverse restart reverse",
+        onEnter: enterImage1,
+        onLeave: leaveImage1,
+        onEnterBack: enterBackImage1,
+        // onLeaveBack: leaveBackImage1,
+        // markers: {
+        //   startColor: "#fff",
+        //   endColor: "#fff",
+        //   fontSize: "20px",
+        // },
+      },
+    });
+    gsap.to(imageScroll2.current, {
+      opacity: 1,
+      scale: 1,
+      clipPath: "inset(0% 0% 0% 0%)",
+      duration: 1.5,
+      ease: "Expo.easeOut",
+      scrollTrigger: {
+        trigger: imageScroll2.current,
+        start: "center 65%",
+        end: "+=200 20%",
+        toggleActions: "play reverse restart reverse",
+        onLeave: leaveImage2,
+        onEnterBack: enterBackImage2,
+        onLeaveBack: leaveBackImage2,
+        markers: {
+          startColor: "#fff",
+          endColor: "#fff",
+          fontSize: "20px",
+        },
+      },
+    });
+    gsap.to(imageScroll3.current, {
+      opacity: 1,
+      scale: 1,
+      clipPath: "inset(0% 0% 0% 0%)",
+      duration: 1.5,
+      ease: "Expo.easeOut",
+      scrollTrigger: {
+        trigger: imageScroll3.current,
+        start: "top 15%",
+        end: "bottom 0%",
+        toggleActions: "restart reverse restart reverse",
+        // onEnter: enterImage3,
+        // onLeave: leaveImage3,
+        // markers: {
+        //   startColor: "#fff",
+        //   endColor: "#fff",
+        //   fontSize: "20px",
+        // },
+      },
+    });
+
+    return () => ctx.revert();
+  });
+
+  return (
+    <>
+      <div ref={techniquessRef} className="container-fluid techniquess">
+        {/*  */}
+        <div className="row">
+          <div className="col-12 col-lg-6">
+            <div className="wrapper_number3">
+              <svg
+                width="38vh"
+                height="60vh"
+                class="number_bold"
+                viewBox="0 0 408 643"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M202.625 643C284.225 643 408 584.295 408 444.872C408 310.952 297.061 279.765 252.135 285.268C299.811 262.337 360.324 202.715 360.324 131.168C360.324 52.2839 290.643 0 214.544 0C129.276 0 31.173 74.2982 31.173 123.83C31.173 136.672 39.4247 144.01 49.5101 144.01C59.5955 144.01 67.8472 140.341 75.182 119.244C91.6854 71.5464 132.027 7.3381 214.544 7.3381C299.811 7.3381 317.231 76.1327 317.231 136.672C317.231 205.466 290.643 257.75 232.881 288.02L144.863 333.883L148.53 341.221L215.461 306.365C233.798 297.193 245.717 292.606 261.303 292.606C325.483 292.606 362.157 338.469 362.157 444.872C362.157 569.619 301.645 635.662 202.625 635.662C131.11 635.662 69.6809 599.889 39.4247 489.817C33.9236 469.638 25.6719 468.72 18.3371 468.72C9.16854 468.72 0 476.058 0 490.735C0 554.943 94.4359 643 202.625 643Z"
+                  fill="#F5F5F5"
+                ></path>
+              </svg>
+            </div>
+          </div>
+          <div className="col-12 col-lg-6">
+            <div className="wrapper_techniques">
+              <p ref={titleRef} className="title_techniques">
+                Techniques care
+              </p>
+              <p ref={descRef} className="desc_techniques">
+                TO HELP RELAUNCH HIS SELF-HEALING MECHANISM AND REGAIN HIS
+                BALANCE. THE TREATMENTS OFFERED MAKE IT POSSIBLE TO CLEANSE
+                STAGNANT OR WORN-OUT ENERGIES, RECHARGE, RELAUNCH THE
+                CIRCULATION OF THESE VITAL ENERGIES, WHICH HELPS THE BODY IN ITS
+                HOMEOSTASIS MECHANISM.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-12">
+            <div className="home_title_ticker_techniquess">
+              <div className="inner_content">
+                <span>Physioscan</span>
+                <span>Réflexologie plantaire</span>
+                <span> Massage Abhyanga</span>
+              </div>
+              <div className="inner_content2">
+                <span>Physioscan</span>
+                <span>Réflexologie plantaire</span>
+                <span> Massage Abhyanga</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="row sticky_section">
+          <div ref={scopeRef} className="col-12 col-lg-7 p-0">
+            <div ref={triggerStickyRef} className="wrapper_sticky_descs">
+              <div ref={borderRef} className="border_right"></div>
+              <div className="descs1">
+                <div className="numbers">
+                  {/*  */}
+                  <span ref={number01}>01</span>
+                  <span className="line_numbers"></span>
+                  <span>03</span>
+                  {/*  */}
+                  <span ref={number02}>02</span>
+                  <span className="line_numbers"></span>
+                  <span>03</span>
+                  {/*  */}
+                  <span ref={number03}>03</span>
+                  <span className="line_numbers"></span>
+                  <span>03</span>
+                  {/*  */}
+                </div>
+                <div className="titles">
+                  {/*  */}
+                  <p ref={title0101}>Réflexologie</p>
+                  <p ref={title0102}>plantaire</p>
+                  {/*  */}
+                  <p ref={title0201}>massage</p>
+                  <p ref={title0202}>Abhyanga</p>
+                  {/*  */}
+                  <p ref={title03}>Physioscan</p>
+                </div>
+                <div className="descs">
+                  {/*  */}
+                  <p ref={descText01}>
+                    Permet d’obtenir des informations précises sur l’état
+                    énergétique de tous les systèmes du corps humain :
+                    endocrinien, nerveux, osseux, digestif, lymphatique...
+                  </p>
+                  {/*  */}
+                  <p ref={descText02}>
+                    Permet d’obtenir des informations précises sur l’état
+                    énergétique de tous les systèmes du corps humain :
+                    endocrinien, nerveux, osseux, digestif, lymphatique...
+                  </p>
+                  {/*  */}
+                  <p ref={descText03}>
+                    PERMET D’OBTENIR DES INFORMATIONS PRÉCISES SUR L’ÉTAT
+                    ÉNERGÉTIQUE DE TOUS LES SYSTÈMES DU CORPS HUMAIN :
+                    ENDOCRINIEN, NERVEUX, OSSEUX, DIGESTIF, LYMPHATIQUE...
+                  </p>
+                  {/*  */}
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="col-12 col-lg-5 p-0">
+            <div className="wrapper_sticky_images">
+              <div className="wrapper_image1">
+                <div ref={imageScroll1} className="bgImage1"></div>
+                <div ref={TopBorder1Ref} className="image1_bt"></div>
+                <div className="image1_bbottom"></div>
+              </div>
+              <div className="wrapper_image2">
+                <div ref={imageScroll2} className="bgImage2"></div>
+                <div ref={TopBorder2Ref} className="image2_bt"></div>
+                <div className="image2_bbottom"></div>
+              </div>
+              <div className="wrapper_image3">
+                <div ref={imageScroll3} className="bgImage3"></div>
+                <div ref={TopBorder3Ref} className="image3_bt"></div>
+                <div className="image3_bbottom"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
