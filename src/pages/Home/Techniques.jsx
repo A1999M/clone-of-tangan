@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useRef } from "react";
+import React, { useEffect, useLayoutEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SplitText from "../../plugins/splitText";
@@ -27,6 +27,12 @@ export default function Techniques() {
   let descText01 = useRef();
   let descText02 = useRef();
   let descText03 = useRef();
+  let topTitleRef = useRef();
+  let bottomTitleRef = useRef();
+  let triggerTitleTop = useRef();
+  let triggerTitleBottom = useRef();
+  let borderWritterRef = useRef();
+  let imageWritterRef = useRef();
 
   useLayoutEffect(() => {
     gsap.set(title0101.current, {
@@ -257,123 +263,6 @@ export default function Techniques() {
         "<0"
       );
     };
-    // let leaveBackImage1 = () => {
-    //   let tl = gsap.timeline();
-    //   tl.to(title0101.current, {
-    //     opacity: 0,
-    //     y: -140,
-    //     clipPath: "inset(0% 0% 100% 0%)",
-    //     duration: 0.4,
-    //     ease: "Expo.easeOut",
-    //   });
-    //   tl.to(
-    //     title0102.current,
-    //     {
-    //       opacity: 0,
-    //       y: 90,
-    //       clipPath: "inset(0% 0% 100% 0%)",
-    //       duration: 0.4,
-    //       ease: "Expo.easeOut",
-    //     },
-    //     "<0"
-    //   );
-    //   tl.to(
-    //     descText01.current,
-    //     {
-    //       opacity: 0,
-    //       y: 135,
-    //       clipPath: "inset(0% 0% 100% 0%)",
-    //       duration: 0.4,
-    //       ease: "Expo.easeOut",
-    //     },
-    //     "<0"
-    //   );
-    // };
-    let enterImage2 = () => {
-      let tl = gsap.timeline();
-      tl.to(number01.current, {
-        opacity: 0,
-        y: -80,
-        duration: 0.4,
-        ease: "Expo.easeOut",
-      });
-      tl.to(
-        number02.current,
-        {
-          opacity: 1,
-          y: "-3rem",
-          duration: 1,
-          ease: "Expo.easeOut",
-        },
-        "<0"
-      );
-      tl.to(
-        title0101.current,
-        {
-          opacity: 0,
-          y: -140,
-          clipPath: "inset(0% 0% 100% 0%)",
-          duration: 0.4,
-          ease: "Expo.easeOut",
-        },
-        "<0"
-      );
-      tl.to(
-        title0201.current,
-        {
-          opacity: 1,
-          y: "-15rem",
-          clipPath: "inset(0% 0% 0% 0%)",
-          duration: 1,
-          ease: "Expo.easeOut",
-        },
-        "<0"
-      );
-      tl.to(
-        title0102.current,
-        {
-          opacity: 0,
-          y: 90,
-          clipPath: "inset(0% 0% 100% 0%)",
-          duration: 0.4,
-          ease: "Expo.easeOut",
-        },
-        "<0"
-      );
-      tl.to(
-        title0202.current,
-        {
-          opacity: 1,
-          y: "-8.5rem",
-          clipPath: "inset(0% 0% 0% 0%)",
-          duration: 1,
-          ease: "Expo.easeOut",
-        },
-        "<0"
-      );
-      tl.to(
-        descText01.current,
-        {
-          opacity: 0,
-          y: 135,
-          clipPath: "inset(0% 0% 100% 0%)",
-          duration: 0.4,
-          ease: "Expo.easeOut",
-        },
-        "<0"
-      );
-      tl.to(
-        descText02.current,
-        {
-          opacity: 1,
-          y: "-15rem",
-          clipPath: "inset(0% 0% 0% 0%)",
-          duration: 1,
-          ease: "Expo.easeOut",
-        },
-        "<0"
-      );
-    };
     let leaveImage2 = () => {
       let tl = gsap.timeline();
       tl.to(number02.current, {
@@ -560,107 +449,6 @@ export default function Techniques() {
         "<0"
       );
     };
-    let enterImage3 = () => {
-      let tl = gsap.timeline();
-      tl.to(number02.current, {
-        opacity: 0,
-        y: -80,
-        duration: 0.4,
-        ease: "Expo.easeOut",
-      });
-      tl.to(
-        number03.current,
-        {
-          opacity: 1,
-          y: "-3rem",
-          duration: 1,
-          ease: "Expo.easeOut",
-        },
-        "<0"
-      );
-      tl.to(
-        title0201.current,
-        {
-          opacity: 0,
-          y: -140,
-          clipPath: "inset(0% 0% 100% 0%)",
-          duration: 0.4,
-          ease: "Expo.easeOut",
-        },
-        "<0"
-      );
-      tl.to(
-        title03.current,
-        {
-          opacity: 1,
-          y: "-10rem",
-          clipPath: "inset(0% 0% 0% 0%)",
-          duration: 1,
-          ease: "Expo.easeOut",
-        },
-        "<0"
-      );
-      tl.to(
-        title0202.current,
-        {
-          opacity: 0,
-          y: 90,
-          clipPath: "inset(0% 0% 100% 0%)",
-          duration: 0.4,
-          ease: "Expo.easeOut",
-        },
-        "<0"
-      );
-      tl.to(
-        descText02.current,
-        {
-          opacity: 0,
-          y: 135,
-          clipPath: "inset(0% 0% 100% 0%)",
-          duration: 0.4,
-          ease: "Expo.easeOut",
-        },
-        "<0"
-      );
-      tl.to(
-        descText03.current,
-        {
-          opacity: 1,
-          y: "-15rem",
-          clipPath: "inset(0% 0% 0% 0%)",
-          duration: 1,
-          ease: "Expo.easeOut",
-        },
-        "<0"
-      );
-    };
-    let leaveImage3 = () => {
-      let tl = gsap.timeline();
-      tl.to(number03.current, {
-        opacity: 0,
-        y: -80,
-        duration: 0.4,
-        ease: "Expo.easeOut",
-      });
-      tl.to(title03.current, {
-        opacity: 0,
-        y: -140,
-        clipPath: "inset(0% 0% 100% 0%)",
-        duration: 0.4,
-        ease: "Expo.easeOut",
-      });
-      tl.to(
-        descText03.current,
-        {
-          opacity: 0,
-          y: 135,
-          clipPath: "inset(0% 0% 100% 0%)",
-          duration: 0.4,
-          ease: "Expo.easeOut",
-        },
-        "<0"
-      );
-    };
 
     gsap.registerPlugin(ScrollTrigger, SplitText);
     let tl = gsap.timeline({
@@ -826,12 +614,6 @@ export default function Techniques() {
         onEnter: enterImage1,
         onLeave: leaveImage1,
         onEnterBack: enterBackImage1,
-        // onLeaveBack: leaveBackImage1,
-        // markers: {
-        //   startColor: "#fff",
-        //   endColor: "#fff",
-        //   fontSize: "20px",
-        // },
       },
     });
     gsap.to(imageScroll2.current, {
@@ -848,11 +630,6 @@ export default function Techniques() {
         onLeave: leaveImage2,
         onEnterBack: enterBackImage2,
         onLeaveBack: leaveBackImage2,
-        markers: {
-          startColor: "#fff",
-          endColor: "#fff",
-          fontSize: "20px",
-        },
       },
     });
     gsap.to(imageScroll3.current, {
@@ -866,13 +643,59 @@ export default function Techniques() {
         start: "top 15%",
         end: "bottom 0%",
         toggleActions: "restart reverse restart reverse",
-        // onEnter: enterImage3,
-        // onLeave: leaveImage3,
-        // markers: {
-        //   startColor: "#fff",
-        //   endColor: "#fff",
-        //   fontSize: "20px",
-        // },
+      },
+    });
+
+    // // // // //
+
+    let splitTopTitle = new SplitText(topTitleRef.current, { type: "chars" });
+    let splitBottomTitle = new SplitText(bottomTitleRef.current, {
+      type: "chars",
+    });
+
+    gsap.set(splitTopTitle.chars, {
+      opacity: 0,
+      perspective: 1000,
+      rotate: "23deg",
+      y: "5rem",
+      clipPath: "inset(0% 0% 100% 0%)",
+    });
+    gsap.set(splitBottomTitle.chars, {
+      opacity: 0,
+      perspective: 1000,
+      y: "5rem",
+      rotate: "23deg",
+      clipPath: "inset(0% 0% 100% 0%)",
+    });
+
+    gsap.to(splitTopTitle.chars, {
+      opacity: 1,
+      y: 0,
+      perspective: 0,
+      clipPath: "inset(0% 0% 0% 0%)",
+      rotate: "0deg",
+      duration: 1,
+      stagger: 0.01,
+      ease: "Expo.easeOut",
+      scrollTrigger: {
+        trigger: triggerTitleTop.current,
+        start: "top 80%",
+        end: "bottom 0%",
+      },
+    });
+    gsap.to(splitBottomTitle.chars, {
+      opacity: 1,
+      y: 0,
+      rotate: "0deg",
+      perspective: 0,
+      clipPath: "inset(0% 0% 0% 0%)",
+      duration: 1,
+      stagger: 0.01,
+      ease: "Expo.easeOut",
+      scrollTrigger: {
+        trigger: triggerTitleTop.current,
+        start: "top 20%",
+        end: "bottom 0%",
       },
     });
 
@@ -889,7 +712,7 @@ export default function Techniques() {
               <svg
                 width="38vh"
                 height="60vh"
-                class="number_bold"
+                className="number_bold"
                 viewBox="0 0 408 643"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -1002,6 +825,62 @@ export default function Techniques() {
                 <div ref={imageScroll3} className="bgImage3"></div>
                 <div ref={TopBorder3Ref} className="image3_bt"></div>
                 <div className="image3_bbottom"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-12">
+            <div ref={triggerTitleTop} className="wrapper_top_title">
+              <p ref={topTitleRef} className="top_title">
+                THE <span>&nbsp;</span> PROCESS <br />
+                SELF ~ HEALING <br />
+                COME <span>&nbsp;</span> TRUE <span>&nbsp;</span> ON{" "}
+                <span>&nbsp;</span> THEIR <span>&nbsp;</span> OWN,
+              </p>
+            </div>
+            <div ref={triggerTitleBottom} className="wrapper_bottom_title">
+              <p ref={bottomTitleRef} className="bottom_title">
+                BUT <span>&nbsp;</span> NOT <span>&nbsp;</span> WITHOUT{" "}
+                <span>&nbsp;</span> OUR <br />
+                TOTAL <span>&nbsp;</span> CONSENT.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="row about_writter">
+          <div className="col-12 col-lg-7">
+            <div className="wrapper_descs_writter">
+              <p className="about_writter_title">
+                I have become a passionate follower of well-being. My philosophy
+                is now '' a break for oneself '', to stop, breathe, reconnect
+                with oneself, its essential.
+              </p>
+              <div
+                ref={borderWritterRef}
+                className="border_bottom_writter"
+              ></div>
+              <p className="writter_name">DIDIER MARTIN</p>
+            </div>
+          </div>
+          <div className="col-12 col-lg-5">
+            <div className="wrapper_all_writter">
+              <div className="wrapper_image_writter">
+                <img
+                  ref={imageWritterRef}
+                  src="https://uploads-ssl.webflow.com/5bc989248743153705f137da/60351bb3a3529d0417b01022_portrait__didier_martin.jpg"
+                  alt="https://uploads-ssl.webflow.com/5bc989248743153705f137da/60351bb3a3529d0417b01022_portrait__didier_martin.jpg"
+                />
+              </div>
+              <div className="wrapper_image_description">
+                <p className="writter_image_description">
+                  A PHYSICIST BY TRAINING AND PROFESSION, DIDIER MARTIN
+                  UNDERSTOOD THAT EVERYTHING IS ENERGY, THAT IT IS IN THE
+                  PRESENT, HENCE THE IMPORTANCE OF THIS BREAK. IT WAS THE ENERGY
+                  TREATMENTS THAT HELPED HIM REGAIN HIS BALANCE OF BODILY,
+                  PSYCHOLOGICAL AND EMOTIONAL HEALTH. THIS NEW AWARENESS
+                  DIRECTED HIM TOWARDS THEIR APPRENTICESHIPS FOR SEVERAL YEARS.
+                </p>
               </div>
             </div>
           </div>
