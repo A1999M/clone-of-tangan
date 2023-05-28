@@ -4,6 +4,7 @@ import Header from "./Header";
 import StopBreath from "./StopBreath";
 import ImagesSection from "./ImagesSection";
 import Techniques from "./Techniques";
+import MyPatients from "./MyPatients";
 
 export default function Home() {
   return (
@@ -26,6 +27,8 @@ export default function Home() {
       <ImagesSection />
       {/* Techniques section home page */}
       <Techniques />
+      {/* MyPatients section home page */}
+      <MyPatients />
     </>
   );
 }

@@ -2,20 +2,23 @@ import { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import "./Btn.scss";
 
-export default function Btn({ firstText, secondText }) {
+export default function Btn({ firstText, secondText, borderColor }) {
   let [isHover, setIsHover] = useState(false);
   let btnTextRef = useRef();
+  let imageSecRef = useRef();
   let btmMouseEnter = () => {
     setIsHover(true);
     let el = btnTextRef.current;
     el.innerText = secondText;
     el.style.color = "#000";
+    imageSecRef.current.style.borderColor = borderColor;
   };
   let btmMouseLeave = () => {
     setIsHover(false);
     let el = btnTextRef.current;
     el.innerText = "MAKEAN APPOINTMENT";
     el.style.color = "#f0f8ff";
+    imageSecRef.current.style.borderColor = "#f0f8ff";
   };
 
   let btnVariants = {
@@ -53,6 +56,7 @@ export default function Btn({ firstText, secondText }) {
         variants={btnVariants}
         animate={isHover ? "hover" : "default"}
         className="image_section_button"
+        ref={imageSecRef}
       >
         <motion.div
           variants={btnBGCVariants}

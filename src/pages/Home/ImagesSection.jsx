@@ -74,7 +74,11 @@ export default function ImagesSection() {
                 alt="https://uploads-ssl.webflow.com/5bc989248743153705f137da/604101c608caef5b642fd603_seance__physioscan.jpg"
               />
             </div>
-            <Btn firstText="makean appointment" secondText="TAKE A BREAK" />
+            <Btn
+              borderColor="#000"
+              firstText="makean appointment"
+              secondText="TAKE A BREAK"
+            />
           </div>
         </div>
       </div>

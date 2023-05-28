@@ -1,4 +1,4 @@
-import React, { useEffect, useLayoutEffect, useRef } from "react";
+import React, { useLayoutEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SplitText from "../../plugins/splitText";
@@ -655,16 +655,16 @@ export default function Techniques() {
 
     gsap.set(splitTopTitle.chars, {
       opacity: 0,
-      perspective: 1000,
-      rotate: "23deg",
+      perspective: 1500,
+      rotate: "27deg",
       y: "5rem",
       clipPath: "inset(0% 0% 100% 0%)",
     });
     gsap.set(splitBottomTitle.chars, {
       opacity: 0,
-      perspective: 1000,
+      perspective: 1500,
       y: "5rem",
-      rotate: "23deg",
+      rotate: "27deg",
       clipPath: "inset(0% 0% 100% 0%)",
     });
 
