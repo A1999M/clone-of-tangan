@@ -1,7 +1,8 @@
-import React, { useLayoutEffect, useRef } from "react";
+import React, { useLayoutEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SplitText from "../../plugins/splitText";
+import { motion } from "framer-motion";
 
 export default function Techniques() {
   let techniquessRef = useRef();
@@ -33,6 +34,7 @@ export default function Techniques() {
   let triggerTitleBottom = useRef();
   let borderWritterRef = useRef();
   let imageWritterRef = useRef();
+  let [enterBorder, setEnterBorder] = useState(false);
 
   useLayoutEffect(() => {
     gsap.set(title0101.current, {
@@ -488,14 +490,15 @@ export default function Techniques() {
       });
     }, scopeRef);
 
-    let splitTitle = new SplitText(titleRef.current, { type: "chars" });
+    let splitTitle = new SplitText(titleRef.current, { type: "lines" });
     let splitDesc = new SplitText(descRef.current, { type: "lines" });
-    gsap.set(splitTitle.chars, {
+    gsap.set(splitTitle.lines, {
       opacity: 0,
-      perspective: 200,
-      scale: 0,
-      x: 30,
-      y: -80,
+      y: 200,
+      clipPath: "inset(0% 0% 100% 0%)",
+      perspective: 100,
+      rotate: "27deg",
+      transformOrigin: "0% 100%",
     });
     gsap.set(splitDesc.lines, {
       opacity: 0,
@@ -505,15 +508,15 @@ export default function Techniques() {
       y: 100,
     });
 
-    tl.to(splitTitle.chars, {
+    tl.to(splitTitle.lines, {
       opacity: 1,
       perspective: 0,
-      scale: 1,
-      x: 0,
+      rotate: 0,
       y: 0,
-      duration: 0.5,
+      clipPath: "inset(0% 0% 0% 0%)",
+      duration: 1.2,
       stagger: 0.04,
-      ease: "Back.easeOut.config(1.4)",
+      ease: "Expo.easeOut",
     });
     tl.to(
       splitDesc.lines,
@@ -624,7 +627,7 @@ export default function Techniques() {
       ease: "Expo.easeOut",
       scrollTrigger: {
         trigger: imageScroll2.current,
-        start: "center 65%",
+        start: "center 80%",
         end: "+=200 20%",
         toggleActions: "play reverse restart reverse",
         onLeave: leaveImage2,
@@ -701,6 +704,19 @@ export default function Techniques() {
 
     return () => ctx.revert();
   });
+
+  let borderVariants = {
+    default: {
+      width: 0,
+    },
+    animate: {
+      width: "100%",
+    },
+  };
+
+  let enterBorderHandler = () => {
+    setEnterBorder(true);
+  };
 
   return (
     <>
@@ -856,10 +872,21 @@ export default function Techniques() {
                 is now '' a break for oneself '', to stop, breathe, reconnect
                 with oneself, its essential.
               </p>
-              <div
+              <motion.div
+                variants={borderVariants}
+                onViewportEnter={enterBorderHandler}
+                initial="default"
+                animate={enterBorder ? "animate" : "default"}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{
+                  type: "tween",
+                  duration: 1,
+                  ease: "easeOut",
+                  delay: 0.4,
+                }}
                 ref={borderWritterRef}
                 className="border_bottom_writter"
-              ></div>
+              ></motion.div>
               <p className="writter_name">DIDIER MARTIN</p>
             </div>
           </div>

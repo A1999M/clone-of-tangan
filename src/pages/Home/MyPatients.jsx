@@ -1,6 +1,7 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import React, { useLayoutEffect, useRef } from "react";
+import React, { useLayoutEffect, useRef, useState } from "react";
+import { motion } from "framer-motion";
 import Btn from "../../components/Btn";
 
 let slider = [
@@ -42,6 +43,8 @@ export default function MyPatients() {
   let sarahTitleRef = useRef(null);
   let MyPatientsRef = useRef(null);
   let wrapperdescRef = useRef(null);
+  let [border1, setBorder1] = useState(false);
+  let [border2, setBorder2] = useState(false);
 
   useLayoutEffect(() => {
     let techniquessSection = document.querySelector(".techniquess");
@@ -55,6 +58,18 @@ export default function MyPatients() {
         opacity: 0,
         ease: "Expo.easeOut",
         duration: 0.7,
+      });
+    };
+    let leaveTechniques = () => {
+      gsap.to(document.body, {
+        backgroundColor: "#f5f5f5",
+        duration: 0.35,
+        ease: "ease",
+      });
+      gsap.to(techniquessSection, {
+        opacity: 1,
+        duration: 0.7,
+        ease: "Expo.easeOut",
       });
     };
     let showTechniques = () => {
@@ -77,14 +92,38 @@ export default function MyPatients() {
         trigger: MyPatientsRef.current,
         start: "top 80%",
         end: "bottom 5%",
-        markers: true,
         onEnter: hiddenTechniques,
         onEnterBack: hiddenTechniques,
-        onLeave: showTechniques,
+        onLeave: leaveTechniques,
         onLeaveBack: showTechniques,
       },
     });
   });
+
+  let border1Animate = () => {
+    setBorder1(true);
+  };
+
+  let border1Variants = {
+    hidden: {
+      width: 0,
+    },
+    animate: {
+      width: "43%",
+    },
+  };
+  let border2Animate = () => {
+    setBorder2(true);
+  };
+
+  let border2Variants = {
+    hidden: {
+      width: 0,
+    },
+    animate: {
+      width: "100%",
+    },
+  };
 
   return (
     <>
@@ -96,7 +135,20 @@ export default function MyPatients() {
                 My Patients <br />
                 are talking about it
               </p>
-              <div className="border_b_myPatients"></div>
+              <motion.div
+                onViewportEnter={border1Animate}
+                variants={border1Variants}
+                initial="hidden"
+                animate={border1 ? "animate" : "hidden"}
+                viewport={{ once: false, amount: "all" }}
+                transition={{
+                  type: "tween",
+                  delay: 0.5,
+                  duration: 0.5,
+                  ease: "backOut",
+                }}
+                className="border_b_myPatients"
+              ></motion.div>
             </div>
           </div>
           <div className="col-12 col-lg-4">
@@ -137,7 +189,20 @@ export default function MyPatients() {
               <p ref={DescRef1} className="current_desc_slider">
                 {slider[0].desc}
               </p>
-              <div className="border_desc_slider"></div>
+              <motion.div
+                variants={border2Variants}
+                initial="hidden"
+                animate={border2 ? "animate" : "hidden"}
+                onViewportEnter={border2Animate}
+                viewport={{ once: false, amount: "all" }}
+                transition={{
+                  type: "tween",
+                  delay: 0.5,
+                  duration: 1.5,
+                  ease: "backOut",
+                }}
+                className="border_desc_slider"
+              ></motion.div>
             </div>
           </div>
         </div>

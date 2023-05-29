@@ -662,7 +662,6 @@ $title_home_header_color: #f5f5f5;
 
 // start MyPatients section styles
 .MyPatients {
-  height: 200vh;
   margin-top: 10rem;
   .wrapper_MyPatients_title {
     margin-left: 3rem;
@@ -818,3 +817,92 @@ $title_home_header_color: #f5f5f5;
   }
 }
 // end MyPatients section styles
+
+// start better health section styles
+.better_health {
+  margin-top: 8rem;
+  .wrapper_logo5 {
+    text-align: center;
+  }
+  .wrapper_betterHealth_desc {
+    .title_betterHealth {
+      margin-top: 3rem;
+      font-size: 7vw;
+      color: #000;
+      font-family: "Playfair Display", serif;
+      white-space: normal;
+      word-spacing: 2px;
+      letter-spacing: -4px;
+      line-height: 8rem;
+    }
+    .desc_betterHealth {
+      font-size: 0.8vw;
+      color: #000;
+      font-family: "Montserrat", sans-serif;
+      white-space: normal;
+      margin-top: 2rem;
+      line-height: 20px;
+    }
+  }
+}
+.home_title_ticker_better_health {
+  overflow: hidden;
+  width: 100%;
+  left: 0rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgb(0, 0, 0);
+  border-left-width: 0px;
+  border-right-width: 0px;
+  margin-top: 6rem;
+  .inner_content {
+    animation: scrollTicker5 infinite 19.8s linear;
+    transform: translateX(153%);
+    white-space: nowrap;
+    span {
+      font-size: 2rem;
+      font-family: "Montserrat", sans-serif;
+      color: #000;
+      text-transform: capitalize;
+      display: inline-block;
+      opacity: 0.8;
+      margin: 0 5rem;
+      white-space: nowrap;
+    }
+  }
+  .inner_content2 {
+    animation: scrollTicker6 infinite 20s linear;
+    animation-delay: 9.7s;
+    white-space: nowrap;
+    transform: translateX(53%);
+    span {
+      font-size: 2rem;
+      font-family: "Montserrat", sans-serif;
+      color: #000;
+      text-transform: capitalize;
+      display: inline-block;
+      opacity: 0.8;
+      margin: 0 5rem;
+      white-space: nowrap;
+    }
+  }
+}
+
+@keyframes scrollTicker5 {
+  0% {
+    transform: translateX(153%);
+  }
+  100% {
+    transform: translateX(-53%);
+  }
+}
+@keyframes scrollTicker6 {
+  0% {
+    transform: translateX(53%);
+  }
+  100% {
+    transform: translateX(-153%);
+  }
+}
+// end better health section styles

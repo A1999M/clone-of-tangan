@@ -18,24 +18,30 @@ export default function StopBreath() {
     let tl = gsap.timeline({
       scrollTrigger: {
         trigger: titleStopBreath.current,
-        start: "top 30%",
+        start: "top 40%",
         end: "bottom 10%",
       },
     });
 
     tl.fromTo(
       splitTitle.lines,
-      { opacity: 0, y: -80, clipPath: "inset(100% 0% 0% 0%)" },
+      {
+        opacity: 0,
+        y: 200,
+        clipPath: "inset(0% 0% 100% 0%)",
+        perspective: 100,
+        rotate: "27deg",
+        transformOrigin: "0% 100%",
+      },
       {
         opacity: 1,
+        perspective: 0,
+        rotate: 0,
         y: 0,
         clipPath: "inset(0% 0% 0% 0%)",
-        duration: 0.4,
-        stagger: 0.1,
-        ease: CustomEase.create(
-          "custom",
-          "M0,0 C0,0 0.026,0.172 0.126,0.4 0.191,0.548 0.238,0.644 0.334,0.748 0.395,0.815 0.432,0.872 0.568,0.946 0.697,1.016 1,1 1,1 "
-        ),
+        duration: 1.2,
+        stagger: 0.04,
+        ease: "Expo.easeOut",
       }
     );
     tl.fromTo(

@@ -5,6 +5,7 @@ import StopBreath from "./StopBreath";
 import ImagesSection from "./ImagesSection";
 import Techniques from "./Techniques";
 import MyPatients from "./MyPatients";
+import BetterHealth from "./BetterHealth";
 
 export default function Home() {
   return (
@@ -29,6 +30,8 @@ export default function Home() {
       <Techniques />
       {/* MyPatients section home page */}
       <MyPatients />
+      {/* better health section home page */}
+      <BetterHealth />
     </>
   );
 }
