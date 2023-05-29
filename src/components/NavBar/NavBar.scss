@@ -1,0 +1,48 @@
+.container_Navbar {
+  .wrapper_nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+    padding: 0 2rem;
+    li {
+      .items_nav {
+        color: black;
+        text-decoration: none;
+        font-family: "Montserrat", sans-serif;
+        margin: 0.5rem;
+        padding: 0.6rem 1rem;
+        font-size: 15px;
+        font-weight: 600;
+        display: inline-block;
+        transition: all 0.35s;
+        position: relative;
+        &::before {
+          position: absolute;
+          z-index: -1;
+          top: 0px;
+          left: 0px;
+          width: 0%;
+          content: "";
+          background-color: black;
+          height: 100%;
+          transition: all 0.35s;
+        }
+      }
+      &:hover {
+        .items_nav {
+          color: aliceblue;
+          &::before {
+            width: 100%;
+          }
+        }
+      }
+    }
+    .mai_page {
+      margin-right: auto;
+      .items_nav {
+        font-weight: bold;
+      }
+    }
+  }
+}
