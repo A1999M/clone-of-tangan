@@ -3,6 +3,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import React, { useLayoutEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import Btn from "../../components/Btn";
+import "./Tangan.scss";
 
 let slider = [
   {

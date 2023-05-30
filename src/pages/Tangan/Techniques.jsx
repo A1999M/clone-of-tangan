@@ -1,8 +1,9 @@
 import React, { useLayoutEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import SplitText from "../../plugins/splitText";
+import SplitText from "../../plugins/SplitText";
 import { motion } from "framer-motion";
+import "./Tangan.scss";
 
 export default function Techniques() {
   let techniquessRef = useRef();
