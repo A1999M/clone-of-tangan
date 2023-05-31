@@ -57,7 +57,7 @@ export default function Header() {
           trigger: imageHeaderRef.current,
           start: "top 80%",
           end: "center 50%",
-          scrub: true,
+          scrub: 2,
         },
       });
 
@@ -66,12 +66,18 @@ export default function Header() {
         ease: "Expo.easeOut",
         scrollTrigger: {
           trigger: scopeRef.current,
+          anticipatePin: 1,
           endTrigger: descHeaderRef.current,
-          start: "top 13%",
-          end: "center 50%",
-          scrub: 2,
+          start: "top 0%",
+          end: "center 60%",
           pin: true,
           pinSpacing: false,
+          pinSpacer: false,
+          // markers: {
+          //   startColor: "#ffd700",
+          //   endColor: "#ff0000",
+          //   fontSize: "20px",
+          // },
         },
       });
     }, scopeRef);
@@ -99,13 +105,18 @@ export default function Header() {
         rotate: 0,
         y: 0,
         clipPath: "inset(0% 0% 0% 0%)",
-        duration: 1.5,
+        duration: 1,
         ease: "Expo.easeOut",
         stagger: 0.01,
         scrollTrigger: {
           trigger: titleStickyTexts.current,
-          start: "center 95%",
+          start: "center 100%",
           end: "bottom 5%",
+          // markers: {
+          //   startColor: "#ffd700",
+          //   endColor: "#ff0000",
+          //   fontSize: "20px",
+          // },
         },
       }
     );
@@ -126,7 +137,7 @@ export default function Header() {
               plantar
             </p>
           </div>
-          <div ref={scopeRef} className="col-12 px-0">
+          <div ref={scopeRef} className="col-12 px-0 scope">
             <div ref={wrapperHeaderImageRef} className="wrapper_header_image">
               <div ref={stickySection}>
                 <div className="zxa" ref={imageHeaderRef}></div>

@@ -1,5 +1,6 @@
 // start header style reflexology
 .header_reflexology {
+  margin-bottom: 4rem;
   .price_reflexology {
     text-align: center;
     margin-top: 7rem;
@@ -26,33 +27,37 @@
     font-weight: 500;
     font-family: "Playfair Display", serif;
   }
-  .wrapper_header_image {
-    width: 100%;
-    height: 100vh;
-    position: relative;
+  .scope {
     margin-top: -5%;
-    div {
+    mix-blend-mode: multiply;
+    .wrapper_header_image {
       width: 100%;
-      height: 105%;
-      position: absolute;
-      .zxa {
-        clip-path: inset(0% 25%);
-        filter: brightness(0.75);
-        background-image: url(https://uploads-ssl.webflow.com/5bc989248743153705f137da/6040f0064ed94c45ceda486b_bg_hero_reflexologie.jpg);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
+      height: 100vh;
+      position: relative;
+      div {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        .zxa {
+          clip-path: inset(0% 25%);
+          filter: brightness(0.75);
+          background-image: url(https://uploads-ssl.webflow.com/5bc989248743153705f137da/6040f0064ed94c45ceda486b_bg_hero_reflexologie.jpg);
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
       }
     }
   }
+
   .sticky_texts {
     position: relative;
     width: 100%;
-    height: 200vh;
+    height: 78vh;
     .title_header_image {
       position: absolute;
-      line-height: 6rem;
-      top: -10%;
+      line-height: 6.5rem;
+      top: -15%;
       font-size: 5.5vw;
       left: 15%;
       color: #f5f5f5;
@@ -61,7 +66,7 @@
     .desc_header_image {
       position: absolute;
       width: 30vw;
-      bottom: 78%;
+      bottom: 32%;
       right: 12%;
       font-size: 0.9vw;
       font-family: "Montserrat", sans-serif;
@@ -70,3 +75,203 @@
   }
 }
 // end header styles reflexology
+
+// start goals styles reflexology
+.goals {
+  position: relative;
+  .wrapper_goals_title {
+    margin-top: 56%;
+    .goals_title {
+      font-size: 6vw;
+      font-family: "Playfair Display", serif;
+      color: #000;
+      text-align: center;
+      font-weight: 500;
+    }
+  }
+  .border_right_goals {
+    position: absolute;
+    top: 0rem;
+    right: 0rem;
+    width: 1px;
+    height: 0%;
+    z-index: 100;
+    background-color: #000;
+  }
+  .wrapper_btn_goals {
+    position: relative;
+    top: 4%;
+    left: -15.55rem;
+  }
+  // border left goals section
+  .border_left_goals {
+    position: absolute;
+    top: 0rem;
+    right: 0rem;
+    height: 0%;
+    width: 1px;
+    background-color: #000;
+    z-index: 100;
+  }
+  // relax
+  .wrapper_relax {
+    padding-left: 1rem;
+    width: 100%;
+    position: relative;
+    padding-bottom: 3rem;
+    .relax_title {
+      font-size: 3vw;
+      color: #000;
+      font-weight: 100;
+      font-family: "Playfair Display", serif;
+    }
+    .relax_desc {
+      font-size: 14px;
+      font-family: "Montserrat", sans-serif;
+      color: #000;
+      margin-top: 2rem;
+      line-height: 1.3rem;
+    }
+    .relax_border {
+      position: absolute;
+      bottom: 0rem;
+      left: -27px;
+      width: 0%;
+      height: 1px;
+      background-color: #000;
+    }
+  }
+  // clear out
+  .wrapper_clear_out {
+    padding-left: 1rem;
+    margin-top: 3rem;
+    position: relative;
+    padding-bottom: 3rem;
+    .clear_title {
+      font-size: 3vw;
+      color: #000;
+      font-weight: 100;
+      font-family: "Playfair Display", serif;
+    }
+    .clear_desc {
+      font-size: 14px;
+      font-family: "Montserrat", sans-serif;
+      color: #000;
+      margin-top: 2rem;
+      line-height: 1.3rem;
+    }
+    .clear_border {
+      position: absolute;
+      bottom: 0rem;
+      left: -27px;
+      width: 0%;
+      height: 1px;
+      background-color: #000;
+    }
+  }
+  // Enable
+  .wrapper_enable {
+    padding-left: 1rem;
+    margin-top: 3rem;
+    position: relative;
+    padding-bottom: 3rem;
+    .enable_title {
+      font-size: 3vw;
+      color: #000;
+      font-weight: 100;
+      font-family: "Playfair Display", serif;
+    }
+    .enable_deac {
+      font-size: 14px;
+      font-family: "Montserrat", sans-serif;
+      color: #000;
+      margin-top: 2rem;
+      line-height: 1.3rem;
+    }
+    .enable_border {
+      position: absolute;
+      bottom: 0rem;
+      left: -27px;
+      width: 0%;
+      height: 1px;
+      background-color: #000;
+    }
+  }
+  // regulate
+  .wrapper_regulate {
+    padding-left: 1rem;
+    margin-top: 3rem;
+    padding-bottom: 3rem;
+    position: relative;
+    .title_regulate {
+      font-size: 3vw;
+      color: #000;
+      font-weight: 100;
+      font-family: "Playfair Display", serif;
+    }
+    .desc_regulate {
+      font-size: 14px;
+      font-family: "Montserrat", sans-serif;
+      color: #000;
+      margin-top: 2rem;
+      line-height: 1.3rem;
+    }
+    .regulate_border {
+      position: absolute;
+      bottom: 0rem;
+      left: -27px;
+      width: 0%;
+      height: 1px;
+      background-color: #000;
+    }
+  }
+  // prevent
+  .wrapper_prevent {
+    padding-left: 1rem;
+    margin-top: 3rem;
+    position: relative;
+    padding-bottom: 3rem;
+    .title_prevent {
+      font-size: 3vw;
+      color: #000;
+      font-weight: 100;
+      font-family: "Playfair Display", serif;
+    }
+    .desc_pevent {
+      font-size: 14px;
+      font-family: "Montserrat", sans-serif;
+      color: #000;
+      margin-top: 2rem;
+      line-height: 1.3rem;
+    }
+    .prevent_border {
+      position: absolute;
+      bottom: 0rem;
+      left: -27px;
+      width: 0%;
+      height: 1px;
+      background-color: #000;
+    }
+    .wrapper_image_prevent {
+      width: 690px;
+      height: 650px;
+      overflow: hidden;
+      position: absolute;
+      left: -26px;
+      margin-top: 3rem;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  .border_bottom_goals {
+    width: 100vw;
+    height: 1px;
+    position: absolute;
+    bottom: -34.8%;
+    left: 0%;
+    background-color: #000;
+  }
+}
+// end goals styles reflexology

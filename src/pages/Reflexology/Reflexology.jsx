@@ -1,6 +1,7 @@
 import React from "react";
 import NavBar from "../../components/NavBar";
 import Header from "./Header";
+import Goals from "./Goals";
 import "./Reflexology.scss";
 
 export default function Reflexology() {
@@ -10,6 +11,8 @@ export default function Reflexology() {
       <NavBar />
       {/* header section reflexology page  */}
       <Header />
+      {/* goals section reflexology page */}
+      <Goals />
     </>
   );
 }
