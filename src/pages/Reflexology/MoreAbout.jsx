@@ -187,7 +187,6 @@ export default function MoreAbout() {
         trigger: document.querySelector(".image_more_section"),
         start: "center 90%",
         end: "bottom 0%",
-        markers: true,
       },
     });
 
