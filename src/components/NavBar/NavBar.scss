@@ -1,4 +1,7 @@
 .container_Navbar {
+  position: fixed;
+  width: 100%;
+  z-index: 200;
   .wrapper_nav {
     display: flex;
     align-items: center;
@@ -25,7 +28,7 @@
           width: 0%;
           content: "";
           background-color: black;
-          height: 2px;
+          height: 1px;
           transition: all 0.35s;
         }
       }

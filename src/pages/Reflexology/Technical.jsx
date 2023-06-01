@@ -47,7 +47,6 @@ export default function Technical() {
           endTrigger: document.querySelector(".Ancestral_desc2"),
           start: "top 0%",
           end: "center 65%",
-          markers: true,
           pin: true,
           pinSpacer: false,
           pinSpacing: false,
@@ -81,6 +80,7 @@ export default function Technical() {
           </div>
         </div>
         <div className="row justify-content-end">
+          <div className="border_bottom_technical"></div>
           <div className="col-12 col-lg-5">
             <div className="wrapper_Reflexzones">
               <p className="Reflexzones_title">Reflex zones</p>

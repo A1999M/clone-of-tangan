@@ -6,6 +6,7 @@ import MoreAbout from "./MoreAbout";
 import Technical from "./Technical";
 import { gsap } from "gsap";
 import "./Reflexology.scss";
+import Footer from "./Footer";
 
 export default function Reflexology() {
   useLayoutEffect(() => {
@@ -27,6 +28,8 @@ export default function Reflexology() {
       <MoreAbout />
       {/* Technical section reflexology page */}
       <Technical />
+      {/* footer section reflexology page */}
+      <Footer />
     </>
   );
 }
