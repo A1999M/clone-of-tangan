@@ -3,7 +3,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import CustomEase from "../../plugins/CustomEase";
 import Btn from "../../components/Btn";
-import "./Home.scss";
+import "./Tangan.scss";
 
 export default function ImagesSection() {
   let leftImageRef = useRef(null);

@@ -2,7 +2,7 @@ import { useLayoutEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SplitText from "../../plugins/splitText";
-import "./Home.scss";
+import "./Tangan.scss";
 
 export default function BetterHealth() {
   let titleBetterHealth = useRef(null);

@@ -1,4 +1,3 @@
-import "./Home.scss";
 import NavBar from "../../components/NavBar";
 import Header from "./Header";
 import StopBreath from "./StopBreath";
@@ -6,8 +5,9 @@ import ImagesSection from "./ImagesSection";
 import Techniques from "./Techniques";
 import MyPatients from "./MyPatients";
 import BetterHealth from "./BetterHealth";
+import "./Tangan.scss";
 
-export default function Home() {
+export default function Tangan() {
   return (
     <>
       {/* NavBar home page */}

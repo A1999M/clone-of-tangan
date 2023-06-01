@@ -1,8 +1,8 @@
-import { useEffect, useLayoutEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import CustomEase from "../../plugins/CustomEase";
-import "./Home.scss";
+import "./Tangan.scss";
 
 export default function Header() {
   let homeHeaderImageRef = useRef();

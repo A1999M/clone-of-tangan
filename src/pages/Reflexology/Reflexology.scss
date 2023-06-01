@@ -1,0 +1,622 @@
+// start header style reflexology
+.header_reflexology {
+  margin-bottom: 4rem;
+  .price_reflexology {
+    text-align: center;
+    margin-top: 7rem;
+    span {
+      font-size: 2vw;
+      display: inline-block;
+      color: #000;
+      opacity: 0.7;
+      font-weight: 100;
+      //   font-family: "Playfair Display", serif;
+      font-family: "Oswald", sans-serif;
+      font-style: italic;
+    }
+    .line_price {
+      width: 20px;
+      height: 1px;
+      background-color: #000;
+    }
+  }
+  .title_header_reflexology {
+    text-align: center;
+    font-size: 10vw;
+    line-height: 10.5rem;
+    font-weight: 500;
+    font-family: "Playfair Display", serif;
+  }
+  .scope {
+    margin-top: -5%;
+    mix-blend-mode: multiply;
+    .wrapper_header_image {
+      width: 100%;
+      height: 100vh;
+      position: relative;
+      div {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        .zxa {
+          clip-path: inset(0% 25%);
+          filter: brightness(0.75);
+          background-image: url(https://uploads-ssl.webflow.com/5bc989248743153705f137da/6040f0064ed94c45ceda486b_bg_hero_reflexologie.jpg);
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+      }
+    }
+  }
+
+  .sticky_texts {
+    position: relative;
+    width: 100%;
+    height: 78vh;
+    .title_header_image {
+      position: absolute;
+      line-height: 6.5rem;
+      top: -15%;
+      font-size: 5.5vw;
+      left: 15%;
+      color: #f5f5f5;
+      font-family: "Playfair Display", serif;
+    }
+    .desc_header_image {
+      position: absolute;
+      width: 30vw;
+      bottom: 32%;
+      right: 12%;
+      font-size: 0.9vw;
+      font-family: "Montserrat", sans-serif;
+      color: #f5f5f5;
+    }
+  }
+}
+// end header styles reflexology
+
+// start goals styles reflexology
+.goals {
+  position: relative;
+  .wrapper_goals_title {
+    margin-top: 56%;
+    .goals_title {
+      font-size: 6vw;
+      font-family: "Playfair Display", serif;
+      color: #000;
+      text-align: center;
+      font-weight: 500;
+    }
+  }
+  .border_right_goals {
+    position: absolute;
+    top: 0rem;
+    right: 0rem;
+    width: 1px;
+    height: 0%;
+    z-index: 100;
+    background-color: #000;
+  }
+  .wrapper_btn_goals {
+    position: relative;
+    top: 20%;
+    left: -15.7rem;
+  }
+  // border left goals section
+  .border_left_goals {
+    position: absolute;
+    top: 0rem;
+    right: 0rem;
+    height: 0%;
+    width: 1px;
+    background-color: #000;
+    z-index: 100;
+  }
+  // relax
+  .wrapper_relax {
+    padding-left: 1rem;
+    width: 100%;
+    position: relative;
+    padding-bottom: 3rem;
+    .relax_title {
+      font-size: 3vw;
+      color: #000;
+      font-weight: 100;
+      font-family: "Playfair Display", serif;
+    }
+    .relax_desc {
+      font-size: 14px;
+      font-family: "Montserrat", sans-serif;
+      color: #000;
+      margin-top: 2rem;
+      line-height: 1.3rem;
+    }
+    .relax_border {
+      position: absolute;
+      bottom: 0rem;
+      left: -27px;
+      width: 0%;
+      height: 1px;
+      background-color: #000;
+    }
+  }
+  // clear out
+  .wrapper_clear_out {
+    padding-left: 1rem;
+    margin-top: 3rem;
+    position: relative;
+    padding-bottom: 3rem;
+    .clear_title {
+      font-size: 3vw;
+      color: #000;
+      font-weight: 100;
+      font-family: "Playfair Display", serif;
+    }
+    .clear_desc {
+      font-size: 14px;
+      font-family: "Montserrat", sans-serif;
+      color: #000;
+      margin-top: 2rem;
+      line-height: 1.3rem;
+    }
+    .clear_border {
+      position: absolute;
+      bottom: 0rem;
+      left: -27px;
+      width: 0%;
+      height: 1px;
+      background-color: #000;
+    }
+  }
+  // Enable
+  .wrapper_enable {
+    padding-left: 1rem;
+    margin-top: 3rem;
+    position: relative;
+    padding-bottom: 3rem;
+    .enable_title {
+      font-size: 3vw;
+      color: #000;
+      font-weight: 100;
+      font-family: "Playfair Display", serif;
+    }
+    .enable_deac {
+      font-size: 14px;
+      font-family: "Montserrat", sans-serif;
+      color: #000;
+      margin-top: 2rem;
+      line-height: 1.3rem;
+    }
+    .enable_border {
+      position: absolute;
+      bottom: 0rem;
+      left: -27px;
+      width: 0%;
+      height: 1px;
+      background-color: #000;
+    }
+  }
+  // regulate
+  .wrapper_regulate {
+    padding-left: 1rem;
+    margin-top: 3rem;
+    padding-bottom: 3rem;
+    position: relative;
+    .title_regulate {
+      font-size: 3vw;
+      color: #000;
+      font-weight: 100;
+      font-family: "Playfair Display", serif;
+    }
+    .desc_regulate {
+      font-size: 14px;
+      font-family: "Montserrat", sans-serif;
+      color: #000;
+      margin-top: 2rem;
+      line-height: 1.3rem;
+    }
+    .regulate_border {
+      position: absolute;
+      bottom: 0rem;
+      left: -27px;
+      width: 0%;
+      height: 1px;
+      background-color: #000;
+    }
+  }
+  // prevent
+  .wrapper_prevent {
+    padding-left: 1rem;
+    margin-top: 3rem;
+    position: relative;
+    padding-bottom: 3rem;
+    .title_prevent {
+      font-size: 3vw;
+      color: #000;
+      font-weight: 100;
+      font-family: "Playfair Display", serif;
+    }
+    .desc_pevent {
+      font-size: 14px;
+      font-family: "Montserrat", sans-serif;
+      color: #000;
+      margin-top: 2rem;
+      line-height: 1.3rem;
+    }
+    .prevent_border {
+      position: absolute;
+      bottom: 0rem;
+      left: -27px;
+      width: 0%;
+      height: 1px;
+      background-color: #000;
+    }
+    .wrapper_image_prevent {
+      width: 690px;
+      height: 650px;
+      overflow: hidden;
+      position: absolute;
+      left: -26px;
+      margin-top: 3rem;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  .border_bottom_goals {
+    width: 100vw;
+    height: 1px;
+    position: absolute;
+    bottom: -34.8%;
+    left: 0%;
+    background-color: #000;
+  }
+}
+// end goals styles reflexology
+
+// start more about section styles
+.moreAbout {
+  margin-top: 60rem;
+  .wrapper_more_descs {
+    padding-left: 5rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    .titles_more1 {
+      font-size: 6vw;
+      color: #f5f5f5;
+      font-family: "Raleway", sans-serif;
+      font-style: italic;
+      text-transform: uppercase;
+      line-height: 6.5rem;
+      font-weight: 100;
+      display: inline-block;
+      letter-spacing: -1px;
+      position: relative;
+      .line_title1 {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 0%;
+        height: 1px;
+        content: "";
+        background-color: #f5f5f5;
+      }
+    }
+    .titles_more2 {
+      @extend .titles_more1;
+      .line_title2 {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 0%;
+        height: 1px;
+        content: "";
+        background-color: #f5f5f5;
+      }
+    }
+    .titles_more3 {
+      @extend .titles_more1;
+      .line_title3 {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 0%;
+        height: 1px;
+        content: "";
+        background-color: #f5f5f5;
+      }
+    }
+    .titles_more4 {
+      @extend .titles_more1;
+      .line_title4 {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 0%;
+        height: 1px;
+        content: "";
+        background-color: #f5f5f5;
+      }
+    }
+  }
+  .wrapper_image_more {
+    overflow: hidden;
+    border: 1px solid #f5f5f5;
+    width: 18vw;
+    height: 14vw;
+    margin-right: 3rem;
+    .image_more_section {
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      transform: scale(2);
+    }
+  }
+  .wrapper_left_image_more {
+    overflow: hidden;
+    height: 19vw;
+    width: 12vw;
+    margin-left: 5rem;
+    margin-top: 4rem;
+    border: 1px solid #f5f5f5;
+    .image_left_more_section {
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      transform: scale(2);
+    }
+  }
+  .wrapper_more_descs2 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    .titles_bottom_more1 {
+      font-size: 6vw;
+      color: #f5f5f5;
+      font-family: "Raleway", sans-serif;
+      font-style: italic;
+      text-transform: uppercase;
+      line-height: 6.5rem;
+      font-weight: 100;
+      display: inline-block;
+      letter-spacing: -1px;
+      position: relative;
+      .line_bottom_title1 {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 0%;
+        height: 1px;
+        content: "";
+        background-color: #f5f5f5;
+      }
+    }
+    .titles_bottom_more2 {
+      @extend .titles_bottom_more1;
+      .line_bottom_title2 {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 0%;
+        height: 1px;
+        content: "";
+        background-color: #f5f5f5;
+      }
+    }
+    .titles_bottom_more3 {
+      @extend .titles_bottom_more2;
+      .line_bottom_title3 {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 0%;
+        height: 1px;
+        content: "";
+        background-color: #f5f5f5;
+      }
+    }
+    .titles_bottom_more4 {
+      @extend .titles_bottom_more2;
+      .line_bottom_title4 {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 0%;
+        height: 1px;
+        content: "";
+        background-color: #f5f5f5;
+      }
+    }
+  }
+}
+// end more about section styles
+
+// start Technical section styles
+.Technical {
+  position: relative;
+  margin-top: 12rem;
+  .border_bottom_technical {
+    position: absolute;
+    bottom: -10rem;
+    width: 100vw;
+    height: 1px;
+    background-color: #000;
+  }
+  .border_top_technical {
+    position: absolute;
+    top: 0rem;
+    left: 0rem;
+    width: 0%;
+    height: 1px;
+    background-color: #000;
+  }
+  .wrapper_Technical_title {
+    margin-top: 50%;
+    .Technical_title {
+      font-size: 6vw;
+      font-family: "Playfair Display", serif;
+      color: #000;
+      text-align: center;
+      font-weight: 500;
+    }
+  }
+  .border_right_Technical {
+    position: absolute;
+    top: 0rem;
+    right: 0rem;
+    width: 1px;
+    height: 0%;
+    z-index: 100;
+    background-color: #000;
+  }
+  .border_left_Technical {
+    position: absolute;
+    top: 0rem;
+    right: 0rem;
+    height: 0%;
+    width: 1px;
+    background-color: #000;
+    z-index: 100;
+  }
+  .wrapper_btn_Technical {
+    position: relative;
+    top: 17%;
+    left: -15.7rem;
+  }
+  .border_bottom_Technical {
+    width: 100vw;
+    height: 1px;
+    position: absolute;
+    bottom: -34.8%;
+    left: 0%;
+    background-color: #000;
+  }
+  .wrapper_Reflexzones {
+    padding-left: 1rem;
+    width: 100%;
+    position: relative;
+    padding-bottom: 3rem;
+    .Reflexzones_title {
+      font-size: 3vw;
+      color: #000;
+      font-weight: 100;
+      font-family: "Playfair Display", serif;
+    }
+    .Reflexzones_desc1 {
+      font-size: 14px;
+      font-family: "Montserrat", sans-serif;
+      color: #000;
+      margin-top: 1.5rem;
+      line-height: 1.3rem;
+    }
+    .Reflexzones_desc2 {
+      font-size: 13px;
+      font-family: "Montserrat", sans-serif;
+      color: #000;
+      margin-top: 1.5rem;
+      line-height: 1.3rem;
+    }
+  }
+  .wrapper_image1_technical {
+    margin: 4rem 0rem;
+    width: 640px;
+    height: 372px;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .wrapper_image2_technical {
+    @extend .wrapper_image1_technical;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .wrapper_image3_technical {
+    @extend .wrapper_image1_technical;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .wrapper_image4_technical {
+    @extend .wrapper_image1_technical;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .wrapper_Ancestral {
+    padding-left: 1rem;
+    width: 100%;
+    position: relative;
+    padding-bottom: 3rem;
+    .Ancestral_title {
+      font-size: 3vw;
+      color: #000;
+      font-weight: 100;
+      font-family: "Playfair Display", serif;
+    }
+    .Ancestral_desc1 {
+      font-size: 14px;
+      font-family: "Montserrat", sans-serif;
+      color: #000;
+      margin-top: 1.5rem;
+      line-height: 1.3rem;
+    }
+    .Ancestral_desc2 {
+      font-size: 13px;
+      font-family: "Montserrat", sans-serif;
+      color: #000;
+      margin-top: 1.5rem;
+      line-height: 1.3rem;
+    }
+  }
+}
+// end Technical section styles
+
+// start footer section css styles
+.footer_reflexology {
+  margin-top: 30rem;
+  height: 70vh;
+  position: relative;
+  .wrapper_title_footer {
+    text-align: center;
+    width: 100%;
+    .next_page {
+      text-align: center;
+      font-size: 20px;
+      font-style: italic;
+      font-weight: 200;
+      font-family: "Playfair Display", serif;
+    }
+    .title_footer {
+      font-size: 8vw;
+      font-weight: 500;
+      font-family: "Playfair Display", serif;
+      cursor: pointer;
+      display: inline-block;
+    }
+    .hover_title_footer {
+      position: absolute;
+      top: 0;
+      left: 10rem;
+      width: 200px;
+      height: 324px;
+      will-change: transform;
+      opacity: 0;
+      pointer-events: none;
+      transform: translate(-50% -50%);
+      mix-blend-mode: hard-light;
+      clip-path: inset(100% 0%);
+    }
+  }
+}
+// end footer section styles
