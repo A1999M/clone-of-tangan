@@ -1,0 +1,84 @@
+// start header styles
+.header_physioscan {
+  margin-top: 4rem;
+  .price_physioscan {
+    text-align: center;
+    margin-top: 7rem;
+    span {
+      font-size: 2vw;
+      display: inline-block;
+      color: #000;
+      opacity: 0.7;
+      font-weight: 100;
+      //   font-family: "Playfair Display", serif;
+      font-family: "Oswald", sans-serif;
+      font-style: italic;
+    }
+    .line_price {
+      width: 20px;
+      height: 1px;
+      background-color: #000;
+    }
+  }
+  .title_header_physioscan {
+    text-align: center;
+    .title_part1 {
+      font-size: 10vw;
+      font-weight: 500;
+      font-family: "Playfair Display", serif;
+      display: inline-block;
+    }
+    .title_part2 {
+      display: inline-block;
+      font-size: 10vw;
+      font-weight: 500;
+      font-family: "Playfair Display", serif;
+    }
+  }
+  .scope {
+    margin-top: -8%;
+    mix-blend-mode: multiply;
+    .wrapper_header_image {
+      width: 100%;
+      height: 100vh;
+      position: relative;
+      div {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        .zxa {
+          clip-path: inset(0% 30%);
+          filter: brightness(0.85);
+          background-image: url(https://uploads-ssl.webflow.com/5bc989248743153705f137da/6012d616a6c6eb0423f3a9f0_bg_hero-physioscan.jpg);
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+      }
+    }
+  }
+  .sticky_texts_physioscan {
+    position: relative;
+    width: 100%;
+    height: 78vh;
+    .title_header_image {
+      position: absolute;
+      line-height: 6.5rem;
+      top: -15%;
+      font-size: 5.5vw;
+      left: 15%;
+      color: #f5f5f5;
+      font-family: "Playfair Display", serif;
+    }
+    .desc_header_image {
+      position: absolute;
+      width: 30vw;
+      bottom: 32%;
+      right: 12%;
+      font-size: 0.9vw;
+      font-family: "Montserrat", sans-serif;
+      color: #f5f5f5;
+    }
+  }
+}
+// end header styles
