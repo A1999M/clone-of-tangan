@@ -53,7 +53,6 @@ export default function Header() {
           start: "top 62%",
           end: "center 20%",
           scrub: 1,
-          markers: true,
         },
       });
       gsap.to(stickySection.current, {
