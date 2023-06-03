@@ -249,3 +249,29 @@
   }
 }
 // end GoalsPhysio styles
+
+// start take care styles
+.takeCare {
+  .wrapper_big_image {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    .big_image {
+      position: absolute;
+      top: 20rem;
+      left: -2rem;
+      object-fit: cover;
+      opacity: 0;
+    }
+    .big_title {
+      position: absolute;
+      top: 45rem;
+      font-size: 15vw;
+      font-family: "Playfair Display", serif;
+      color: #f5f5f5;
+      text-transform: uppercase;
+      mix-blend-mode: difference;
+    }
+  }
+}
+// end take care styles
