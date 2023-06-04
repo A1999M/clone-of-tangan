@@ -4,6 +4,7 @@ import Header from "./Header";
 import GoalsPhysio from "./GoalsPhysio";
 import TakeCare from "./TakeCare";
 import TechnicalPhysio from "./TechnicalPhysio";
+import FooterPhysio from "./FooterPhysio";
 import "./Physioscan.scss";
 
 export default function Physioscan() {
@@ -19,6 +20,8 @@ export default function Physioscan() {
       <TakeCare />
       {/* Technical */}
       <TechnicalPhysio />
+      {/* FooterPhysio */}
+      <FooterPhysio />
     </>
   );
 }

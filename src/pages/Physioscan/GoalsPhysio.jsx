@@ -2,6 +2,7 @@ import Btn from "../../components/Btn";
 import { useLayoutEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/all";
+import "./Physioscan.scss";
 
 export default function GoalsPhysio() {
   useLayoutEffect(() => {
@@ -218,6 +219,16 @@ export default function GoalsPhysio() {
         document.querySelector(".Reinform_border"),
         {
           width: "110%",
+          duration: 2,
+          ease: "Expo.easeOut",
+        },
+        "<0.2"
+      );
+      reinformTl.to(
+        document.querySelector(".image_Reinform"),
+        {
+          scale: 1,
+          clipPath: "inset(0% 0% 0% 0%)",
           duration: 2,
           ease: "Expo.easeOut",
         },
