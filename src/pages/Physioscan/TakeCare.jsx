@@ -44,11 +44,11 @@ export default function TakeCare() {
           onLeave: showGoals,
           onLeaveBack: showGoals,
           toggleActions: "restart reverse restart reverse",
-          markers: {
-            startColor: "#ffd700",
-            endColor: "#ff0000",
-            fontSize: "20px",
-          },
+          // markers: {
+          //   startColor: "#ffd700",
+          //   endColor: "#ff0000",
+          //   fontSize: "20px",
+          // },
         },
       });
       gsap.fromTo(

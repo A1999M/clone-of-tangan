@@ -3,6 +3,7 @@ import NavBar from "../../components/NavBar";
 import Header from "./Header";
 import GoalsPhysio from "./GoalsPhysio";
 import TakeCare from "./TakeCare";
+import TechnicalPhysio from "./TechnicalPhysio";
 import "./Physioscan.scss";
 
 export default function Physioscan() {
@@ -16,6 +17,8 @@ export default function Physioscan() {
       <GoalsPhysio />
       {/* TakeCare */}
       <TakeCare />
+      {/* Technical */}
+      <TechnicalPhysio />
     </>
   );
 }
