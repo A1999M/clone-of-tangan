@@ -1,82 +1,80 @@
-import React from "react";
-import { useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollTrigger } from "gsap/all";
 import SplitText from "../../plugins/SplitText";
-import "./Reflexology.scss";
+import "./Physioscan.scss";
 
 export default function Header() {
-  let titleHeaderRef = useRef(null);
-  let imageHeaderRef = useRef(null);
-  let wrapperHeaderImageRef = useRef(null);
-  let descHeaderRef = useRef(null);
   let scopeRef = useRef(null);
+  let titleHeaderRef = useRef(null);
+  let wrapperHeaderImageRef = useRef(null);
   let stickySection = useRef(null);
+  let imageHeaderRef = useRef(null);
   let titleStickyTexts = useRef(null);
-  let priceReflexology = useRef(null);
+  let descHeaderRef = useRef(null);
+  let title1Ref = useRef(null);
+  let title2Ref = useRef(null);
+  let pricePhysioscanRef = useRef(null);
 
   useEffect(() => {
     let ctx = gsap.context(() => {
       gsap.registerPlugin(ScrollTrigger, SplitText);
 
-      let splitTitleHeader = new SplitText(titleHeaderRef.current, {
-        type: "lines",
-      });
-
-      gsap.set(priceReflexology.current, {
+      gsap.set(pricePhysioscanRef.current, {
         y: -80,
+        opacity: 0,
         clipPath: "inset(100% 0% 0% 0%)",
       });
-      gsap.set(splitTitleHeader.lines[0], {
-        y: -120,
+      gsap.set(title1Ref.current, {
+        y: -150,
         clipPath: "inset(100% 0% 0% 0%)",
       });
-      gsap.set(splitTitleHeader.lines[1], {
-        y: 120,
+      gsap.set(title2Ref.current, {
+        y: 150,
         clipPath: "inset(0% 0% 100% 0%)",
       });
       gsap.set(wrapperHeaderImageRef.current, { y: "11rem", opacity: 0 });
 
-      gsap.to(priceReflexology.current, {
+      gsap.to(pricePhysioscanRef.current, {
+        y: 0,
         opacity: 1,
-        duration: 1.5,
-        y: 0,
         clipPath: "inset(0% 0% 0% 0%)",
-        ease: "Expo.easeOut",
         delay: 0.5,
       });
-      gsap.to(splitTitleHeader.lines[0], {
+      gsap.to(title1Ref.current, {
+        opacity: 1,
         y: 0,
         clipPath: "inset(0% 0% 0% 0%)",
         duration: 1.5,
         ease: "Expo.easeOut",
         delay: 0.5,
       });
-      gsap.to(splitTitleHeader.lines[1], {
+      gsap.to(title2Ref.current, {
+        opacity: 1,
         y: 0,
         duration: 1.5,
         clipPath: "inset(0% 0% 0% 0%)",
-        ease: "Expo.easeOut",
         delay: 0.5,
+        ease: "Expo.easeOut",
       });
       gsap.to(wrapperHeaderImageRef.current, {
         y: 0,
-        duration: 1.5,
-        ease: "Expo.easeOut",
         opacity: 1,
+        duration: 1.5,
         delay: 0.5,
+        ease: "Expo.easeOut",
       });
 
       gsap.to(imageHeaderRef.current, {
         clipPath: "inset(0% 0%)",
-        duration: 1.5,
+        duration: 2,
         ease: "none",
         scrollTrigger: {
           trigger: imageHeaderRef.current,
-          start: "-=100 50%",
-          end: "center 50%",
-          scrub: 1.2,
+          start: "-=20 62%",
+          end: "center 20%",
           id: "imageHeader",
+          scrub: 1.3,
         },
       });
 
@@ -87,9 +85,9 @@ export default function Header() {
           trigger: scopeRef.current,
           anticipatePin: 1,
           endTrigger: descHeaderRef.current,
-          id: "descHeaderImage",
           start: "top 0%",
           end: "center 60%",
+          id: "stickySection",
           pin: true,
           pinSpacing: false,
           pinSpacer: false,
@@ -104,7 +102,6 @@ export default function Header() {
       let splitStickyTitle = new SplitText(titleStickyTexts.current, {
         type: "lines",
       });
-
       gsap.fromTo(
         splitStickyTitle.lines,
         {
@@ -140,26 +137,30 @@ export default function Header() {
     }, scopeRef);
 
     return () => {
-      ScrollTrigger.getById("descHeaderImage").kill();
-      ScrollTrigger.getById("titleSticky").kill();
       ScrollTrigger.getById("imageHeader").kill();
+      ScrollTrigger.getById("stickySection").kill();
+      ScrollTrigger.getById("titleSticky").kill();
       ctx.revert();
     };
   });
 
   return (
-    <>
-      <div className="container-fluid header_reflexology">
+    <div>
+      <div className="container-fluid header_physioscan">
         <div className="row">
           <div className="col-12">
-            <div ref={priceReflexology} className="price_reflexology">
-              <span>50€</span>
+            <div ref={pricePhysioscanRef} className="price_physioscan">
+              <span>60€</span>
               <span className="line_price"></span>
-              <span>1h00</span>
+              <span>1h15</span>
             </div>
-            <p ref={titleHeaderRef} className="title_header_reflexology">
-              reflexology <br />
-              plantar
+            <p ref={titleHeaderRef} className="title_header_physioscan">
+              <span ref={title1Ref} className="title_part1">
+                Physio
+              </span>
+              <span ref={title2Ref} className="title_part2">
+                scanning
+              </span>
             </p>
           </div>
           <div ref={scopeRef} className="col-12 px-0 scope">
@@ -171,7 +172,7 @@ export default function Header() {
           </div>
         </div>
         <div className="row">
-          <div className="col-12 sticky_texts">
+          <div className="col-12 sticky_texts_physioscan">
             <p ref={titleStickyTexts} className="title_header_image">
               REBALANCE A <br />
               PHYSICAL DISORDER, <br />
@@ -186,6 +187,6 @@ export default function Header() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }

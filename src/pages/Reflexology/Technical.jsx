@@ -1,28 +1,35 @@
-import { useLayoutEffect, useRef } from "react";
-import { gsap } from "gsap";
+import React, { useEffect, useRef } from "react";
+import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Btn from "../../components/Btn";
 
 export default function Technical() {
   let scope = useRef();
-  useLayoutEffect(() => {
+  let borderTopRef = useRef();
+  let borderRightRef = useRef();
+  let borderBottomRef = useRef();
+  let borderLeftRef = useRef();
+  let stickyRowRef = useRef();
+  let AncestralDesc2Ref = useRef();
+
+  useEffect(() => {
     let ctx = gsap.context(() => {
       gsap.registerPlugin(ScrollTrigger);
       let tl = gsap.timeline({
         scrollTrigger: {
-          trigger: document.querySelector(".border_top_technical"),
+          trigger: borderTopRef.current,
           start: "top 15%",
           end: "top 0%",
+          id: "bordertop",
         },
       });
-
-      tl.to(document.querySelector(".border_top_technical"), {
+      tl.to(borderTopRef.current, {
         width: "100%",
         duration: 2.5,
         ease: "Expo.easeOut",
       });
       tl.to(
-        document.querySelector(".border_right_Technical"),
+        borderRightRef.current,
         {
           height: "100vh",
           duration: 3,
@@ -31,7 +38,7 @@ export default function Technical() {
         "<0.3"
       );
       tl.to(
-        document.querySelector(".border_left_Technical"),
+        borderLeftRef.current,
         {
           height: "100vh",
           duration: 3,
@@ -39,14 +46,16 @@ export default function Technical() {
         },
         "<0.1"
       );
-      gsap.to(document.querySelector(".stickyRow"), {
+
+      gsap.to(stickyRowRef.current, {
         duration: 1,
         ease: "Expo.easeOut",
         scrollTrigger: {
-          trigger: document.querySelector(".stickyRow"),
-          endTrigger: document.querySelector(".Ancestral_desc2"),
+          trigger: stickyRowRef.current,
+          endTrigger: AncestralDesc2Ref.current,
           start: "top 0%",
           end: "center 65%",
+          id: "stickyRow",
           pin: true,
           pinSpacer: false,
           pinSpacing: false,
@@ -54,22 +63,27 @@ export default function Technical() {
       });
     }, scope);
 
-    return () => ctx.revert();
+    return () => {
+      ScrollTrigger.getById("bordertop").kill();
+      ScrollTrigger.getById("stickyRow").kill();
+
+      ctx.revert();
+    };
   });
 
   return (
     <>
       <div ref={scope} className="container-fluid Technical">
-        <div className="border_top_technical"></div>
-        <div className="row stickyRow justify-content-start">
+        <div ref={borderTopRef} className="border_top_technical"></div>
+        <div ref={stickyRowRef} className="row stickyRow justify-content-start">
           <div className="col-12 col-lg-5 position-relative">
             <div className="wrapper_Technical_title">
               <p className="Technical_title">Technical</p>
             </div>
-            <div className="border_right_Technical"></div>
+            <div ref={borderRightRef} className="border_right_Technical"></div>
           </div>
           <div className="col-12 col-lg-2 position-relative">
-            <div className="border_left_Technical"></div>
+            <div ref={borderLeftRef} className="border_left_Technical"></div>
             <div className="wrapper_btn_Technical">
               <Btn
                 firstText="makean appointment"
@@ -80,7 +94,7 @@ export default function Technical() {
           </div>
         </div>
         <div className="row justify-content-end">
-          <div className="border_bottom_technical"></div>
+          <div ref={borderBottomRef} className="border_bottom_technical"></div>
           <div className="col-12 col-lg-5">
             <div className="wrapper_Reflexzones">
               <p className="Reflexzones_title">Reflex zones</p>
@@ -135,7 +149,7 @@ export default function Technical() {
                 “FOOT” LITERALLY MEANS “PART <br /> OF THE BODY THAT SAFEGUARDS
                 HEALTH”. <br /> ‍ IT WAS
               </p>
-              <p className="Ancestral_desc2">
+              <p ref={AncestralDesc2Ref} className="Ancestral_desc2">
                 in 1917 that Zone therapy, or relieving pain at home appeared ,
                 Fitzgerald's discovery which <br /> led him to establish a map
                 of the “connected” regions of the body. <br /> Reflexology is
