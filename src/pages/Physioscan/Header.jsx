@@ -1,7 +1,8 @@
-import React, { useLayoutEffect, useRef } from "react";
-import { gsap } from "gsap";
+import React, { useEffect, useRef } from "react";
+import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import SplitText from "../../plugins/SplitText";
+import "./Physioscan.scss";
 
 export default function Header() {
   let scopeRef = useRef(null);
@@ -11,50 +12,72 @@ export default function Header() {
   let imageHeaderRef = useRef(null);
   let titleStickyTexts = useRef(null);
   let descHeaderRef = useRef(null);
+  let title1Ref = useRef(null);
+  let title2Ref = useRef(null);
+  let pricePhysioscanRef = useRef(null);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     let ctx = gsap.context(() => {
       gsap.registerPlugin(ScrollTrigger, SplitText);
 
-      gsap.set(document.querySelector(".title_part1"), {
+      gsap.set(pricePhysioscanRef.current, {
+        y: -80,
+        opacity: 0,
+        clipPath: "inset(100% 0% 0% 0%)",
+      });
+      gsap.set(title1Ref.current, {
         y: -150,
         clipPath: "inset(100% 0% 0% 0%)",
       });
-      gsap.set(document.querySelector(".title_part2"), {
+      gsap.set(title2Ref.current, {
         y: 150,
         clipPath: "inset(0% 0% 100% 0%)",
       });
-      gsap.set(wrapperHeaderImageRef.current, { y: "11rem" });
+      gsap.set(wrapperHeaderImageRef.current, { y: "11rem", opacity: 0 });
 
-      gsap.to(document.querySelector(".title_part1"), {
+      gsap.to(pricePhysioscanRef.current, {
+        y: 0,
+        opacity: 1,
+        clipPath: "inset(0% 0% 0% 0%)",
+        delay: 0.5,
+      });
+      gsap.to(title1Ref.current, {
+        opacity: 1,
         y: 0,
         clipPath: "inset(0% 0% 0% 0%)",
         duration: 1.5,
         ease: "Expo.easeOut",
+        delay: 0.5,
       });
-      gsap.to(document.querySelector(".title_part2"), {
+      gsap.to(title2Ref.current, {
+        opacity: 1,
         y: 0,
         duration: 1.5,
         clipPath: "inset(0% 0% 0% 0%)",
+        delay: 0.5,
         ease: "Expo.easeOut",
       });
       gsap.to(wrapperHeaderImageRef.current, {
         y: 0,
+        opacity: 1,
         duration: 1.5,
+        delay: 0.5,
         ease: "Expo.easeOut",
       });
 
       gsap.to(imageHeaderRef.current, {
         clipPath: "inset(0% 0%)",
         duration: 2,
-        ease: "Expo.easeOut",
+        ease: "none",
         scrollTrigger: {
           trigger: imageHeaderRef.current,
-          start: "top 62%",
+          start: "-=20 62%",
           end: "center 20%",
-          scrub: 1,
+          id: "imageHeader",
+          scrub: 1.3,
         },
       });
+
       gsap.to(stickySection.current, {
         duration: 1,
         ease: "Expo.easeOut",
@@ -64,6 +87,7 @@ export default function Header() {
           endTrigger: descHeaderRef.current,
           start: "top 0%",
           end: "center 60%",
+          id: "stickySection",
           pin: true,
           pinSpacing: false,
           pinSpacer: false,
@@ -101,6 +125,7 @@ export default function Header() {
             trigger: titleStickyTexts.current,
             start: "center 100%",
             end: "bottom 5%",
+            id: "titleSticky",
             // markers: {
             //   startColor: "#ffd700",
             //   endColor: "#ff0000",
@@ -111,7 +136,12 @@ export default function Header() {
       );
     }, scopeRef);
 
-    return () => ctx.revert();
+    return () => {
+      ScrollTrigger.getById("imageHeader").kill();
+      ScrollTrigger.getById("stickySection").kill();
+      ScrollTrigger.getById("titleSticky").kill();
+      ctx.revert();
+    };
   });
 
   return (
@@ -119,14 +149,18 @@ export default function Header() {
       <div className="container-fluid header_physioscan">
         <div className="row">
           <div className="col-12">
-            <div className="price_physioscan">
+            <div ref={pricePhysioscanRef} className="price_physioscan">
               <span>60€</span>
               <span className="line_price"></span>
               <span>1h15</span>
             </div>
             <p ref={titleHeaderRef} className="title_header_physioscan">
-              <span className="title_part1">Physio</span>
-              <span className="title_part2">scanning</span>
+              <span ref={title1Ref} className="title_part1">
+                Physio
+              </span>
+              <span ref={title2Ref} className="title_part2">
+                scanning
+              </span>
             </p>
           </div>
           <div ref={scopeRef} className="col-12 px-0 scope">

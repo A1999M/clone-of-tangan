@@ -1,14 +1,22 @@
-import React, { useLayoutEffect } from "react";
+import React, { useEffect, useLayoutEffect } from "react";
 import NavBar from "../../components/NavBar";
 import Header from "./Header";
 import Goals from "./Goals";
 import MoreAbout from "./MoreAbout";
 import Technical from "./Technical";
-import { gsap } from "gsap";
-import "./Reflexology.scss";
+import gsap from "gsap";
 import Footer from "./Footer";
+import "./Reflexology.scss";
 
 export default function Reflexology() {
+  useEffect(() => {
+    document.documentElement.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "instant",
+    });
+  });
+
   useLayoutEffect(() => {
     gsap.to(document.body, {
       duration: 0.1,

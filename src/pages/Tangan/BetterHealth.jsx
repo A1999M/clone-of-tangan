@@ -1,7 +1,7 @@
 import { useLayoutEffect, useRef } from "react";
-import { gsap } from "gsap";
+import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import SplitText from "../../plugins/splitText";
+import SplitText from "../../plugins/SplitText";
 import "./Tangan.scss";
 
 export default function BetterHealth() {

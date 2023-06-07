@@ -1,19 +1,44 @@
+import React, { useEffect, useRef } from "react";
 import Btn from "../../components/Btn";
-import { gsap } from "gsap";
+import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
-import { useLayoutEffect } from "react";
 import "./Physioscan.scss";
 
 export default function TechnicalPhysio() {
-  useLayoutEffect(() => {
+  let TechnicalPhysioRef = useRef(null);
+  let borderLeftRef = useRef(null);
+  let borderRightRef = useRef(null);
+  let titleRef = useRef(null);
+  let stickyRef = useRef(null);
+  let imageInvestigateRef = useRef(null);
+  let imageVibrationRef = useRef(null);
+
+  let physioquantaTitleRef = useRef(null);
+  let physioquantaDescRef = useRef(null);
+  let physioquantaBorderRef = useRef(null);
+
+  let VibrationTitleRef = useRef(null);
+  let VibrationDescRef = useRef(null);
+  let VibrationBorderRef = useRef(null);
+
+  let energyTitleRef = useRef(null);
+  let energyDescRef = useRef(null);
+  let energyBorderRef = useRef(null);
+
+  let InvestigateTitleRef = useRef(null);
+  let InvestigateDescRef = useRef(null);
+  let InvestigateBorderRef = useRef(null);
+
+  useEffect(() => {
     let ctx = gsap.context(() => {
       gsap.registerPlugin(ScrollTrigger);
 
       let tl = gsap.timeline({
         scrollTrigger: {
-          trigger: document.querySelector(".border_left_TechnicalPhysio"),
+          trigger: borderLeftRef.current,
           start: "top 0%",
           end: "top 0%",
+          id: "borderLeftTrigger",
           // markers: {
           //   startColor: "#ffd700",
           //   endColor: "#ff0000",
@@ -21,14 +46,14 @@ export default function TechnicalPhysio() {
           // },
         },
       });
-      tl.to(document.querySelector(".border_left_TechnicalPhysio"), {
+      tl.to(borderLeftRef.current, {
         height: "100vh",
         duration: 2,
         delay: 0.2,
         ease: "Expo.easeOut",
       });
       tl.to(
-        document.querySelector(".border_right_TechnicalPhysioo"),
+        borderRightRef.current,
         {
           height: "100vh",
           duration: 2,
@@ -38,7 +63,7 @@ export default function TechnicalPhysio() {
       );
 
       gsap.fromTo(
-        document.querySelector(".title_TechnicalPhysio"),
+        titleRef.current,
         { y: -120 },
         {
           y: 0,
@@ -46,19 +71,21 @@ export default function TechnicalPhysio() {
           duration: 1,
           ease: "Expo.easeOut",
           scrollTrigger: {
-            trigger: document.querySelector(".title_TechnicalPhysio"),
+            trigger: titleRef.current,
             start: "top 20%",
             end: "bottom 0%",
+            id: "titleTrigger",
           },
         }
       );
-      gsap.to(document.querySelector(".sticky_TechnicalPhysio"), {
+      gsap.to(stickyRef.current, {
         duration: 1,
         scrollTrigger: {
-          trigger: document.querySelector(".sticky_TechnicalPhysio"),
-          endTrigger: document.querySelector(".image_Investigate"),
+          trigger: stickyRef.current,
+          endTrigger: imageInvestigateRef.current,
           start: "top 0%",
           end: "center 65%",
+          id: "stickyTrigger",
           pin: true,
           pinSpacer: false,
           pinSpacing: false,
@@ -75,9 +102,10 @@ export default function TechnicalPhysio() {
       // Physioquanta border
       let PhysioquantaTl = gsap.timeline({
         scrollTrigger: {
-          trigger: document.querySelector(".Physioquanta_title"),
+          trigger: physioquantaTitleRef.current,
           start: "center 70%",
           end: "bottom 10%",
+          id: "PhysioquantaTrigger",
           // markers: {
           //   startColor: "#ffd700",
           //   endColor: "#ff0000",
@@ -86,7 +114,7 @@ export default function TechnicalPhysio() {
         },
       });
       PhysioquantaTl.fromTo(
-        document.querySelector(".Physioquanta_title"),
+        physioquantaTitleRef.current,
         { opacity: 0, y: 80, clipPath: "inset(0% 0% 100% 0%)" },
         {
           y: 0,
@@ -97,7 +125,7 @@ export default function TechnicalPhysio() {
         }
       );
       PhysioquantaTl.fromTo(
-        document.querySelector(".Physioquanta_desc"),
+        physioquantaDescRef.current,
         { opacity: 0, y: 80, clipPath: "inset(0% 0% 100% 0%)" },
         {
           y: 0,
@@ -109,7 +137,7 @@ export default function TechnicalPhysio() {
         "<.1"
       );
       PhysioquantaTl.to(
-        document.querySelector(".Physioquanta_border"),
+        physioquantaBorderRef.current,
         {
           width: "110%",
           duration: 2,
@@ -118,12 +146,13 @@ export default function TechnicalPhysio() {
         "<0.2"
       );
 
-      // scan border
+      // Vibration border
       let VibrationTl = gsap.timeline({
         scrollTrigger: {
-          trigger: document.querySelector(".Vibration_title"),
+          trigger: VibrationTitleRef.current,
           start: "center 70%",
           end: "bottom 10%",
+          id: "VibrationTrigger",
           // markers: {
           //   startColor: "#ffd700",
           //   endColor: "#ff0000",
@@ -132,7 +161,7 @@ export default function TechnicalPhysio() {
         },
       });
       VibrationTl.fromTo(
-        document.querySelector(".Vibration_title"),
+        VibrationTitleRef.current,
         { opacity: 0, y: 80, clipPath: "inset(0% 0% 100% 0%)" },
         {
           y: 0,
@@ -143,7 +172,7 @@ export default function TechnicalPhysio() {
         }
       );
       VibrationTl.fromTo(
-        document.querySelector(".Vibration_desc"),
+        VibrationDescRef.current,
         { opacity: 0, y: 80, clipPath: "inset(0% 0% 100% 0%)" },
         {
           y: 0,
@@ -155,7 +184,7 @@ export default function TechnicalPhysio() {
         "<.1"
       );
       VibrationTl.to(
-        document.querySelector(".Vibration_border"),
+        VibrationBorderRef.current,
         {
           width: "110%",
           duration: 2,
@@ -170,6 +199,7 @@ export default function TechnicalPhysio() {
           trigger: document.querySelector(".Energy_title"),
           start: "center 75%",
           end: "bottom 10%",
+          id: "EnergyTrigger",
           // markers: {
           //   startColor: "#ffd700",
           //   endColor: "#ff0000",
@@ -178,7 +208,7 @@ export default function TechnicalPhysio() {
         },
       });
       EnergyTl.fromTo(
-        document.querySelector(".Energy_title"),
+        energyTitleRef.current,
         { opacity: 0, y: 80, clipPath: "inset(0% 0% 100% 0%)" },
         {
           y: 0,
@@ -189,7 +219,7 @@ export default function TechnicalPhysio() {
         }
       );
       EnergyTl.fromTo(
-        document.querySelector(".Energy_desc"),
+        energyDescRef.current,
         { opacity: 0, y: 80, clipPath: "inset(0% 0% 100% 0%)" },
         {
           y: 0,
@@ -201,7 +231,7 @@ export default function TechnicalPhysio() {
         "<.1"
       );
       EnergyTl.to(
-        document.querySelector(".Energy_border"),
+        energyBorderRef.current,
         {
           width: "110%",
           duration: 2,
@@ -216,6 +246,7 @@ export default function TechnicalPhysio() {
           trigger: document.querySelector(".Investigate_title"),
           start: "center 70%",
           end: "bottom 10%",
+          id: "InvestigateTrigger",
           // markers: {
           //   startColor: "#ffd700",
           //   endColor: "#ff0000",
@@ -224,7 +255,7 @@ export default function TechnicalPhysio() {
         },
       });
       InvestigateTl.fromTo(
-        document.querySelector(".Investigate_title"),
+        InvestigateTitleRef.current,
         { opacity: 0, y: 80, clipPath: "inset(0% 0% 100% 0%)" },
         {
           y: 0,
@@ -235,7 +266,7 @@ export default function TechnicalPhysio() {
         }
       );
       InvestigateTl.fromTo(
-        document.querySelector(".Investigate_desc"),
+        InvestigateDescRef.current,
         { opacity: 0, y: 80, clipPath: "inset(0% 0% 100% 0%)" },
         {
           y: 0,
@@ -247,7 +278,7 @@ export default function TechnicalPhysio() {
         "<.1"
       );
       InvestigateTl.to(
-        document.querySelector(".Investigate_border"),
+        InvestigateBorderRef.current,
         {
           width: "110%",
           duration: 2,
@@ -257,7 +288,7 @@ export default function TechnicalPhysio() {
       );
 
       gsap.fromTo(
-        document.querySelector(".Vibration_image"),
+        imageVibrationRef.current,
         { scale: 1.5, clipPath: "inset(0% 0% 100% 0%)" },
         {
           scale: 1,
@@ -265,9 +296,10 @@ export default function TechnicalPhysio() {
           duration: 1.5,
           ease: "Expo.easeOut",
           scrollTrigger: {
-            trigger: document.querySelector(".Vibration_image"),
+            trigger: imageVibrationRef.current,
             start: "center 85%",
             end: "bottom 0%",
+            id: "imageVibration",
             // markers: {
             //   startColor: "#ffd700",
             //   endColor: "#ff0000",
@@ -276,44 +308,47 @@ export default function TechnicalPhysio() {
           },
         }
       );
+    }, TechnicalPhysioRef);
 
-      gsap.fromTo(
-        document.querySelector(".image_Investigate"),
-        { scale: 1.5, clipPath: "inset(0% 0% 100% 0%)" },
-        {
-          scale: 1,
-          clipPath: "inset(0% 0% 0% 0%)",
-          duration: 1.5,
-          ease: "Expo.easeOut",
-          scrollTrigger: {
-            trigger: document.querySelector(".image_Investigate"),
-            start: "center 85%",
-            end: "bottom 0%",
-            // markers: {
-            //   startColor: "#ffd700",
-            //   endColor: "#ff0000",
-            //   fontSize: "20px",
-            // },
-          },
-        }
-      );
-    }, document.querySelector(".TechnicalPhysio"));
-
-    return () => ctx.revert();
+    return () => {
+      ScrollTrigger.getById("borderLeftTrigger").kill();
+      ScrollTrigger.getById("titleTrigger").kill();
+      ScrollTrigger.getById("stickyTrigger").kill();
+      ScrollTrigger.getById("PhysioquantaTrigger").kill();
+      ScrollTrigger.getById("VibrationTrigger").kill();
+      ScrollTrigger.getById("EnergyTrigger").kill();
+      ScrollTrigger.getById("InvestigateTrigger").kill();
+      ScrollTrigger.getById("imageVibration").kill();
+      ctx.revert();
+    };
   });
 
   return (
     <>
-      <div className="contianer-fluid TechnicalPhysio position-relative">
-        <div className="row sticky_TechnicalPhysio justify-content-start">
+      <div
+        ref={TechnicalPhysioRef}
+        className="contianer-fluid TechnicalPhysio position-relative"
+      >
+        <div
+          ref={stickyRef}
+          className="row sticky_TechnicalPhysio justify-content-start"
+        >
           <div className="col-12 col-lg-5 position-relative">
             <div className="wrapper_title_TechnicalPhysio">
-              <p className="title_TechnicalPhysio">Technical</p>
+              <p ref={titleRef} className="title_TechnicalPhysio">
+                Technical
+              </p>
             </div>
-            <div className="border_left_TechnicalPhysio"></div>
+            <div
+              ref={borderLeftRef}
+              className="border_left_TechnicalPhysio"
+            ></div>
           </div>
           <div className="col-12 col-lg-2 position-relative">
-            <div className="border_right_TechnicalPhysioo"></div>
+            <div
+              ref={borderRightRef}
+              className="border_right_TechnicalPhysioo"
+            ></div>
             <div className="wrapper_btn_TechnicalPhysio">
               <Btn
                 firstText="makean appointment"
@@ -327,17 +362,24 @@ export default function TechnicalPhysio() {
           <div className="col-12 col-lg-5">
             {/* Physioquantato scan  */}
             <div className="wrapper_Physioquanta">
-              <p className="Physioquanta_title">Physioquanta</p>
-              <p className="Physioquanta_desc">
+              <p ref={physioquantaTitleRef} className="Physioquanta_title">
+                Physioquanta
+              </p>
+              <p ref={physioquantaDescRef} className="Physioquanta_desc">
                 DISCOVER THE REFERENCE SITE ON THE PHYSIOSCAN
                 PHYSIOQUANTA.COM/PHYSIOSCAN
               </p>
-              <div className="Physioquanta_border"></div>
+              <div
+                ref={physioquantaBorderRef}
+                className="Physioquanta_border"
+              ></div>
             </div>
-            {/* Target  */}
+            {/* Vibration  */}
             <div className="wrapper_Vibration">
-              <p className="Vibration_title">Vibration frequencies</p>
-              <p className="Vibration_desc">
+              <p ref={VibrationTitleRef} className="Vibration_title">
+                Vibration frequencies
+              </p>
+              <p ref={VibrationDescRef} className="Vibration_desc">
                 <span>
                   THIS PRINCIPLE IS BASED ON THE ASSUMPTION THAT ALL ORGANS HAVE
                   CHARACTERISTIC VIBRATIONAL FREQUENCIES WHEN THEY ARE HEALTHY
@@ -371,32 +413,34 @@ export default function TechnicalPhysio() {
               </p>
               <div className="wrapper_image_Vibration">
                 <img
+                  ref={imageVibrationRef}
                   className="Vibration_image"
                   src="https://uploads-ssl.webflow.com/5bc989248743153705f137da/6042235f79a7104cc84ed500_physioscan_02-p-800.jpeg"
                   alt="https://uploads-ssl.webflow.com/5bc989248743153705f137da/6042235f79a7104cc84ed500_physioscan_02-p-800.jpeg"
                 />
               </div>
-
-              <div className="Vibration_border"></div>
+              <div ref={VibrationBorderRef} className="Vibration_border"></div>
             </div>
-            {/* Rebalance  */}
+            {/* Energy  */}
             <div className="wrapper_Energy">
-              <p className="Energy_title">Energy rebalancing by Meta-therapy</p>
-              <p className="Energy_desc">
+              <p ref={energyTitleRef} className="Energy_title">
+                Energy rebalancing by Meta-therapy
+              </p>
+              <p ref={energyDescRef} className="Energy_desc">
                 THE PHYSIOSCAN OFFERS THE POSSIBILITY OF "RE-INFORMING" THE
                 TISSUES CONCERNED IN A FREQUENTIAL WAY IN ORDER TO RESTART THE
                 FUNCTIONING OF THE DEFICIENT ORGANS. THIS QUANTUM BIOTECHNOLOGY
                 IS INFORMATIVE, GENTLE, NON-BINDING, THEREFORE IN TOTAL RESPECT
                 WITH THE UNIQUENESS OF THE LIVING BODY.
               </p>
-              <div className="Energy_border"></div>
+              <div ref={energyBorderRef} className="Energy_border"></div>
             </div>
-            {/* Reinform  */}
+            {/* Investigate  */}
             <div className="wrapper_Investigate">
-              <p className="Investigate_title">
+              <p ref={InvestigateTitleRef} className="Investigate_title">
                 Investigate and correct vibrational fields
               </p>
-              <p className="Investigate_desc">
+              <p ref={InvestigateDescRef} className="Investigate_desc">
                 <span>
                   THE PHYSIOSCAN IS A DEVICE THAT USES WAVE NANOTECHNOLOGY, THE
                   PURPOSE OF WHICH IS TO INVESTIGATE AND CORRECT THE VIBRATIONAL
@@ -413,9 +457,13 @@ export default function TechnicalPhysio() {
                   specific cells and biochemical structures.
                 </span>
               </p>
-              <div className="Investigate_border"></div>
+              <div
+                ref={InvestigateBorderRef}
+                className="Investigate_border"
+              ></div>
               <div className="wrapper_image_Investigate">
                 <img
+                  ref={imageInvestigateRef}
                   className="image_Investigate"
                   src="https://uploads-ssl.webflow.com/5bc989248743153705f137da/60422374863caf2a190d9315_physioscan_03-p-800.jpeg"
                   alt="https://uploads-ssl.webflow.com/5bc989248743153705f137da/60422374863caf2a190d9315_physioscan_03-p-800.jpeg"

@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
-import { gsap } from "gsap";
+import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import SplitText from "../../plugins/splitText";
+import SplitText from "../../plugins/SplitText";
 import stopVideo from "../../assets/videos/stopBreath.mp4";
 import "./Tangan.scss";
 

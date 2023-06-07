@@ -8,8 +8,9 @@
     justify-content: center;
     margin-top: 1rem;
     padding: 0 2rem;
+    opacity: 0;
     li {
-      .items_nav {
+      button {
         color: black;
         text-decoration: none;
         font-family: "Montserrat", sans-serif;
@@ -33,7 +34,7 @@
         }
       }
       &:hover {
-        .items_nav {
+        button {
           &::before {
             width: 100%;
           }

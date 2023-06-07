@@ -1,10 +1,13 @@
+import React, { useEffect } from "react";
+import gsap from "gsap";
 import { useLayoutEffect, useRef } from "react";
-import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import "./Physioscan.scss";
 
 export default function TakeCare() {
   let scopeRef = useRef();
+  let bigImageRef = useRef();
+  let bigTitleRef = useRef();
 
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
@@ -13,7 +16,7 @@ export default function TakeCare() {
           opacity: 0,
           duration: 0.3,
         });
-        gsap.to(document.querySelector(".takeCare"), {
+        gsap.to(scopeRef.current, {
           visibility: "visible",
           duration: 0.1,
         });
@@ -24,7 +27,7 @@ export default function TakeCare() {
           visibility: "visible",
           duration: 0.3,
         });
-        gsap.to(document.querySelector(".takeCare"), {
+        gsap.to(scopeRef.current, {
           visibility: "hidden",
           duration: 0.1,
         });
@@ -35,8 +38,8 @@ export default function TakeCare() {
         duration: 0.2,
         backgroundColor: "#000",
         scrollTrigger: {
-          trigger: document.querySelector(".takeCare"),
-          endTrigger: document.querySelector(".big_image"),
+          trigger: scopeRef.current,
+          endTrigger: bigImageRef.current,
           start: "top 22%",
           end: "bottom 0%",
           onEnter: hiddenGoals,
@@ -44,6 +47,7 @@ export default function TakeCare() {
           onLeave: showGoals,
           onLeaveBack: showGoals,
           toggleActions: "restart reverse restart reverse",
+          id: "bodyChangeColor",
           // markers: {
           //   startColor: "#ffd700",
           //   endColor: "#ff0000",
@@ -51,29 +55,41 @@ export default function TakeCare() {
           // },
         },
       });
+    }, scopeRef);
+
+    return () => {
+      ScrollTrigger.getById("bodyChangeColor").kill();
+      ctx.revert();
+    };
+  });
+
+  useEffect(() => {
+    let ctx = gsap.context(() => {
       gsap.fromTo(
-        document.querySelector(".big_title"),
+        bigTitleRef.current,
         { x: "65rem" },
         {
           duration: 30,
           x: "-30rem",
           scrollTrigger: {
-            trigger: document.querySelector(".big_title"),
+            trigger: bigTitleRef.current,
             start: "top 100%",
             end: "bottom 0%",
             scrub: 10,
+            id: "bigTitleTrigger",
           },
         }
       );
-      gsap.to(document.querySelector(".big_image"), {
+      gsap.to(bigImageRef.current, {
         opacity: 1,
         duration: 1,
         ease: "Expo.easeOut",
         scrollTrigger: {
-          trigger: document.querySelector(".big_image"),
+          trigger: bigImageRef.current,
           start: "+=250 70%",
           end: "bottom 0%",
           toggleActions: "restart reverse restart reverse",
+          id: "bigImageTrigger",
           // markers: {
           //   startColor: "#ffd700",
           //   endColor: "#ff0000",
@@ -81,11 +97,13 @@ export default function TakeCare() {
           // },
         },
       });
-
-      //
     }, scopeRef);
 
-    return () => ctx.revert();
+    return () => {
+      ScrollTrigger.getById("bigTitleTrigger").kill();
+      ScrollTrigger.getById("bigImageTrigger").kill();
+      ctx.revert();
+    };
   });
 
   return (
@@ -95,11 +113,14 @@ export default function TakeCare() {
           <div className="col-12">
             <div className="wrapper_big_image">
               <img
+                ref={bigImageRef}
                 className="big_image"
                 src="https://uploads-ssl.webflow.com/5bc989248743153705f137da/6042232983a6c94ed2016f2f_bg_take-care.jpg"
                 alt="https://uploads-ssl.webflow.com/5bc989248743153705f137da/6042232983a6c94ed2016f2f_bg_take-care.jpg"
               />
-              <p className="big_title">take care</p>
+              <p ref={bigTitleRef} className="big_title">
+                take care
+              </p>
             </div>
           </div>
         </div>
