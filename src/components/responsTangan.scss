@@ -18,6 +18,25 @@
     }
   }
   // end header tangan responsive
+  // start stop breath section responsive
+  .stop_breath {
+    margin-top: 4rem;
+    .title_stop_breath {
+      font-size: 4rem;
+      margin-left: 0rem;
+      line-height: 65px;
+      width: 460px;
+    }
+    .desc_stop_breath {
+      font-size: 12px;
+      line-height: 20px;
+      // width: 600px;
+      margin-top: 2rem;
+      margin-bottom: 10%;
+      margin-left: 0%;
+    }
+  }
+  // end stop breath section responsive
 }
 // device 476px
 @media (min-width: 476px) {
@@ -40,6 +59,25 @@
     }
   }
   // end header tangan responsive
+  // start stop breath section responsive
+  .stop_breath {
+    margin-top: 4rem;
+    .title_stop_breath {
+      font-size: 4rem;
+      margin-left: 0rem;
+      line-height: 62px;
+      width: 460px;
+    }
+    .desc_stop_breath {
+      font-size: 12px;
+      line-height: 20px;
+      // width: 600px;
+      margin-top: 2rem;
+      margin-bottom: 10%;
+      margin-left: 0%;
+    }
+  }
+  // end stop breath section responsive
 }
 // small device 576px
 @media (min-width: 576px) {
@@ -62,6 +100,25 @@
     }
   }
   // end header tangan responsive
+  // start stop breath section responsive
+  .stop_breath {
+    margin-top: 7rem;
+    .title_stop_breath {
+      font-size: 5rem;
+      margin-left: 0rem;
+      line-height: 80px;
+      width: 460px;
+    }
+    .desc_stop_breath {
+      font-size: 13px;
+      line-height: 23px;
+      // width: 600px;
+      margin-top: 3rem;
+      margin-bottom: 6%;
+      margin-left: 0%;
+    }
+  }
+  // end stop breath section responsive
 }
 // medium device 768px
 @media (min-width: 768px) {
@@ -84,6 +141,25 @@
     }
   }
   // end header tangan responsive
+  // start stop breath section responsive
+  .stop_breath {
+    margin-top: 7rem;
+    .title_stop_breath {
+      font-size: 5.5rem;
+      margin-left: 0rem;
+      line-height: 85px;
+      width: 460px;
+    }
+    .desc_stop_breath {
+      font-size: 13px;
+      line-height: 25px;
+      // width: 600px;
+      margin-top: 3rem;
+      margin-bottom: 4%;
+      margin-left: 0%;
+    }
+  }
+  // end stop breath section responsive
 }
 // large device 992px
 @media (min-width: 992px) {
@@ -106,6 +182,26 @@
     }
   }
   // end header tangan responsive
+
+  // start stop breath section responsive
+  .stop_breath {
+    margin-top: 10rem;
+    .title_stop_breath {
+      font-size: 6rem;
+      margin-left: 5rem;
+      line-height: 95px;
+      width: 460px;
+    }
+    .desc_stop_breath {
+      font-size: 13px;
+      line-height: 23px;
+      // width: 600px;
+      margin-top: 7rem;
+      margin-left: 18%;
+      margin-bottom: 0%;
+    }
+  }
+  // end stop breath section responsive
 }
 // xl device 1200px
 @media (min-width: 1200px) {
@@ -128,6 +224,26 @@
     }
   }
   // end header tangan responsive
+
+  // start stop breath section responsive
+  .stop_breath {
+    margin-top: 12rem;
+    .title_stop_breath {
+      font-size: 6rem;
+      margin-left: 5rem;
+      line-height: 100px;
+      width: 460px;
+    }
+    .desc_stop_breath {
+      font-size: 14px;
+      line-height: 25px;
+      // width: 600px;
+      margin-top: 8rem;
+      margin-bottom: 0%;
+      margin-left: 18%;
+    }
+  }
+  // end stop breath section responsive
 }
 // xxl device 1400px
 @media (min-width: 1400px) {
@@ -150,4 +266,24 @@
     }
   }
   // end header tangan responsive
+
+  // start stop breath section responsive
+  .stop_breath {
+    margin-top: 13rem;
+    .title_stop_breath {
+      font-size: 6rem;
+      margin-left: 5rem;
+      line-height: 100px;
+      width: 460px;
+    }
+    .desc_stop_breath {
+      font-size: 14px;
+      line-height: 25px;
+      // width: 600px;
+      margin-top: 10rem;
+      margin-bottom: 0%;
+      margin-left: 30%;
+    }
+  }
+  // end stop breath section responsive
 }
