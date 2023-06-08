@@ -1,11 +1,12 @@
 .container_Navbar {
   position: fixed;
-  width: 100%;
+  width: 100vw;
   z-index: 200;
+  padding-right: 3rem;
   .wrapper_nav {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     margin-top: 1rem;
     padding: 0 2rem;
     opacity: 0;

@@ -1,0 +1,153 @@
+//  device 360px
+@media (min-width: 360px) {
+  // start header tangan responsive
+  .home_header {
+    padding: 0 0rem;
+    margin-top: -30rem !important;
+    .wrapper_home_header {
+      background-size: 185% !important;
+      height: 165vh !important;
+      .title_home_header {
+        margin-top: 55rem;
+        font-size: 20vw;
+      }
+      .home_title_ticker_header {
+        visibility: hidden;
+        display: none;
+      }
+    }
+  }
+  // end header tangan responsive
+}
+// device 476px
+@media (min-width: 476px) {
+  // start header tangan responsive
+  .home_header {
+    padding: 0 0rem;
+    margin-top: -25rem !important;
+    .wrapper_home_header {
+      height: 116vh;
+      background-size: 170%;
+      .title_home_header {
+        margin-top: 42rem;
+        font-size: 20vw;
+        margin-left: 1.5rem;
+      }
+      .home_title_ticker_header {
+        visibility: hidden;
+        display: none;
+      }
+    }
+  }
+  // end header tangan responsive
+}
+// small device 576px
+@media (min-width: 576px) {
+  // start header tangan responsive
+  .home_header {
+    padding: 0 0rem;
+    margin-top: -1rem !important;
+    .wrapper_home_header {
+      background-size: 170% !important;
+      height: 116vh !important;
+      .title_home_header {
+        margin-top: 19rem;
+        font-size: 20vw;
+        margin-left: 1.5rem;
+      }
+      .home_title_ticker_header {
+        visibility: hidden;
+        display: none;
+      }
+    }
+  }
+  // end header tangan responsive
+}
+// medium device 768px
+@media (min-width: 768px) {
+  // start header tangan responsive
+  .home_header {
+    padding: 0 0rem;
+    margin-top: 0rem !important;
+    .wrapper_home_header {
+      background-size: 170% !important;
+      height: 110vh !important;
+      .title_home_header {
+        margin-top: 14rem;
+        margin-left: 1.5rem;
+        font-size: 20vw;
+      }
+      .home_title_ticker_header {
+        visibility: hidden;
+        display: none;
+      }
+    }
+  }
+  // end header tangan responsive
+}
+// large device 992px
+@media (min-width: 992px) {
+  // start header tangan responsive
+  .home_header {
+    padding: 0 2rem;
+    margin-top: 6rem !important;
+    .wrapper_home_header {
+      background-size: 170% !important;
+      height: 91vh !important;
+      .title_home_header {
+        margin-top: 12rem;
+        font-size: 17vw;
+        margin-left: 1.5rem;
+      }
+      .home_title_ticker_header {
+        visibility: hidden;
+        display: none;
+      }
+    }
+  }
+  // end header tangan responsive
+}
+// xl device 1200px
+@media (min-width: 1200px) {
+  // start header tangan responsive
+  .home_header {
+    margin-top: 6rem !important;
+    padding: 0 3rem;
+    .wrapper_home_header {
+      background-size: 170% !important;
+      height: 87vh !important;
+      .title_home_header {
+        margin-top: 11;
+        margin-left: 1.5rem;
+        font-size: 17vw;
+      }
+      .home_title_ticker_header {
+        visibility: hidden;
+        display: none;
+      }
+    }
+  }
+  // end header tangan responsive
+}
+// xxl device 1400px
+@media (min-width: 1400px) {
+  // start header tangan responsive
+  .home_header {
+    margin-top: 6rem !important;
+    padding: 0 3rem;
+    .wrapper_home_header {
+      background-size: 170% !important;
+      height: 90.5vh !important;
+      .title_home_header {
+        margin-top: 5rem;
+        font-size: 17vw;
+        margin-left: 0rem;
+      }
+      .home_title_ticker_header {
+        visibility: visible;
+        display: flex;
+      }
+    }
+  }
+  // end header tangan responsive
+}
