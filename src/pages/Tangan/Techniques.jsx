@@ -457,9 +457,9 @@ export default function Techniques() {
     let tl = gsap.timeline({
       scrollTrigger: {
         trigger: titleRef.current,
+        endTrigger: descRef.current,
         start: "top 70%",
         end: "bottom 0%",
-        toggleActions: "restart reverse restart reverse",
       },
     });
     gsap.to(document.body, {
@@ -491,14 +491,14 @@ export default function Techniques() {
       });
     }, scopeRef);
 
-    let splitTitle = new SplitText(titleRef.current, { type: "lines" });
+    let splitTitle = new SplitText(titleRef.current, { type: "chars" });
     let splitDesc = new SplitText(descRef.current, { type: "lines" });
-    gsap.set(splitTitle.lines, {
+    gsap.set(splitTitle.chars, {
       opacity: 0,
       y: 200,
       clipPath: "inset(0% 0% 100% 0%)",
       perspective: 100,
-      rotate: "27deg",
+      // rotate: "27deg",
       transformOrigin: "0% 100%",
     });
     gsap.set(splitDesc.lines, {
@@ -509,7 +509,7 @@ export default function Techniques() {
       y: 100,
     });
 
-    tl.to(splitTitle.lines, {
+    tl.to(splitTitle.chars, {
       opacity: 1,
       perspective: 0,
       rotate: 0,
@@ -724,10 +724,9 @@ export default function Techniques() {
       <div ref={techniquessRef} className="container-fluid techniquess">
         {/*  */}
         <div className="row">
-          <div className="col-12 col-lg-6">
+          <div className="col-12 col-md-6">
             <div className="wrapper_number3">
               <svg
-                width="38vh"
                 height="60vh"
                 className="number_bold"
                 viewBox="0 0 408 643"
@@ -741,10 +740,10 @@ export default function Techniques() {
               </svg>
             </div>
           </div>
-          <div className="col-12 col-lg-6">
+          <div className="col-12 col-md-6">
             <div className="wrapper_techniques">
               <p ref={titleRef} className="title_techniques">
-                Techniques care
+                Techniques <br /> care
               </p>
               <p ref={descRef} className="desc_techniques">
                 TO HELP RELAUNCH HIS SELF-HEALING MECHANISM AND REGAIN HIS

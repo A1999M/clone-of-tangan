@@ -32,7 +32,6 @@ export default function ImagesSection() {
           trigger: leftImageRef.current,
           start: "center 90%",
           end: "bottom 0%",
-          markers: true,
         },
       });
     }

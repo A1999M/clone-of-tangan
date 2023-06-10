@@ -65,6 +65,37 @@
     }
   }
   // end image section reponsive
+
+  // start techniquess section responsive
+  .techniquess {
+    margin-top: 0;
+    padding-top: 6rem;
+    .wrapper_number3 {
+      svg {
+        width: 25vh;
+      }
+    }
+    .wrapper_techniques {
+      .title_techniques {
+        margin-top: 1rem;
+        margin-left: 2rem;
+        font-size: 3rem;
+        line-height: 4.2rem;
+        width: 100%;
+      }
+      .desc_techniques {
+        font-size: 11px;
+        line-height: 1.6rem;
+        width: 90%;
+        margin-top: 3rem;
+        margin-left: 2rem;
+      }
+    }
+    .home_title_ticker_techniquess {
+      margin-top: 5rem;
+    }
+  }
+  // end techniquess section responsive
 }
 // device 476px
 @media (min-width: 476px) {
@@ -134,6 +165,37 @@
     }
   }
   // end image section reponsive
+
+  // start techniquess section responsive
+  .techniquess {
+    margin-top: 0rem;
+    padding-top: 8rem;
+    .wrapper_number3 {
+      svg {
+        width: 29vh;
+      }
+    }
+    .wrapper_techniques {
+      .title_techniques {
+        margin-top: 2rem;
+        margin-left: 2rem;
+        font-size: 3rem;
+        line-height: 4.2rem;
+        width: 100%;
+      }
+      .desc_techniques {
+        font-size: 10px;
+        line-height: 1.6rem;
+        width: 90%;
+        margin-top: 3rem;
+        margin-left: 2rem;
+      }
+    }
+    .home_title_ticker_techniquess {
+      margin-top: 5rem;
+    }
+  }
+  // end techniquess section responsive
 }
 // small device 576px
 @media (min-width: 576px) {
@@ -176,6 +238,7 @@
   }
   // end stop breath section responsive
 
+  // start image section responsive
   .images_section {
     margin-top: 5rem;
     .wrapper_left_image {
@@ -201,6 +264,38 @@
       display: none;
     }
   }
+  // end image section responsive
+
+  // start techniquess section responsive
+  .techniquess {
+    margin-top: 6rem;
+    padding-top: 10rem;
+    .wrapper_number3 {
+      svg {
+        width: 33vh;
+      }
+    }
+    .wrapper_techniques {
+      .title_techniques {
+        margin-top: 6rem;
+        margin-left: 6rem;
+        font-size: 4.5rem;
+        line-height: 5.5rem;
+        width: 100%;
+      }
+      .desc_techniques {
+        font-size: 11px;
+        line-height: 1.6rem;
+        width: 100%;
+        margin-top: 4rem;
+        margin-left: 6rem;
+      }
+    }
+    .home_title_ticker_techniquess {
+      margin-top: 5rem;
+    }
+  }
+  // end techniquess section responsive
 }
 // medium device 768px
 @media (min-width: 768px) {
@@ -265,11 +360,43 @@
       }
     }
     .btn_imageSection {
+      display: block;
+      visibility: visible;
       margin-left: -9rem;
       margin-top: 19rem;
     }
   }
   // end image section responsive
+  // start techniquess section responsive
+  .techniquess {
+    margin-top: 8rem;
+    padding-top: 10rem;
+    .wrapper_number3 {
+      svg {
+        width: 33vh;
+      }
+    }
+    .wrapper_techniques {
+      .title_techniques {
+        margin-top: 3rem;
+        font-size: 3.5rem;
+        line-height: 4.5rem;
+        margin-left: 0rem;
+        width: 100%;
+      }
+      .desc_techniques {
+        font-size: 10px;
+        line-height: 1.2rem;
+        margin-left: 0rem;
+        width: 100%;
+        margin-top: 4rem;
+      }
+    }
+    .home_title_ticker_techniquess {
+      margin-top: 10rem;
+    }
+  }
+  // end techniquess section responsive
 }
 // large device 992px
 @media (min-width: 992px) {
@@ -340,6 +467,37 @@
     }
   }
   // end image section responsive
+
+  // start techniquess section responsive
+  .techniquess {
+    margin-top: 8rem;
+    padding-top: 10rem;
+    .wrapper_number3 {
+      svg {
+        width: 36vh;
+      }
+    }
+    .wrapper_techniques {
+      .title_techniques {
+        font-size: 4.5rem;
+        line-height: 5rem;
+        margin-top: 3rem;
+        margin-left: 0rem;
+        width: 100%;
+      }
+      .desc_techniques {
+        font-size: 11px;
+        line-height: 1.5rem;
+        margin-left: 0rem;
+        width: 90%;
+        margin-top: 4rem;
+      }
+    }
+    .home_title_ticker_techniquess {
+      margin-top: 11rem;
+    }
+  }
+  // end techniquess section responsive
 }
 // xl device 1200px
 @media (min-width: 1200px) {
@@ -410,6 +568,37 @@
     }
   }
   // end image section responsive
+
+  // start techniquess section responsive
+  .techniquess {
+    margin-top: 8rem;
+    padding-top: 10rem;
+    .wrapper_number3 {
+      svg {
+        width: 37vh;
+      }
+    }
+    .wrapper_techniques {
+      .title_techniques {
+        margin-top: 0;
+        font-size: 5.5rem;
+        line-height: 6rem;
+        margin-left: 0rem;
+        width: 100%;
+      }
+      .desc_techniques {
+        font-size: 13px;
+        line-height: 1.5rem;
+        margin-left: 0rem;
+        width: 85%;
+        margin-top: 5rem;
+      }
+    }
+    .home_title_ticker_techniquess {
+      margin-top: 12rem;
+    }
+  }
+  // end techniquess section responsive
 }
 // xxl device 1400px
 @media (min-width: 1400px) {
@@ -480,4 +669,35 @@
     }
   }
   // end image section responsive
+
+  // start techniquess section responsive
+  .techniquess {
+    margin-top: 8rem;
+    padding-top: 10rem;
+    .wrapper_number3 {
+      svg {
+        width: 38vh;
+      }
+    }
+    .wrapper_techniques {
+      .title_techniques {
+        margin-top: 0;
+        font-size: 6rem;
+        line-height: 6.5rem;
+        margin-left: 0rem;
+        width: 90%;
+      }
+      .desc_techniques {
+        font-size: 15px;
+        line-height: 1.5rem;
+        margin-left: 0rem;
+        width: 80%;
+        margin-top: 5rem;
+      }
+    }
+    .home_title_ticker_techniquess {
+      margin-top: 12rem;
+    }
+  }
+  // end techniquess section responsive
 }
