@@ -37,6 +37,34 @@
     }
   }
   // end stop breath section responsive
+
+  // start image section responsive
+  .images_section {
+    margin-top: 0rem;
+    .wrapper_left_image {
+      margin-top: 2rem;
+      margin-left: 1rem;
+      margin-right: auto;
+      width: 100%;
+      height: 100%;
+      img {
+        width: 100%;
+      }
+    }
+    .wrapper_right_image {
+      width: 94%;
+      margin-right: 2rem;
+      margin-left: auto;
+      img {
+        width: 100%;
+      }
+    }
+    .btn_imageSection {
+      visibility: hidden;
+      display: none;
+    }
+  }
+  // end image section reponsive
 }
 // device 476px
 @media (min-width: 476px) {
@@ -78,6 +106,34 @@
     }
   }
   // end stop breath section responsive
+
+  // start image section responsive
+  .images_section {
+    margin-top: 3rem;
+    .wrapper_left_image {
+      margin-top: 2rem;
+      margin-left: 1rem;
+      margin-right: auto;
+      width: 100%;
+      height: 100%;
+      img {
+        width: 100%;
+      }
+    }
+    .wrapper_right_image {
+      width: 94%;
+      margin-right: 2rem;
+      margin-left: auto;
+      img {
+        width: 100%;
+      }
+    }
+    .btn_imageSection {
+      visibility: hidden;
+      display: none;
+    }
+  }
+  // end image section reponsive
 }
 // small device 576px
 @media (min-width: 576px) {
@@ -119,6 +175,32 @@
     }
   }
   // end stop breath section responsive
+
+  .images_section {
+    margin-top: 5rem;
+    .wrapper_left_image {
+      margin-top: 2rem;
+      margin-left: 2rem;
+      margin-right: auto;
+      width: 100%;
+      height: 100%;
+      img {
+        width: 100%;
+      }
+    }
+    .wrapper_right_image {
+      width: 94%;
+      margin-right: 2rem;
+      margin-left: auto;
+      img {
+        width: 100%;
+      }
+    }
+    .btn_imageSection {
+      visibility: hidden;
+      display: none;
+    }
+  }
 }
 // medium device 768px
 @media (min-width: 768px) {
@@ -160,6 +242,34 @@
     }
   }
   // end stop breath section responsive
+
+  // start image section responsive
+  .images_section {
+    margin-top: 7rem;
+    .wrapper_left_image {
+      margin-top: 3rem;
+      margin-left: 3rem;
+      margin-right: auto;
+      width: 95%;
+      height: 95%;
+      img {
+        width: 100%;
+      }
+    }
+    .wrapper_right_image {
+      width: 93%;
+      margin-left: auto;
+      margin-right: 3rem;
+      img {
+        width: 100%;
+      }
+    }
+    .btn_imageSection {
+      margin-left: -9rem;
+      margin-top: 19rem;
+    }
+  }
+  // end image section responsive
 }
 // large device 992px
 @media (min-width: 992px) {
@@ -202,6 +312,34 @@
     }
   }
   // end stop breath section responsive
+
+  // start image section responsive
+  .images_section {
+    margin-top: 10rem;
+    .wrapper_left_image {
+      margin-top: -5rem;
+      margin-right: auto;
+      margin-left: 3rem;
+      width: 75%;
+      height: 100%;
+      img {
+        width: 100%;
+      }
+    }
+    .wrapper_right_image {
+      width: 83%;
+      margin-left: auto;
+      margin-right: 3rem;
+      img {
+        width: 100%;
+      }
+    }
+    .btn_imageSection {
+      margin-left: -9rem;
+      margin-top: -6rem;
+    }
+  }
+  // end image section responsive
 }
 // xl device 1200px
 @media (min-width: 1200px) {
@@ -244,6 +382,34 @@
     }
   }
   // end stop breath section responsive
+
+  // start image section responsive
+  .images_section {
+    margin-top: 10rem;
+    .wrapper_left_image {
+      margin-top: -5rem;
+      margin-left: 3rem;
+      margin-right: auto;
+      width: 75%;
+      height: 95%;
+      img {
+        width: 100%;
+      }
+    }
+    .wrapper_right_image {
+      width: 80%;
+      margin-left: auto;
+      margin-right: 3rem;
+      img {
+        width: 100%;
+      }
+    }
+    .btn_imageSection {
+      margin-top: -9rem;
+      margin-left: -6rem;
+    }
+  }
+  // end image section responsive
 }
 // xxl device 1400px
 @media (min-width: 1400px) {
@@ -286,4 +452,32 @@
     }
   }
   // end stop breath section responsive
+
+  // start image section responsive
+  .images_section {
+    margin-top: 10rem;
+    .wrapper_left_image {
+      margin-top: -5rem;
+      margin-left: 3rem;
+      margin-right: auto;
+      width: 73%;
+      height: 90%;
+      img {
+        width: 100%;
+      }
+    }
+    .wrapper_right_image {
+      width: 72%;
+      margin-left: auto;
+      margin-right: 3rem;
+      img {
+        width: 100%;
+      }
+    }
+    .btn_imageSection {
+      margin-top: -5rem;
+      margin-left: 0rem;
+    }
+  }
+  // end image section responsive
 }
