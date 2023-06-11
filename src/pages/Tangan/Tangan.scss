@@ -282,7 +282,7 @@ $title_home_header_color: #f5f5f5;
     }
     .descs1 {
       margin-bottom: 1.5rem;
-      margin-left: 10rem;
+      margin-left: 8rem;
       .numbers {
         position: relative;
         overflow: hidden;
@@ -369,52 +369,32 @@ $title_home_header_color: #f5f5f5;
         overflow: hidden;
         p {
           position: absolute;
+          font-size: 6rem;
+          color: aliceblue;
+          font-family: "Playfair Display", serif;
+          font-weight: 500;
+          text-transform: capitalize;
           &:nth-child(1) {
             top: 0rem;
             left: 0rem;
-            font-size: 6rem;
-            color: aliceblue;
-            font-family: "Playfair Display", serif;
-            font-weight: 500;
-            text-transform: capitalize;
           }
           &:nth-child(2) {
             top: 7rem;
             left: 0rem;
-            font-size: 6rem;
-            color: aliceblue;
-            font-family: "Playfair Display", serif;
-            font-weight: 500;
-            text-transform: capitalize;
           }
           // // //
           &:nth-child(3) {
             top: 15rem;
             left: 0rem;
-            font-size: 6rem;
-            color: aliceblue;
-            font-family: "Playfair Display", serif;
-            font-weight: 500;
-            text-transform: capitalize;
           }
           &:nth-child(4) {
             top: 15rem;
             left: 0rem;
-            font-size: 6rem;
-            color: aliceblue;
-            font-family: "Playfair Display", serif;
-            font-weight: 500;
-            text-transform: capitalize;
           }
           // // //
           &:nth-child(5) {
             top: 15rem;
             left: 0rem;
-            font-size: 6rem;
-            color: aliceblue;
-            font-family: "Playfair Display", serif;
-            font-weight: 500;
-            text-transform: capitalize;
           }
         }
       }
@@ -426,35 +406,23 @@ $title_home_header_color: #f5f5f5;
         height: 120px;
         p {
           position: absolute;
+          font-size: 16px;
+          color: rgb(213 220 223);
+          text-transform: capitalize;
+          width: 500px;
+          line-height: 26px;
+          font-family: "Playfair Display", serif;
           &:nth-child(1) {
             top: 0rem;
             left: 0rem;
-            font-size: 16px;
-            color: rgb(213 220 223);
-            text-transform: capitalize;
-            width: 500px;
-            line-height: 26px;
-            font-family: "Playfair Display", serif;
           }
           &:nth-child(2) {
             top: 15rem;
             left: 0rem;
-            font-size: 16px;
-            color: rgb(213 220 223);
-            text-transform: capitalize;
-            width: 500px;
-            line-height: 26px;
-            font-family: "Playfair Display", serif;
           }
           &:nth-child(3) {
             top: 15rem;
             left: 0rem;
-            font-size: 16px;
-            color: rgb(213 220 223);
-            text-transform: capitalize;
-            width: 500px;
-            line-height: 26px;
-            font-family: "Playfair Display", serif;
           }
         }
       }
