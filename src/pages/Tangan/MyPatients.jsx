@@ -91,7 +91,7 @@ export default function MyPatients() {
       ease: "Expo.easeOut",
       scrollTrigger: {
         trigger: MyPatientsRef.current,
-        start: "top 80%",
+        start: "top 70%",
         end: "bottom 5%",
         onEnter: hiddenTechniques,
         onEnterBack: hiddenTechniques,

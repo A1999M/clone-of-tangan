@@ -162,6 +162,49 @@
     }
   }
   // end more description about tangan responsive
+
+  // start about writter section responsive
+  .about_writter {
+    margin-top: 8rem !important;
+    .wrapper_descs_writter {
+      margin-left: 2.5rem;
+      .about_writter_title {
+        font-size: 6vw;
+        line-height: 2rem;
+        width: 90%;
+        margin-top: 3rem;
+      }
+      .border_bottom_writter {
+        width: 100%;
+        height: 1px;
+        margin-top: 2rem;
+      }
+      .writter_name {
+        font-size: 13px;
+        margin-top: 2rem;
+      }
+    }
+    .wrapper_all_writter {
+      margin-right: 2rem;
+      .wrapper_image_writter {
+        width: 80%;
+        margin: 0 auto;
+        img {
+          width: 100%;
+        }
+      }
+      .wrapper_image_description {
+        margin: 0 auto;
+        margin-top: 2rem;
+        width: 80%;
+        .writter_image_description {
+          font-size: 12px;
+          line-height: 21px;
+        }
+      }
+    }
+  }
+  // end about writter section responsive
 }
 // device 476px
 @media (min-width: 476px) {
@@ -329,6 +372,49 @@
     }
   }
   // end more description about tangan responsive
+
+  // start about writter section responsive
+  .about_writter {
+    margin-top: 8rem !important;
+    .wrapper_descs_writter {
+      margin-left: 4rem;
+      .about_writter_title {
+        font-size: 6vw;
+        line-height: 2.5rem;
+        width: 90%;
+        margin-top: 5rem;
+      }
+      .border_bottom_writter {
+        width: 100%;
+        height: 1px;
+        margin-top: 4rem;
+      }
+      .writter_name {
+        font-size: 13px;
+        margin-top: 2rem;
+      }
+    }
+    .wrapper_all_writter {
+      margin-right: 2rem;
+      .wrapper_image_writter {
+        width: 80%;
+        margin: 0 auto;
+        img {
+          width: 100%;
+        }
+      }
+      .wrapper_image_description {
+        margin: 0 auto;
+        margin-top: 2rem;
+        width: 80%;
+        .writter_image_description {
+          font-size: 12px;
+          line-height: 21px;
+        }
+      }
+    }
+  }
+  // end about writter section responsive
 }
 // small device 576px
 @media (min-width: 576px) {
@@ -497,6 +583,49 @@
     }
   }
   // end more description about tangan responsive
+
+  // start about writter section responsive
+  .about_writter {
+    margin-top: 8rem !important;
+    .wrapper_descs_writter {
+      margin-left: 4rem;
+      .about_writter_title {
+        font-size: 6vw;
+        line-height: 3.5rem;
+        width: 90%;
+        margin-top: 5rem;
+      }
+      .border_bottom_writter {
+        width: 100%;
+        height: 1px;
+        margin-top: 4rem;
+      }
+      .writter_name {
+        font-size: 15px;
+        margin-top: 2rem;
+      }
+    }
+    .wrapper_all_writter {
+      margin-right: 2rem;
+      .wrapper_image_writter {
+        width: 80%;
+        margin: 0 auto;
+        img {
+          width: 100%;
+        }
+      }
+      .wrapper_image_description {
+        margin: 0 auto;
+        margin-top: 2rem;
+        width: 80%;
+        .writter_image_description {
+          font-size: 12px;
+          line-height: 21px;
+        }
+      }
+    }
+  }
+  // end about writter section responsive
 }
 // medium device 768px
 @media (min-width: 768px) {
@@ -658,6 +787,46 @@
     }
   }
   // end more description about tangan responsive
+
+  // start about writter section responsive
+  .about_writter {
+    margin-top: 15rem !important;
+    .wrapper_descs_writter {
+      margin-left: 3rem;
+      .about_writter_title {
+        font-size: 3vw;
+        line-height: 2rem;
+        width: 90%;
+        margin-top: 1rem;
+      }
+      .border_bottom_writter {
+        width: 100%;
+        height: 1px;
+        margin-top: 9rem;
+      }
+      .writter_name {
+        font-size: 13px;
+        margin-top: 2rem;
+      }
+    }
+    .wrapper_all_writter {
+      margin-right: 2rem;
+      .wrapper_image_writter {
+        width: 100%;
+        img {
+          width: 100%;
+        }
+      }
+      .wrapper_image_description {
+        margin-top: 2rem;
+        .writter_image_description {
+          font-size: 12px;
+          line-height: 21px;
+        }
+      }
+    }
+  }
+  // end about writter section responsive
 }
 // large device 992px
 @media (min-width: 992px) {
@@ -817,6 +986,46 @@
     }
   }
   // end more description about tangan responsive
+
+  // start about writter section responsive
+  .about_writter {
+    margin-top: 15rem !important;
+    .wrapper_descs_writter {
+      margin-left: 3rem;
+      .about_writter_title {
+        font-size: 3vw;
+        line-height: 3rem;
+        width: 90%;
+        margin-top: 2.8rem;
+      }
+      .border_bottom_writter {
+        width: 100%;
+        height: 1px;
+        margin-top: 7.8rem;
+      }
+      .writter_name {
+        font-size: 14px;
+        margin-top: 2.5rem;
+      }
+    }
+    .wrapper_all_writter {
+      margin-right: 2rem;
+      .wrapper_image_writter {
+        width: 100%;
+        img {
+          width: 100%;
+        }
+      }
+      .wrapper_image_description {
+        margin-top: 3rem;
+        .writter_image_description {
+          font-size: 12px;
+          line-height: 21px;
+        }
+      }
+    }
+  }
+  // end about writter section responsive
 }
 // xl device 1200px
 @media (min-width: 1200px) {
@@ -976,6 +1185,46 @@
     }
   }
   // end more description about tangan responsive
+
+  // start about writter section responsive
+  .about_writter {
+    margin-top: 15rem !important;
+    .wrapper_descs_writter {
+      margin-left: 3rem;
+      .about_writter_title {
+        font-size: 3vw;
+        line-height: 3.5rem;
+        width: 90%;
+        margin-top: 2rem;
+      }
+      .border_bottom_writter {
+        width: 100%;
+        height: 1px;
+        margin-top: 13.5rem;
+      }
+      .writter_name {
+        font-size: 14px;
+        margin-top: 2.5rem;
+      }
+    }
+    .wrapper_all_writter {
+      margin-right: 2rem;
+      .wrapper_image_writter {
+        width: 100%;
+        img {
+          width: 100%;
+        }
+      }
+      .wrapper_image_description {
+        margin-top: 3.5rem;
+        .writter_image_description {
+          font-size: 14px;
+          line-height: 21px;
+        }
+      }
+    }
+  }
+  // end about writter section responsive
 }
 // xxl device 1400px
 @media (min-width: 1400px) {
@@ -1136,4 +1385,43 @@
     }
   }
   // end more description about tangan responsive
+
+  // start about writter section responsive
+  .about_writter {
+    margin-top: 15rem !important;
+    .wrapper_descs_writter {
+      margin-left: 3rem;
+      .about_writter_title {
+        margin-top: 0rem;
+        font-size: 3.5vw;
+        line-height: 4.5rem;
+        width: 90%;
+      }
+      .border_bottom_writter {
+        width: 100%;
+        height: 1px;
+        margin-top: 10.5rem;
+      }
+      .writter_name {
+        font-size: 16px;
+        margin-top: 3.5rem;
+      }
+    }
+    .wrapper_all_writter {
+      margin-right: 2rem;
+      .wrapper_image_writter {
+        width: 100%;
+        img {
+          width: 100%;
+        }
+      }
+      .wrapper_image_description {
+        margin-top: 3.5rem;
+        .writter_image_description {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+  // end about writter section responsive
 }

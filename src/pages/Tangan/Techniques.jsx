@@ -36,6 +36,7 @@ export default function Techniques() {
   let triggerTitleBottom = useRef();
   let borderWritterRef = useRef();
   let imageWritterRef = useRef();
+  let endTriggerTech = useRef();
   let [enterBorder, setEnterBorder] = useState(false);
   let [width, setWidth] = useState(window.innerWidth);
 
@@ -50,8 +51,9 @@ export default function Techniques() {
       ease: "ease",
       scrollTrigger: {
         trigger: techniquessRef.current,
-        endTrigger: techniquessRef.current,
+        endTrigger: endTriggerTech.current,
         start: "top 50%",
+        end: "bottom 30%",
         toggleActions: "play none restart reverse",
       },
     });
@@ -524,6 +526,81 @@ export default function Techniques() {
         );
       };
 
+      let enterBackImage3 = () => {
+        let tl = gsap.timeline();
+        tl.to(number02.current, {
+          opacity: 0,
+          y: -80,
+          duration: 0.4,
+          ease: "Expo.easeOut",
+        });
+        tl.to(
+          number03.current,
+          {
+            opacity: 1,
+            y: "-3rem",
+            duration: 1,
+            ease: "Expo.easeOut",
+          },
+          "<0"
+        );
+        tl.to(
+          title0101.current,
+          {
+            opacity: 0,
+            y: "-25rem",
+            clipPath: "inset(0% 0% 100% 0%)",
+            duration: 0.4,
+            ease: "Expo.easeOut",
+          },
+          "<0"
+        );
+        tl.to(
+          title03.current,
+          {
+            opacity: 1,
+            y: "-15rem",
+            clipPath: "inset(0% 0% 0% 0%)",
+            duration: 1,
+            ease: "Expo.easeOut",
+          },
+          "<0"
+        );
+        tl.to(
+          title0102.current,
+          {
+            opacity: 0,
+            y: 90,
+            clipPath: "inset(0% 0% 100% 0%)",
+            duration: 0.4,
+            ease: "Expo.easeOut",
+          },
+          "<0"
+        );
+        tl.to(
+          descText01.current,
+          {
+            opacity: 0,
+            y: 135,
+            clipPath: "inset(0% 0% 100% 0%)",
+            duration: 0.4,
+            ease: "Expo.easeOut",
+          },
+          "<0"
+        );
+        tl.to(
+          descText03.current,
+          {
+            opacity: 1,
+            y: "-15rem",
+            clipPath: "inset(0% 0% 0% 0%)",
+            duration: 1,
+            ease: "Expo.easeOut",
+          },
+          "<0"
+        );
+      };
+
       gsap.registerPlugin(ScrollTrigger, SplitText);
       let tl = gsap.timeline({
         scrollTrigger: {
@@ -717,6 +794,7 @@ export default function Techniques() {
           trigger: imageScroll3.current,
           start: "top 15%",
           end: "bottom 0%",
+          onEnterBack: enterBackImage3,
           toggleActions: "restart reverse restart reverse",
         },
       });
@@ -916,7 +994,7 @@ export default function Techniques() {
           </div>
         </div>
         <div className="row about_writter">
-          <div className="col-12 col-lg-7">
+          <div className="col-12 col-md-7 order-2 order-md-1">
             <div className="wrapper_descs_writter">
               <p className="about_writter_title">
                 I have become a passionate follower of well-being. My philosophy
@@ -941,7 +1019,7 @@ export default function Techniques() {
               <p className="writter_name">DIDIER MARTIN</p>
             </div>
           </div>
-          <div className="col-12 col-lg-5">
+          <div className="col-12 col-md-5 order-1 order-md-2">
             <div className="wrapper_all_writter">
               <div className="wrapper_image_writter">
                 <img
@@ -951,7 +1029,7 @@ export default function Techniques() {
                 />
               </div>
               <div className="wrapper_image_description">
-                <p className="writter_image_description">
+                <p ref={endTriggerTech} className="writter_image_description">
                   A PHYSICIST BY TRAINING AND PROFESSION, DIDIER MARTIN
                   UNDERSTOOD THAT EVERYTHING IS ENERGY, THAT IT IS IN THE
                   PRESENT, HENCE THE IMPORTANCE OF THIS BREAK. IT WAS THE ENERGY
