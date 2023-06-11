@@ -55,6 +55,59 @@ export default function Techniques() {
         toggleActions: "play none restart reverse",
       },
     });
+
+    let splitTopTitle = new SplitText(topTitleRef.current, { type: "chars" });
+    let splitBottomTitle = new SplitText(bottomTitleRef.current, {
+      type: "chars",
+    });
+
+    gsap.set(splitTopTitle.chars, {
+      opacity: 0,
+      perspective: 1500,
+      rotate: "27deg",
+      y: "5rem",
+      clipPath: "inset(0% 0% 100% 0%)",
+    });
+    gsap.set(splitBottomTitle.chars, {
+      opacity: 0,
+      perspective: 1500,
+      y: "5rem",
+      rotate: "27deg",
+      clipPath: "inset(0% 0% 100% 0%)",
+    });
+
+    gsap.to(splitTopTitle.chars, {
+      opacity: 1,
+      y: 0,
+      perspective: 0,
+      clipPath: "inset(0% 0% 0% 0%)",
+      rotate: "0deg",
+      duration: 1,
+      stagger: 0.01,
+      ease: "Expo.easeOut",
+      scrollTrigger: {
+        trigger: triggerTitleTop.current,
+        start: "top 70%",
+        end: "bottom 0%",
+      },
+    });
+    gsap.to(splitBottomTitle.chars, {
+      opacity: 1,
+      y: 0,
+      rotate: "0deg",
+      perspective: 0,
+      clipPath: "inset(0% 0% 0% 0%)",
+      duration: 1,
+      stagger: 0.01,
+      ease: "Expo.easeOut",
+      scrollTrigger: {
+        trigger: triggerTitleBottom.current,
+        start: "top 30%",
+        end: "bottom 0%",
+        // markers: true,
+      },
+    });
+
     if (window.innerWidth >= 768) {
       gsap.set(title0101.current, {
         y: -140,
@@ -671,57 +724,6 @@ export default function Techniques() {
     }
 
     // // // // //
-
-    let splitTopTitle = new SplitText(topTitleRef.current, { type: "chars" });
-    let splitBottomTitle = new SplitText(bottomTitleRef.current, {
-      type: "chars",
-    });
-
-    gsap.set(splitTopTitle.chars, {
-      opacity: 0,
-      perspective: 1500,
-      rotate: "27deg",
-      y: "5rem",
-      clipPath: "inset(0% 0% 100% 0%)",
-    });
-    gsap.set(splitBottomTitle.chars, {
-      opacity: 0,
-      perspective: 1500,
-      y: "5rem",
-      rotate: "27deg",
-      clipPath: "inset(0% 0% 100% 0%)",
-    });
-
-    gsap.to(splitTopTitle.chars, {
-      opacity: 1,
-      y: 0,
-      perspective: 0,
-      clipPath: "inset(0% 0% 0% 0%)",
-      rotate: "0deg",
-      duration: 1,
-      stagger: 0.01,
-      ease: "Expo.easeOut",
-      scrollTrigger: {
-        trigger: triggerTitleTop.current,
-        start: "top 80%",
-        end: "bottom 0%",
-      },
-    });
-    gsap.to(splitBottomTitle.chars, {
-      opacity: 1,
-      y: 0,
-      rotate: "0deg",
-      perspective: 0,
-      clipPath: "inset(0% 0% 0% 0%)",
-      duration: 1,
-      stagger: 0.01,
-      ease: "Expo.easeOut",
-      scrollTrigger: {
-        trigger: triggerTitleTop.current,
-        start: "top 20%",
-        end: "bottom 0%",
-      },
-    });
   });
 
   let borderVariants = {
@@ -895,17 +897,20 @@ export default function Techniques() {
           <div className="col-12">
             <div ref={triggerTitleTop} className="wrapper_top_title">
               <p ref={topTitleRef} className="top_title">
-                THE <span>&nbsp;</span> PROCESS <br />
-                SELF ~ HEALING <br />
-                COME <span>&nbsp;</span> TRUE <span>&nbsp;</span> ON{" "}
-                <span>&nbsp;</span> THEIR <span>&nbsp;</span> OWN,
+                THE<span>&nbsp;</span>PROCESS
+                <br />
+                SELF ~ HEALING
+                <br />
+                COME<span>&nbsp;</span>TRUE<span>&nbsp;</span>ON
+                <span>&nbsp;</span>THEIR<span>&nbsp;</span>OWN,
               </p>
             </div>
             <div ref={triggerTitleBottom} className="wrapper_bottom_title">
               <p ref={bottomTitleRef} className="bottom_title">
-                BUT <span>&nbsp;</span> NOT <span>&nbsp;</span> WITHOUT{" "}
-                <span>&nbsp;</span> OUR <br />
-                TOTAL <span>&nbsp;</span> CONSENT.
+                BUT<span>&nbsp;</span>NOT<span>&nbsp;</span>WITHOUT
+                <span>&nbsp;</span>OUR
+                <br />
+                TOTAL<span>&nbsp;</span>CONSENT.
               </p>
             </div>
           </div>

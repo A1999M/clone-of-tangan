@@ -96,6 +96,72 @@
     }
   }
   // end techniquess section responsive
+  // start sticky section responsive
+  .wrapper_item {
+    margin-top: 6rem;
+    .wrapper_numbers_item {
+      margin-left: 3rem;
+      span {
+        &:nth-child(1) {
+          font-size: 23px;
+          font-family: "Playfair Display", serif;
+          color: #cfcfcf;
+        }
+        &:nth-child(2) {
+          width: 23px;
+          height: 2px;
+          background-color: #cfcfcf;
+          display: inline-block;
+          margin: 0 0.2rem;
+        }
+        &:nth-child(3) {
+          font-size: 23px;
+          font-family: "Playfair Display", serif;
+          color: #cfcfcf;
+          display: inline-block;
+        }
+      }
+    }
+    .title_items {
+      font-size: 3rem;
+      width: 85%;
+      margin-top: 4rem;
+      line-height: 3.5rem;
+    }
+    .desc_items {
+      width: 85%;
+      margin-top: 2rem;
+      font-size: 12px;
+      line-height: 20px;
+    }
+    .wrapper_image_item {
+      width: 85%;
+      margin-top: 2rem;
+      border: 1px solid aliceblue;
+      img {
+        width: 100%;
+      }
+    }
+  }
+  // end sticky section responsive
+  // start more description about tangan resonsive
+  .wrapper_top_title {
+    margin-left: 2rem;
+    margin-top: 10rem;
+    .top_title {
+      font-size: 6vw;
+      line-height: 2.5rem;
+    }
+  }
+  .wrapper_bottom_title {
+    width: 75vw;
+    margin-right: 0rem;
+    .bottom_title {
+      font-size: 6vw;
+      line-height: 2.5rem;
+    }
+  }
+  // end more description about tangan responsive
 }
 // device 476px
 @media (min-width: 476px) {
@@ -196,6 +262,8 @@
     }
   }
   // end techniquess section responsive
+
+  // start sticky section responsive
   .wrapper_item {
     margin-top: 6rem;
     .wrapper_numbers_item {
@@ -242,6 +310,25 @@
       }
     }
   }
+  // end sticky section responsive
+  // start more description about tangan resonsive
+  .wrapper_top_title {
+    margin-left: 3rem;
+    margin-top: 10rem;
+    .top_title {
+      font-size: 6vw;
+      line-height: 3rem;
+    }
+  }
+  .wrapper_bottom_title {
+    width: 75vw;
+    margin-right: 2rem;
+    .bottom_title {
+      font-size: 6vw;
+      line-height: 3rem;
+    }
+  }
+  // end more description about tangan responsive
 }
 // small device 576px
 @media (min-width: 576px) {
@@ -343,6 +430,7 @@
   }
   // end techniquess section responsive
 
+  // start sticky section responsive
   .wrapper_item {
     margin-top: 6rem;
     .wrapper_numbers_item {
@@ -389,6 +477,26 @@
       }
     }
   }
+  // end sticky section responsive
+
+  // start more description about tangan resonsive
+  .wrapper_top_title {
+    margin-left: 3rem;
+    margin-top: 10rem;
+    .top_title {
+      font-size: 6vw;
+      line-height: 3rem;
+    }
+  }
+  .wrapper_bottom_title {
+    width: 75vw;
+    margin-right: 2rem;
+    .bottom_title {
+      font-size: 6vw;
+      line-height: 3rem;
+    }
+  }
+  // end more description about tangan responsive
 }
 // medium device 768px
 @media (min-width: 768px) {
@@ -531,6 +639,25 @@
     }
   }
   // end sticky section responsive
+
+  // start more description about tangan resonsive
+  .wrapper_top_title {
+    margin-left: 3rem;
+    margin-top: 10rem;
+    .top_title {
+      font-size: 6vw;
+      line-height: 4rem;
+    }
+  }
+  .wrapper_bottom_title {
+    width: 75vw;
+    margin-right: 2rem;
+    .bottom_title {
+      font-size: 6vw;
+      line-height: 4rem;
+    }
+  }
+  // end more description about tangan responsive
 }
 // large device 992px
 @media (min-width: 992px) {
@@ -672,6 +799,24 @@
     }
   }
   // end sticky section responsive
+  // start more description about tangan resonsive
+  .wrapper_top_title {
+    margin-left: 3rem;
+    margin-top: 10rem;
+    .top_title {
+      font-size: 5.5vw;
+      line-height: 4.5rem;
+    }
+  }
+  .wrapper_bottom_title {
+    width: 75vw;
+    margin-right: -2rem;
+    .bottom_title {
+      font-size: 5.5vw;
+      line-height: 4.5rem;
+    }
+  }
+  // end more description about tangan responsive
 }
 // xl device 1200px
 @media (min-width: 1200px) {
@@ -813,6 +958,24 @@
     }
   }
   // end sticky section responsive
+  // start more description about tangan resonsive
+  .wrapper_top_title {
+    margin-left: 3rem;
+    margin-top: 10rem;
+    .top_title {
+      font-size: 6vw;
+      line-height: 5.5rem;
+    }
+  }
+  .wrapper_bottom_title {
+    width: 75vw;
+    margin-right: 3rem;
+    .bottom_title {
+      font-size: 6vw;
+      line-height: 5.5rem;
+    }
+  }
+  // end more description about tangan responsive
 }
 // xxl device 1400px
 @media (min-width: 1400px) {
@@ -954,4 +1117,23 @@
     }
   }
   // end sticky section responsive
+
+  // start more description about tangan resonsive
+  .wrapper_top_title {
+    margin-left: 3rem;
+    margin-top: 10rem;
+    .top_title {
+      font-size: 6vw;
+      line-height: 7rem;
+    }
+  }
+  .wrapper_bottom_title {
+    width: 75vw;
+    margin-right: 3rem;
+    .bottom_title {
+      font-size: 6vw;
+      line-height: 7rem;
+    }
+  }
+  // end more description about tangan responsive
 }
