@@ -7,17 +7,75 @@ import "./Tangan.scss";
 export default function BetterHealth() {
   let titleBetterHealth = useRef(null);
   let descBetterHealth = useRef(null);
+  let betterHealthRef = useRef(null);
+  let logoRef = useRef(null);
 
   useLayoutEffect(() => {
+    let techniquessSection = document.querySelector(".techniquess");
     gsap.registerPlugin(ScrollTrigger, SplitText);
-    gsap.to(document.body, {
-      backgroundColor: "#f5f5f5",
-      duration: 0.35,
-      ease: "ease",
+
+    gsap.set(logoRef.current, {
+      opacity: 0,
+    });
+    gsap.to(logoRef.current, {
+      opacity: 1,
+      duration: 0.5,
+      ease: "Expo.easeOut",
       scrollTrigger: {
-        trigger: document.querySelector(".better_health"),
-        start: "top: 90%",
+        trigger: logoRef.current,
+        start: "top 40%",
         end: "bottom 0%",
+        toggleActions: "restart reverse restart reverse",
+      },
+    });
+
+    let hiddenTechniques = () => {
+      gsap.to(document.body, {
+        backgroundColor: "#f5f5f5",
+        duration: 0.35,
+        ease: "ease",
+      });
+      gsap.to(techniquessSection, {
+        opacity: 0,
+        ease: "Expo.easeOut",
+        duration: 0.7,
+      });
+    };
+    let leaveTechniques = () => {
+      gsap.to(document.body, {
+        backgroundColor: "#f5f5f5",
+        duration: 0.35,
+        ease: "ease",
+      });
+      gsap.to(techniquessSection, {
+        opacity: 1,
+        duration: 0.7,
+        ease: "Expo.easeOut",
+      });
+    };
+    let showTechniques = () => {
+      gsap.to(document.body, {
+        backgroundColor: "#000",
+        duration: 0.35,
+        ease: "ease",
+      });
+      gsap.to(techniquessSection, {
+        opacity: 1,
+        duration: 0.7,
+        ease: "Expo.easeOut",
+      });
+    };
+    gsap.to(betterHealthRef.current, {
+      duration: 0.5,
+      ease: "Expo.easeOut",
+      scrollTrigger: {
+        trigger: betterHealthRef.current,
+        start: "top 70%",
+        end: "bottom 5%",
+        onEnter: hiddenTechniques,
+        onEnterBack: hiddenTechniques,
+        onLeave: leaveTechniques,
+        onLeaveBack: showTechniques,
       },
     });
 
@@ -75,11 +133,12 @@ export default function BetterHealth() {
 
   return (
     <>
-      <div className="container better_health">
+      <div ref={betterHealthRef} className="container-fluid better_health">
         <div className="row">
-          <div className="col-12 col-lg-6">
+          <div className="col-12 col-md-5">
             <div className="wrapper_logo5">
               <svg
+                ref={logoRef}
                 width="38vh"
                 height="60vh"
                 className="”number_bold”"
@@ -95,7 +154,7 @@ export default function BetterHealth() {
               </svg>
             </div>
           </div>
-          <div className="col-12 col-lg-6">
+          <div className="col-12 col-md-7">
             <div className="wrapper_betterHealth_desc">
               <p ref={titleBetterHealth} className="title_betterHealth">
                 Axes<span>&nbsp;</span>for<span>&nbsp;</span>a <br />
@@ -115,7 +174,7 @@ export default function BetterHealth() {
       </div>
       <div className="container-fluid">
         <div className="row">
-          <div className="col-12">
+          <div className="col-12 d-md-none">
             <div className="home_title_ticker_better_health">
               <div className="inner_content">
                 <span>Physioscan</span>

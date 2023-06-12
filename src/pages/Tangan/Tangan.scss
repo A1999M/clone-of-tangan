@@ -2,40 +2,27 @@ $title_home_header_color: #f5f5f5;
 
 //
 // start home page header styles
-.container_home_header {
-  padding: 0rem 3.5rem;
+.home_header {
+  position: relative;
+  padding: 0rem 3rem;
   margin-top: 6rem !important;
-  height: 90.5vh;
   .wrapper_home_header {
-    position: relative;
+    opacity: 0;
+    background-image: url("https://uploads-ssl.webflow.com/5bc989248743153705f137da/60410425ffe7011d191f5c1e_home__hero--bg.jpg");
+    background-size: 170%;
+    background-repeat: no-repeat;
+    filter: brightness(0.85);
     width: 100%;
-    height: 100%;
+    height: 90.5vh;
     overflow: hidden;
     .title_home_header {
-      position: absolute;
+      text-align: center;
+      margin-left: 0;
+      margin-top: 5rem;
       opacity: 0;
-      top: 6rem;
-      left: 10rem;
-      font-size: 17rem;
+      font-size: 17vw;
       font-family: "Playfair Display", serif;
       font-weight: 500;
-      z-index: 2;
-      color: $title_home_header_color;
-    }
-    .image_home_header {
-      position: absolute;
-      top: -18rem;
-      left: 0rem;
-      width: 110%;
-      filter: brightness(0.8);
-    }
-    .arrow_hex {
-      opacity: 0;
-      font-size: 3rem;
-      position: absolute;
-      bottom: 0rem;
-      transform: rotate(90deg);
-      left: 48rem;
       color: $title_home_header_color;
     }
     .home_title_ticker_header {
@@ -108,7 +95,7 @@ $title_home_header_color: #f5f5f5;
 
 // start stop breath section styles
 .stop_breath {
-  margin-top: 10rem;
+  margin-top: 13rem;
   padding: 0 3rem !important;
   .wrapper_stop_breath_video {
     width: 100%;
@@ -138,9 +125,9 @@ $title_home_header_color: #f5f5f5;
     color: black;
     opacity: 0.8;
     line-height: 25px;
-    width: 600px;
-    margin-top: 12rem;
-    margin-left: 18rem;
+    // max-width: 600px;
+    margin-top: 10rem;
+    margin-left: 30%;
     font-family: "Montserrat", sans-serif;
   }
 }
@@ -151,39 +138,32 @@ $title_home_header_color: #f5f5f5;
 .images_section {
   margin-top: 10rem;
   .wrapper_left_image {
-    position: relative;
-    margin-top: 21rem;
-    width: 606px;
-    height: 604px;
-    overflow: hidden !important;
+    overflow: hidden;
+    width: 70%;
+    height: 100%;
+    margin-top: -5rem;
     margin-left: 3rem;
     img {
-      width: 100%;
       display: inline-block;
-      position: absolute;
-      height: 160%;
-      top: 0rem;
-      left: 0rem;
+      width: 100%;
       transform: scale(2.5);
       clip-path: inset(100% 0% 0% 0%);
     }
   }
   .wrapper_right_image {
-    position: relative;
+    width: 70%;
     margin-left: auto;
     margin-right: 3rem;
-    width: 550px;
-    height: 390px;
     overflow: hidden !important;
     img {
-      position: absolute;
-      top: 0rem;
-      right: 0rem;
       width: 100%;
       display: inline-block;
       transform: scale(2.5);
       clip-path: inset(100% 0% 0% 0%);
     }
+  }
+  .btn_imageSection {
+    margin-top: -5rem;
   }
 }
 // end imgages section styles
@@ -196,6 +176,7 @@ $title_home_header_color: #f5f5f5;
     text-align: center;
     svg {
       transform: scale(1.1);
+      width: 38vh;
     }
   }
   .wrapper_techniques {
@@ -301,7 +282,7 @@ $title_home_header_color: #f5f5f5;
     }
     .descs1 {
       margin-bottom: 1.5rem;
-      margin-left: 10rem;
+      margin-left: 8rem;
       .numbers {
         position: relative;
         overflow: hidden;
@@ -388,52 +369,32 @@ $title_home_header_color: #f5f5f5;
         overflow: hidden;
         p {
           position: absolute;
+          font-size: 6rem;
+          color: aliceblue;
+          font-family: "Playfair Display", serif;
+          font-weight: 500;
+          text-transform: capitalize;
           &:nth-child(1) {
             top: 0rem;
             left: 0rem;
-            font-size: 6rem;
-            color: aliceblue;
-            font-family: "Playfair Display", serif;
-            font-weight: 500;
-            text-transform: capitalize;
           }
           &:nth-child(2) {
             top: 7rem;
             left: 0rem;
-            font-size: 6rem;
-            color: aliceblue;
-            font-family: "Playfair Display", serif;
-            font-weight: 500;
-            text-transform: capitalize;
           }
           // // //
           &:nth-child(3) {
             top: 15rem;
             left: 0rem;
-            font-size: 6rem;
-            color: aliceblue;
-            font-family: "Playfair Display", serif;
-            font-weight: 500;
-            text-transform: capitalize;
           }
           &:nth-child(4) {
             top: 15rem;
             left: 0rem;
-            font-size: 6rem;
-            color: aliceblue;
-            font-family: "Playfair Display", serif;
-            font-weight: 500;
-            text-transform: capitalize;
           }
           // // //
           &:nth-child(5) {
             top: 15rem;
             left: 0rem;
-            font-size: 6rem;
-            color: aliceblue;
-            font-family: "Playfair Display", serif;
-            font-weight: 500;
-            text-transform: capitalize;
           }
         }
       }
@@ -445,35 +406,23 @@ $title_home_header_color: #f5f5f5;
         height: 120px;
         p {
           position: absolute;
+          font-size: 16px;
+          color: rgb(213 220 223);
+          text-transform: capitalize;
+          width: 500px;
+          line-height: 26px;
+          font-family: "Playfair Display", serif;
           &:nth-child(1) {
             top: 0rem;
             left: 0rem;
-            font-size: 16px;
-            color: rgb(213 220 223);
-            text-transform: capitalize;
-            width: 500px;
-            line-height: 26px;
-            font-family: "Playfair Display", serif;
           }
           &:nth-child(2) {
             top: 15rem;
             left: 0rem;
-            font-size: 16px;
-            color: rgb(213 220 223);
-            text-transform: capitalize;
-            width: 500px;
-            line-height: 26px;
-            font-family: "Playfair Display", serif;
           }
           &:nth-child(3) {
             top: 15rem;
             left: 0rem;
-            font-size: 16px;
-            color: rgb(213 220 223);
-            text-transform: capitalize;
-            width: 500px;
-            line-height: 26px;
-            font-family: "Playfair Display", serif;
           }
         }
       }
@@ -585,25 +534,29 @@ $title_home_header_color: #f5f5f5;
   }
 }
 .wrapper_top_title {
+  width: 90vw;
+  margin-right: auto;
   margin-left: 3rem;
   margin-top: 10rem;
   .top_title {
     color: #f5f5f5;
     font-size: 6vw;
+    width: 100%;
     line-height: 7rem;
-    width: 100vw;
     font-weight: 500;
     font-family: "Playfair Display", serif;
     text-transform: uppercase;
   }
 }
 .wrapper_bottom_title {
-  margin-left: 25rem;
+  width: 70vw;
+  margin-left: auto;
+  margin-right: 3rem;
   .bottom_title {
     color: #f5f5f5;
     font-size: 6vw;
     line-height: 7rem;
-    width: 100vw;
+    width: 100%;
     font-weight: 500;
     font-family: "Playfair Display", serif;
     text-transform: uppercase;
@@ -803,12 +756,6 @@ $title_home_header_color: #f5f5f5;
       word-spacing: -1px;
       font-size: 3.2vw;
       line-height: 4.3rem;
-      position: absolute;
-      top: 0rem;
-      left: 0rem;
-    }
-    .next_desc_slider {
-      @extend .current_desc_slider;
     }
     .border_desc_slider {
       width: 100%;

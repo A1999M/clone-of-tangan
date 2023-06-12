@@ -17,7 +17,7 @@ export default function StopBreath() {
     let tl = gsap.timeline({
       scrollTrigger: {
         trigger: titleStopBreath.current,
-        start: "top 40%",
+        start: "top 50%",
         end: "bottom 10%",
       },
     });
@@ -45,8 +45,8 @@ export default function StopBreath() {
     );
     tl.fromTo(
       descStopBreath.current,
-      { opacity: 0 },
-      { opacity: 1, duration: 0.5 },
+      { opacity: 0, y: 50 },
+      { opacity: 1, duration: 1.3, y: 0, ease: "Expo.easeOut" },
       "<0.3"
     );
   });
@@ -55,7 +55,7 @@ export default function StopBreath() {
     <>
       <div className="container-fluid stop_breath">
         <div className="row">
-          <div className="col-12 col-lg-5">
+          <div className="col-12 col-lg-5 order-2 order-lg-1">
             <div className="wrapper_stop_breath_video">
               <div>
                 <video
@@ -68,9 +68,11 @@ export default function StopBreath() {
               </div>
             </div>
           </div>
-          <div className="col-12 col-lg-7">
+          <div className="col-12 col-lg-7 order-1 order-lg-2">
             <p ref={titleStopBreath} className="title_stop_breath">
-              stop, breathe, reconnect
+              stop, <br />
+              breathe, <br />
+              reconnect
             </p>
             <p ref={descStopBreath} className="desc_stop_breath">
               DIDIER MARTIN, PRACTITIONER IN ENERGY CARE, WELCOMES YOU WITH A
