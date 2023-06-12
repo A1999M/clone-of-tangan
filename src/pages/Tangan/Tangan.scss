@@ -756,12 +756,6 @@ $title_home_header_color: #f5f5f5;
       word-spacing: -1px;
       font-size: 3.2vw;
       line-height: 4.3rem;
-      position: absolute;
-      top: 0rem;
-      left: 0rem;
-    }
-    .next_desc_slider {
-      @extend .current_desc_slider;
     }
     .border_desc_slider {
       width: 100%;

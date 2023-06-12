@@ -43,7 +43,7 @@ export default function Tangan() {
       {/* Techniques section home page */}
       <Techniques />
       {/* MyPatients section home page */}
-      <MyPatients />
+      {/* <MyPatients /> */}
       {/* better health section home page */}
       <BetterHealth />
     </>

@@ -130,7 +130,7 @@ export default function MyPatients() {
     <>
       <div ref={MyPatientsRef} className="container-fluid MyPatients">
         <div className="row">
-          <div className="col-12 col-lg-8">
+          <div className="col-12 col-md-8">
             <div className="wrapper_MyPatients_title">
               <p className="title_myPatients">
                 My Patients <br />
@@ -152,7 +152,7 @@ export default function MyPatients() {
               ></motion.div>
             </div>
           </div>
-          <div className="col-12 col-lg-4">
+          <div className="col-12 col-md-4">
             <div className="wrapper_MyPatients_btn">
               <Btn
                 borderColor={"#000"}
@@ -163,7 +163,7 @@ export default function MyPatients() {
           </div>
         </div>
         <div className="row">
-          <div className="col-12 col-lg-4">
+          <div className="col-12 col-md-4 d-none d-lg-block ">
             <div className="wrapper_number_slider">
               <span ref={NumberRef1} className="current_slider_number">
                 01
@@ -185,7 +185,7 @@ export default function MyPatients() {
               </div>
             </div>
           </div>
-          <div className="col-12 col-lg-8">
+          <div className="col-12 col-lg-8 align-self-end">
             <div ref={wrapperdescRef} className="wrapper_desc_slider">
               <p ref={DescRef1} className="current_desc_slider">
                 {slider[0].desc}
