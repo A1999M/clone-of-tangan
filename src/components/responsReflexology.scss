@@ -28,6 +28,34 @@
     }
   }
   // end responsive header of reflexology
+
+  // start responsive goals of reflexology
+  .goals2 {
+    margin-top: 11rem;
+    .wrapper_title2_goals {
+      .title_goals2 {
+        font-size: 18vw;
+      }
+    }
+    .wrapper_item_goals2 {
+      position: relative;
+      padding-left: 0rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 5rem;
+      padding-bottom: 3rem;
+      .title_itemGoals {
+        font-size: 8vw;
+      }
+      .desc_itemGoals {
+        font-size: 11px;
+        width: 53vw;
+        line-height: 19px;
+      }
+    }
+  }
+  // end responsive goals of reflexology
 }
 @media (min-width: 476px) {
   // start responsive header of reflexology
@@ -59,6 +87,33 @@
     }
   }
   // end responsive header of reflexology
+  // start responsive goals of reflexology
+  .goals2 {
+    margin-top: 11rem;
+    .wrapper_title2_goals {
+      .title_goals2 {
+        font-size: 18vw;
+      }
+    }
+    .wrapper_item_goals2 {
+      position: relative;
+      padding-left: 0rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 5rem;
+      padding-bottom: 3rem;
+      .title_itemGoals {
+        font-size: 9vw;
+      }
+      .desc_itemGoals {
+        font-size: 10px;
+        width: 52vw;
+        line-height: 17px;
+      }
+    }
+  }
+  // end responsive goals of reflexology
 }
 @media (min-width: 576px) {
   // start responsive header of reflexology
@@ -90,6 +145,34 @@
     }
   }
   // end responsive header of reflexology
+
+  // start reflexology goals responsive
+  .goals2 {
+    margin-top: 9rem;
+    .wrapper_title2_goals {
+      .title_goals2 {
+        font-size: 15vw;
+      }
+    }
+    .wrapper_item_goals2 {
+      position: relative;
+      padding-left: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 5rem;
+      padding-bottom: 3rem;
+      .title_itemGoals {
+        font-size: 9vw;
+      }
+      .desc_itemGoals {
+        font-size: 11px;
+        width: 53vw;
+        line-height: 18px;
+      }
+    }
+  }
+  // end reflexology goals responsive
 }
 @media (min-width: 768px) {
   // start responsive header of reflexology
@@ -121,6 +204,56 @@
     }
   }
   // end responsive header of reflexology
+  // start goals section reflexology reponsive
+  .goals {
+    .wrapper_goals_title {
+      margin-top: 95%;
+      .goals_title {
+        font-size: 9vw;
+      }
+    }
+    .wrapper_relax {
+      padding-left: 0rem;
+    }
+    .wrapper_clear_out {
+      padding-left: 0;
+    }
+    .wrapper_enable {
+      padding-left: 0rem;
+    }
+    .wrapper_regulate {
+      padding-left: 0rem;
+    }
+    .wrapper_prevent {
+      padding-left: 0rem;
+    }
+  }
+  .goals2 {
+    margin-top: 11rem;
+    .wrapper_title2_goals {
+      .title_goals2 {
+        font-size: 13vw;
+      }
+    }
+    .wrapper_item_goals2 {
+      position: relative;
+      padding-left: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 5rem;
+      padding-bottom: 3rem;
+      .title_itemGoals {
+        font-size: 8vw;
+      }
+      .desc_itemGoals {
+        font-size: 12px;
+        width: 53vw;
+        line-height: 20px;
+      }
+    }
+  }
+  // end gaols section reflexology responsive
 }
 @media (min-width: 992px) {
   // start responsive header of reflexology
@@ -152,6 +285,42 @@
     }
   }
   // end responsive header of reflexology
+
+  // start goals section reflexology reponsive
+  .goals {
+    margin-top: 6rem;
+    .wrapper_goals_title {
+      margin-top: 65%;
+      .goals_title {
+        font-size: 8vw;
+      }
+    }
+    .wrapper_goalsItem1 {
+      padding-left: 1rem;
+      width: 100%;
+      padding-bottom: 3rem;
+      margin-top: 2rem;
+      .title_goalsItem1 {
+        font-size: 4vw;
+      }
+      .desc_goalsItem1 {
+        font-size: 11px;
+        margin-top: 2rem;
+        line-height: 19px;
+      }
+      .border_goalsItem1 {
+        bottom: 0rem;
+        left: -27px;
+      }
+    }
+    .prevent_image {
+      height: 50%;
+    }
+    .border_bottom_goals {
+      bottom: -37%;
+    }
+  }
+  // end gaols section reflexology responsive
 }
 @media (min-width: 1200px) {
   // start responsive header of reflexology
@@ -183,6 +352,42 @@
     }
   }
   // end responsive header of reflexology
+
+  // start goals section reflexology reponsive
+  .goals {
+    margin-top: 8rem;
+    .wrapper_goals_title {
+      margin-top: 55%;
+      .goals_title {
+        font-size: 8vw;
+      }
+    }
+    .wrapper_goalsItem1 {
+      padding-left: 1rem;
+      width: 100%;
+      padding-bottom: 3rem;
+      margin-top: 2rem;
+      .title_goalsItem1 {
+        font-size: 3vw;
+      }
+      .desc_goalsItem1 {
+        font-size: 12px;
+        margin-top: 2rem;
+        line-height: 21px;
+      }
+      .border_goalsItem1 {
+        bottom: 0rem;
+        left: -27px;
+      }
+    }
+    .prevent_image {
+      height: 56%;
+    }
+    .border_bottom_goals {
+      bottom: -40%;
+    }
+  }
+  // end gaols section reflexology responsive
 }
 @media (min-width: 1400px) {
   // start responsive header of reflexology
@@ -214,4 +419,40 @@
     }
   }
   // end responsive header of reflexology
+
+  // start goals section reflexology reponsive
+  .goals {
+    margin-top: 10rem;
+    .wrapper_goals_title {
+      margin-top: 56%;
+      .goals_title {
+        font-size: 6vw;
+      }
+    }
+    .wrapper_goalsItem1 {
+      padding-left: 1rem;
+      width: 100%;
+      padding-bottom: 3rem;
+      margin-top: 2rem;
+      .title_goalsItem1 {
+        font-size: 3vw;
+      }
+      .desc_goalsItem1 {
+        font-size: 13px;
+        margin-top: 2rem;
+        line-height: 23px;
+      }
+      .border_goalsItem1 {
+        bottom: 0rem;
+        left: -27px;
+      }
+    }
+    .prevent_image {
+      height: 60%;
+    }
+    .border_bottom_goals {
+      bottom: -42%;
+    }
+  }
+  // end gaols section reflexology responsive
 }
