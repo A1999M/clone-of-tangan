@@ -28,7 +28,7 @@ export default function GoalsItem768({ title, desc }) {
     let tl = gsap.timeline({
       scrollTrigger: {
         trigger: titleRef.current,
-        start: "top 75%",
+        start: "top 80%",
         end: "bottom 0%",
       },
     });

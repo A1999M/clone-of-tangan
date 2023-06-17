@@ -25,6 +25,7 @@ export default function MoreAbout() {
 
   let moreAboutRef = useRef(null);
   let imageMoreRef = useRef(null);
+  let imageMoreRef2 = useRef(null);
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -174,7 +175,9 @@ export default function MoreAbout() {
 
       gsap.to(imageMoreRef.current, {
         scale: 1,
-        duration: 1.5,
+        opacity: 1,
+        clipPath: "inset(0% 0% 0% 0%)",
+        duration: 2,
         ease: "Expo.easeOut",
         scrollTrigger: {
           trigger: imageMoreRef.current,
@@ -324,14 +327,15 @@ export default function MoreAbout() {
           // },
         },
       });
-
-      gsap.to(imageMoreRef.current, {
+      gsap.to(imageMoreRef2.current, {
         scale: 1,
         duration: 1.5,
+        opacity: 1,
+        clipPath: "inset(0% 0% 0% 0%)",
         ease: "Expo.easeOut",
         scrollTrigger: {
-          trigger: imageMoreRef.current,
-          start: "center 95%",
+          trigger: imageMoreRef2.current,
+          start: "center 90%",
           end: "bottom 0%",
         },
       });
@@ -379,7 +383,7 @@ export default function MoreAbout() {
     <>
       <div ref={moreAboutRef} className="container_fluid moreAbout">
         <div className="row">
-          <div className="col-12 col-lg-9">
+          <div className="col-12 order-2 order-lg-1 col-lg-9">
             <div className="wrapper_more_descs">
               <span ref={topTitle1Ref} className="titles_more1">
                 STRESS
@@ -399,7 +403,7 @@ export default function MoreAbout() {
               </span>
             </div>
           </div>
-          <div className="col-12 col-lg-3">
+          <div className="col-12 order-1 order-lg-2 col-lg-3">
             <div className="wrapper_image_more">
               <img
                 ref={imageMoreRef}
@@ -411,17 +415,17 @@ export default function MoreAbout() {
           </div>
         </div>
         <div className="row">
-          <div className="col-12 col-lg-3">
+          <div className="col-12 order-1 order-lg-1 col-lg-3">
             <div className="wrapper_left_image_more">
               <img
-                ref={imageMoreRef}
+                ref={imageMoreRef2}
                 className="image_left_more_section"
                 src="https://uploads-ssl.webflow.com/5bc989248743153705f137da/6040f006f868eb0c4ce0536a_reflexo-01.jpg"
                 alt="https://uploads-ssl.webflow.com/5bc989248743153705f137da/6040f006f868eb0c4ce0536a_reflexo-01.jpg"
               />
             </div>
           </div>
-          <div className="col-12 col-lg-9">
+          <div className="col-12 order-2 order-lg-2 col-lg-9">
             <div className="wrapper_more_descs2">
               <span ref={bottomTitle1Ref} className="titles_bottom_more1">
                 TROUBLES DU SOMMEIL

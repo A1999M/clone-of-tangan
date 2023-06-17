@@ -11,6 +11,8 @@ export default function Goals() {
   let borderRightGoalsRef = useRef(null);
   let borderLeftGoalsRef = useRef(null);
   let stickyRef = useRef(null);
+  let imgPrevent2Ref = useRef(null);
+  let imgPreventRef = useRef(null);
   let endTriggerSticky = useRef(null);
   let [winWidth, setWinWidth] = useState(window.innerWidth);
 
@@ -65,6 +67,29 @@ export default function Goals() {
             pinSpacing: false,
           },
         });
+      } else {
+        gsap.set(imgPrevent2Ref.current, {
+          opacity: 0,
+          scale: 2,
+          clipPath: "inset(100% 0% 0% 0%)",
+        });
+        gsap.to(imgPrevent2Ref.current, {
+          opacity: 1,
+          scale: 1,
+          clipPath: "inset(0% 0% 0% 0%)",
+          duration: 2,
+          ease: "Expo.easeOut",
+          scrollTrigger: {
+            trigger: imgPrevent2Ref.current,
+            start: "center 75%",
+            end: "center 0%",
+            // markers: {
+            //   startColor: "#ff0000",
+            //   endColor: "#ffd700",
+            //   fontSize: "20px",
+            // },
+          },
+        });
       }
     }, scopeRef);
 
@@ -79,9 +104,9 @@ export default function Goals() {
 
   return (
     <>
-      <div ref={scopeRef} className="container-fluid goals">
-        {winWidth >= 992 ? (
-          <>
+      {winWidth >= 992 ? (
+        <>
+          <div ref={scopeRef} className="container-fluid goals">
             <div ref={stickyRef} className="row sticky justify-content-start">
               <div className="col-12 col-lg-5 position-relative">
                 <div className="wrapper_goals_title">
@@ -136,54 +161,57 @@ export default function Goals() {
                 DISORDERS IN ORDER TO PROMOTE HOMEOSTASIS (STATE OF
                 BALANCE IN THE BODY).`}
                 />
-                <div className="prevent_image"></div>
+                <div ref={imgPreventRef} className="prevent_image"></div>
                 <div
                   ref={endTriggerSticky}
                   className="border_bottom_goals"
                 ></div>
               </div>
             </div>
-          </>
-        ) : (
-          <div className="container-fluid goals2">
-            <div className="row">
-              <div className="col-12">
-                <div className="wrapper_title2_goals">
-                  <p className="title_goals2">goals</p>
-                </div>
+          </div>
+        </>
+      ) : (
+        <div className="container-fluid goals2">
+          <div className="row">
+            <div className="col-12">
+              <div className="wrapper_title2_goals">
+                <p className="title_goals2">goals</p>
               </div>
-              {/* relax */}
-              <GoalsItem768
-                title={"relax"}
-                desc="RELAX THE BODY AND BRING GENERAL WELL-BEING, ESPECIALLY MENTAL WELL-BEING, THANKS TO MENTAL RELAXATION AND THE EVACUATION OF NEGATIVE EMOTIONS."
-              />
-              <GoalsItem768
-                title={"Clear"}
-                desc="EVACUATE THE STRESS AT THE ORIGIN OF MANY PHYSICAL AND PSYCHIC DYSFUNCTIONS."
-              />
-              <GoalsItem768
-                title={"Enable"}
-                desc={`THE TECHNIQUES USED ALLOW FIRST OF ALL TO RELAX THE
+            </div>
+            {/* relax */}
+            <GoalsItem768
+              title={"relax"}
+              desc="RELAX THE BODY AND BRING GENERAL WELL-BEING, ESPECIALLY MENTAL WELL-BEING, THANKS TO MENTAL RELAXATION AND THE EVACUATION OF NEGATIVE EMOTIONS."
+            />
+            <GoalsItem768
+              title={"Clear"}
+              desc="EVACUATE THE STRESS AT THE ORIGIN OF MANY PHYSICAL AND PSYCHIC DYSFUNCTIONS."
+            />
+            <GoalsItem768
+              title={"Enable"}
+              desc={`THE TECHNIQUES USED ALLOW FIRST OF ALL TO RELAX THE
                 TISSUES AND THEN TO HAVE AN EFFECTIVE DRAINING
                 ACTION, BY DISLODGING THE TOXINS AND ELIMINATING
                 THEM. ACTIVATING AND IMPROVING VENOUS AND LYMPHATIC 
                 CIRCULATION.`}
-              />
-              <GoalsItem768
-                title={"regulate"}
-                desc={`REGULATE THE CENTRAL NERVOUS SYSTEM WHICH ITSELF
+            />
+            <GoalsItem768
+              title={"regulate"}
+              desc={`REGULATE THE CENTRAL NERVOUS SYSTEM WHICH ITSELF
                 INCREASES THE BODY'S SELF-REGULATION PROCESS.`}
-              />
-              <GoalsItem768
-                title={"Prevent"}
-                desc={`PREVENT, RELIEVE, EVEN ELIMINATE A LARGE NUMBER OF 
+            />
+            <GoalsItem768
+              title={"Prevent"}
+              desc={`PREVENT, RELIEVE, EVEN ELIMINATE A LARGE NUMBER OF 
                 DISORDERS IN ORDER TO PROMOTE HOMEOSTASIS (STATE OF
                 BALANCE IN THE BODY).`}
-              />
+            />
+            <div className="col-12 px-0 overflow-hidden">
+              <div ref={imgPrevent2Ref} className="image_prevent_goals2"></div>
             </div>
           </div>
-        )}
-      </div>
+        </div>
+      )}
     </>
   );
 }
