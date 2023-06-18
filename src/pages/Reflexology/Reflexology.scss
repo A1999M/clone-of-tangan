@@ -411,9 +411,8 @@
     z-index: 100;
   }
   .wrapper_btn_Technical {
-    position: relative;
-    top: 17%;
-    left: -15.7rem;
+    width: 100%;
+    margin-top: 17rem;
   }
   .border_bottom_Technical {
     width: 100vw;
@@ -438,8 +437,8 @@
       font-size: 14px;
       font-family: "Montserrat", sans-serif;
       color: #000;
-      margin-top: 1.5rem;
-      line-height: 1.3rem;
+      margin-top: 2.5rem;
+      line-height: 1.4rem;
     }
     .Reflexzones_desc2 {
       font-size: 13px;
@@ -495,8 +494,8 @@
       font-size: 14px;
       font-family: "Montserrat", sans-serif;
       color: #000;
-      margin-top: 1.5rem;
-      line-height: 1.3rem;
+      margin-top: 2.5rem;
+      line-height: 1.4rem;
     }
     .Ancestral_desc2 {
       font-size: 13px;
@@ -505,6 +504,95 @@
       margin-top: 1.5rem;
       line-height: 1.3rem;
     }
+  }
+}
+.Technical2 {
+  position: relative;
+  margin-top: 22rem;
+  .wrapper_Reflexzones2 {
+    padding-left: 1rem;
+    .Reflexzones2_title {
+      font-size: 6vw;
+      color: #000;
+      font-weight: 100;
+      font-family: "Playfair Display", serif;
+    }
+    .Reflexzones2_desc1 {
+      font-size: 13px;
+      font-family: "Montserrat", sans-serif;
+      color: #000;
+      margin-top: 2.5rem;
+      line-height: 1.3rem;
+    }
+    .Reflexzones2_desc2 {
+      font-size: 12px;
+      font-family: "Montserrat", sans-serif;
+      color: #000;
+      margin-top: 1.5rem;
+      line-height: 22px;
+    }
+  }
+  .wrapper_Ancestral2 {
+    padding-left: 1rem;
+    .Ancestral2_title {
+      font-size: 6vw;
+      color: #000;
+      font-weight: 100;
+      font-family: "Playfair Display", serif;
+    }
+    .Ancestral2_desc1 {
+      font-size: 11px;
+      font-family: "Montserrat", sans-serif;
+      color: #000;
+      margin-top: 2.5rem;
+      line-height: 20px;
+    }
+    .Ancestral2_desc2 {
+      font-size: 13px;
+      font-family: "Montserrat", sans-serif;
+      color: #000;
+      margin-top: 1.5rem;
+      line-height: 23px;
+    }
+  }
+  .image1_Technical2 {
+    background-image: url(https://uploads-ssl.webflow.com/5bc989248743153705f137da/5feca1ebc46ece50791c880e_feet-map-01-p-1080.jpeg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 75vh;
+    margin-top: 2rem;
+    clip-path: inset(100% 0% 0% 0%);
+    transform: scale(2);
+    opacity: 0;
+  }
+  .image2_Technical2 {
+    background-image: url(https://uploads-ssl.webflow.com/5bc989248743153705f137da/5feca3329c74e6ab9561347a_feet-map-02-p-1080.jpeg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 60vh;
+    margin-top: 4rem;
+  }
+  .image3_Technical2 {
+    background-image: url(https://uploads-ssl.webflow.com/5bc989248743153705f137da/5feca347aac908296c5fbeae_feet-map-03-p-1080.jpeg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 75vh;
+    margin-top: 4rem;
+  }
+  .image4_Technical2 {
+    background-image: url(https://uploads-ssl.webflow.com/5bc989248743153705f137da/5feca35bd91ad311edfd674a_feet-map-04-p-1080.jpeg);
+    background-size: 85%;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    margin-top: 1rem;
   }
 }
 // end Technical section styles

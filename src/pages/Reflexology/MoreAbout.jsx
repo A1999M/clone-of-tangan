@@ -349,22 +349,39 @@ export default function MoreAbout() {
   useLayoutEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
     let hiddenGoals = () => {
-      gsap.to(document.querySelector(".goals"), {
-        opacity: 0,
-        duration: 0.5,
-        ease: "ease",
-      });
+      if (window.innerWidth >= 992) {
+        gsap.to(document.querySelector(".goals"), {
+          opacity: 0,
+          duration: 0.3,
+          ease: "none",
+        });
+      } else {
+        gsap.to(document.querySelector(".goals2"), {
+          opacity: 0,
+          duration: 0.3,
+          ease: "none",
+        });
+      }
     };
     let showGoals = () => {
-      gsap.to(document.querySelector(".goals"), {
-        opacity: 1,
-        duration: 0.5,
-        ease: "ease",
-      });
+      if (window.innerWidth >= 992) {
+        gsap.to(document.querySelector(".goals"), {
+          opacity: 1,
+          duration: 0.3,
+          ease: "none",
+        });
+      } else {
+        gsap.to(document.querySelector(".goals2"), {
+          opacity: 1,
+          duration: 0.3,
+          ease: "none",
+        });
+      }
     };
     gsap.to(document.body, {
       backgroundColor: "#000",
       duration: 0.3,
+      ease: "none",
       scrollTrigger: {
         trigger: moreAboutRef.current,
         endTrigger: bottomTitle4Ref.current,
