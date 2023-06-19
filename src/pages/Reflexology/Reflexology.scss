@@ -1,6 +1,6 @@
 // start header style reflexology
 .header_reflexology {
-  margin-bottom: 4rem;
+  // margin-bottom: 4rem;
   .price_reflexology {
     text-align: center;
     margin-top: 7rem;
@@ -31,23 +31,14 @@
   .scope {
     margin-top: -5%;
     mix-blend-mode: multiply;
-    .wrapper_header_image {
-      width: 100%;
+    .header_image {
       height: 100vh;
-      position: relative;
-      div {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        .zxa {
-          clip-path: inset(0% 25%);
-          filter: brightness(0.75);
-          background-image: url(https://uploads-ssl.webflow.com/5bc989248743153705f137da/6040f0064ed94c45ceda486b_bg_hero_reflexologie.jpg);
-          background-position: center;
-          background-repeat: no-repeat;
-          background-size: cover;
-        }
-      }
+      clip-path: inset(0% 25%);
+      filter: brightness(0.75);
+      background-image: url(https://uploads-ssl.webflow.com/5bc989248743153705f137da/6040f0064ed94c45ceda486b_bg_hero_reflexologie.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
     }
   }
 
@@ -102,8 +93,7 @@
   }
   .wrapper_btn_goals {
     position: relative;
-    top: 20%;
-    left: -15.7rem;
+    top: 72%;
   }
   // border left goals section
   .border_left_goals {
@@ -115,26 +105,26 @@
     background-color: #000;
     z-index: 100;
   }
-  // relax
-  .wrapper_relax {
+  .wrapper_goalsItem1 {
     padding-left: 1rem;
     width: 100%;
     position: relative;
     padding-bottom: 3rem;
-    .relax_title {
+    margin-top: 2rem;
+    .title_goalsItem1 {
       font-size: 3vw;
       color: #000;
       font-weight: 100;
       font-family: "Playfair Display", serif;
     }
-    .relax_desc {
+    .desc_goalsItem1 {
       font-size: 14px;
       font-family: "Montserrat", sans-serif;
       color: #000;
       margin-top: 2rem;
       line-height: 1.3rem;
     }
-    .relax_border {
+    .border_goalsItem1 {
       position: absolute;
       bottom: 0rem;
       left: -27px;
@@ -143,139 +133,68 @@
       background-color: #000;
     }
   }
-  // clear out
-  .wrapper_clear_out {
-    padding-left: 1rem;
-    margin-top: 3rem;
-    position: relative;
-    padding-bottom: 3rem;
-    .clear_title {
-      font-size: 3vw;
-      color: #000;
-      font-weight: 100;
-      font-family: "Playfair Display", serif;
-    }
-    .clear_desc {
-      font-size: 14px;
-      font-family: "Montserrat", sans-serif;
-      color: #000;
-      margin-top: 2rem;
-      line-height: 1.3rem;
-    }
-    .clear_border {
-      position: absolute;
-      bottom: 0rem;
-      left: -27px;
-      width: 0%;
-      height: 1px;
-      background-color: #000;
-    }
-  }
-  // Enable
-  .wrapper_enable {
-    padding-left: 1rem;
-    margin-top: 3rem;
-    position: relative;
-    padding-bottom: 3rem;
-    .enable_title {
-      font-size: 3vw;
-      color: #000;
-      font-weight: 100;
-      font-family: "Playfair Display", serif;
-    }
-    .enable_desc {
-      font-size: 14px;
-      font-family: "Montserrat", sans-serif;
-      color: #000;
-      margin-top: 2rem;
-      line-height: 1.3rem;
-    }
-    .enable_border {
-      position: absolute;
-      bottom: 0rem;
-      left: -27px;
-      width: 0%;
-      height: 1px;
-      background-color: #000;
-    }
-  }
-  // regulate
-  .wrapper_regulate {
-    padding-left: 1rem;
-    margin-top: 3rem;
-    padding-bottom: 3rem;
-    position: relative;
-    .title_regulate {
-      font-size: 3vw;
-      color: #000;
-      font-weight: 100;
-      font-family: "Playfair Display", serif;
-    }
-    .desc_regulate {
-      font-size: 14px;
-      font-family: "Montserrat", sans-serif;
-      color: #000;
-      margin-top: 2rem;
-      line-height: 1.3rem;
-    }
-    .regulate_border {
-      position: absolute;
-      bottom: 0rem;
-      left: -27px;
-      width: 0%;
-      height: 1px;
-      background-color: #000;
-    }
-  }
-  // prevent
-  .wrapper_prevent {
-    padding-left: 1rem;
-    margin-top: 3rem;
-    position: relative;
-    padding-bottom: 3rem;
-    .title_prevent {
-      font-size: 3vw;
-      color: #000;
-      font-weight: 100;
-      font-family: "Playfair Display", serif;
-    }
-    .desc_pevent {
-      font-size: 14px;
-      font-family: "Montserrat", sans-serif;
-      color: #000;
-      margin-top: 2rem;
-      line-height: 1.3rem;
-    }
-    .prevent_border {
-      position: absolute;
-      bottom: 0rem;
-      left: -27px;
-      width: 0%;
-      height: 1px;
-      background-color: #000;
-    }
-    .wrapper_image_prevent {
-      width: 690px;
-      height: 650px;
-      overflow: hidden;
-      position: absolute;
-      left: -26px;
-      margin-top: 3rem;
-      img {
-        width: 100%;
-        height: 100%;
-        clip-path: inset(100% 0% 0% 0%);
-        transform: scale(1.8);
-      }
-    }
+  .prevent_image {
+    background-image: url(https://uploads-ssl.webflow.com/5bc989248743153705f137da/6040f006134916376bca40b1_reflexologie.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 60%;
+    width: 110%;
+    margin-left: -1.7rem;
   }
   .border_bottom_goals {
     width: 100vw;
     height: 1px;
     position: absolute;
-    bottom: -40.6%;
+    bottom: -40%;
     left: 0%;
     background-color: #000;
+  }
+}
+
+.goals2 {
+  margin-top: 11rem;
+  .wrapper_title2_goals {
+    .title_goals2 {
+      font-size: 13vw;
+      text-align: center;
+      text-transform: capitalize;
+    }
+  }
+  .wrapper_item_goals2 {
+    position: relative;
+    padding-left: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 5rem;
+    padding-bottom: 3rem;
+    .title_itemGoals {
+      font-size: 8vw;
+      color: #000;
+      font-weight: 100;
+      font-family: "Playfair Display", serif;
+    }
+    .desc_itemGoals {
+      font-size: 12px;
+      font-family: "Montserrat", sans-serif;
+      color: #000;
+      width: 53vw;
+      line-height: 20px;
+    }
+  }
+  .border_bottemItem {
+    width: 0vw;
+    height: 1px;
+    background-color: #000;
+  }
+  .image_prevent_goals2 {
+    min-width: 100%;
+    min-height: 70vh;
+    background-image: url(https://uploads-ssl.webflow.com/5bc989248743153705f137da/6040f006134916376bca40b1_reflexologie.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 }
 // end goals styles reflexology
@@ -357,20 +276,24 @@
       display: inline-block;
       width: 100%;
       height: 100%;
-      transform: scale(2);
+      opacity: 0;
+      clip-path: inset(100% 0% 0% 0%);
+      transform: scale(3);
     }
   }
   .wrapper_left_image_more {
     overflow: hidden;
-    height: 19vw;
-    width: 12vw;
+    height: 23vw;
+    width: 16vw;
     margin-left: 5rem;
-    margin-top: 4rem;
+    margin-top: 2rem;
     border: 1px solid #f5f5f5;
     .image_left_more_section {
       display: inline-block;
       width: 100%;
       height: 100%;
+      opacity: 0;
+      clip-path: inset(100% 0% 0% 0%);
       transform: scale(2);
     }
   }
@@ -488,9 +411,8 @@
     z-index: 100;
   }
   .wrapper_btn_Technical {
-    position: relative;
-    top: 17%;
-    left: -15.7rem;
+    width: 100%;
+    margin-top: 17rem;
   }
   .border_bottom_Technical {
     width: 100vw;
@@ -515,8 +437,8 @@
       font-size: 14px;
       font-family: "Montserrat", sans-serif;
       color: #000;
-      margin-top: 1.5rem;
-      line-height: 1.3rem;
+      margin-top: 2.5rem;
+      line-height: 1.4rem;
     }
     .Reflexzones_desc2 {
       font-size: 13px;
@@ -572,8 +494,8 @@
       font-size: 14px;
       font-family: "Montserrat", sans-serif;
       color: #000;
-      margin-top: 1.5rem;
-      line-height: 1.3rem;
+      margin-top: 2.5rem;
+      line-height: 1.4rem;
     }
     .Ancestral_desc2 {
       font-size: 13px;
@@ -582,6 +504,106 @@
       margin-top: 1.5rem;
       line-height: 1.3rem;
     }
+  }
+}
+.Technical2 {
+  position: relative;
+  margin-top: 22rem;
+  .wrapper_Technical2_title {
+    margin-top: 12%;
+    .Technical2_title {
+      font-size: 12vw;
+      font-family: "Playfair Display", serif;
+      color: #000;
+      text-align: center;
+      font-weight: 500;
+    }
+  }
+  .wrapper_Reflexzones2 {
+    padding-left: 1rem;
+    margin-top: 5rem;
+    .Reflexzones2_title {
+      font-size: 6vw;
+      color: #000;
+      font-weight: 100;
+      font-family: "Playfair Display", serif;
+    }
+    .Reflexzones2_desc1 {
+      font-size: 13px;
+      font-family: "Montserrat", sans-serif;
+      color: #000;
+      margin-top: 2.5rem;
+      line-height: 1.3rem;
+    }
+    .Reflexzones2_desc2 {
+      font-size: 12px;
+      font-family: "Montserrat", sans-serif;
+      color: #000;
+      margin-top: 1.5rem;
+      line-height: 22px;
+    }
+  }
+  .wrapper_Ancestral2 {
+    padding-left: 1rem;
+    .Ancestral2_title {
+      font-size: 6vw;
+      color: #000;
+      font-weight: 100;
+      font-family: "Playfair Display", serif;
+    }
+    .Ancestral2_desc1 {
+      font-size: 11px;
+      font-family: "Montserrat", sans-serif;
+      color: #000;
+      margin-top: 2.5rem;
+      line-height: 20px;
+    }
+    .Ancestral2_desc2 {
+      font-size: 13px;
+      font-family: "Montserrat", sans-serif;
+      color: #000;
+      margin-top: 1.5rem;
+      line-height: 23px;
+    }
+  }
+  .image1_Technical2 {
+    background-image: url(https://uploads-ssl.webflow.com/5bc989248743153705f137da/5feca1ebc46ece50791c880e_feet-map-01-p-1080.jpeg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 75vh;
+    margin-top: 2rem;
+    clip-path: inset(100% 0% 0% 0%);
+    transform: scale(2);
+    opacity: 0;
+  }
+  .image2_Technical2 {
+    background-image: url(https://uploads-ssl.webflow.com/5bc989248743153705f137da/5feca3329c74e6ab9561347a_feet-map-02-p-1080.jpeg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 60vh;
+    margin-top: 4rem;
+  }
+  .image3_Technical2 {
+    background-image: url(https://uploads-ssl.webflow.com/5bc989248743153705f137da/5feca347aac908296c5fbeae_feet-map-03-p-1080.jpeg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 75vh;
+    margin-top: 4rem;
+  }
+  .image4_Technical2 {
+    background-image: url(https://uploads-ssl.webflow.com/5bc989248743153705f137da/5feca35bd91ad311edfd674a_feet-map-04-p-1080.jpeg);
+    background-size: 85%;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    margin-top: 1rem;
   }
 }
 // end Technical section styles

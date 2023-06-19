@@ -7,11 +7,9 @@ import "./Reflexology.scss";
 
 export default function Header() {
   let titleHeaderRef = useRef(null);
-  let imageHeaderRef = useRef(null);
-  let wrapperHeaderImageRef = useRef(null);
+  let HeaderImageRef = useRef(null);
   let descHeaderRef = useRef(null);
   let scopeRef = useRef(null);
-  let stickySection = useRef(null);
   let titleStickyTexts = useRef(null);
   let priceReflexology = useRef(null);
 
@@ -35,7 +33,7 @@ export default function Header() {
         y: 120,
         clipPath: "inset(0% 0% 100% 0%)",
       });
-      gsap.set(wrapperHeaderImageRef.current, { y: "11rem", opacity: 0 });
+      gsap.set(HeaderImageRef.current, { y: "11rem", opacity: 0 });
 
       gsap.to(priceReflexology.current, {
         opacity: 1,
@@ -59,7 +57,7 @@ export default function Header() {
         ease: "Expo.easeOut",
         delay: 0.5,
       });
-      gsap.to(wrapperHeaderImageRef.current, {
+      gsap.to(HeaderImageRef.current, {
         y: 0,
         duration: 1.5,
         ease: "Expo.easeOut",
@@ -67,20 +65,20 @@ export default function Header() {
         delay: 0.5,
       });
 
-      gsap.to(imageHeaderRef.current, {
+      gsap.to(HeaderImageRef.current, {
         clipPath: "inset(0% 0%)",
         duration: 1.5,
         ease: "none",
         scrollTrigger: {
-          trigger: imageHeaderRef.current,
-          start: "-=100 50%",
+          trigger: HeaderImageRef.current,
+          start: "-=180 50%",
           end: "center 50%",
           scrub: 1.2,
           id: "imageHeader",
         },
       });
 
-      gsap.to(stickySection.current, {
+      gsap.to(scopeRef.current, {
         duration: 1,
         ease: "Expo.easeOut",
         scrollTrigger: {
@@ -163,11 +161,7 @@ export default function Header() {
             </p>
           </div>
           <div ref={scopeRef} className="col-12 px-0 scope">
-            <div ref={wrapperHeaderImageRef} className="wrapper_header_image">
-              <div ref={stickySection}>
-                <div className="zxa" ref={imageHeaderRef}></div>
-              </div>
-            </div>
+            <div ref={HeaderImageRef} className="header_image"></div>
           </div>
         </div>
         <div className="row">

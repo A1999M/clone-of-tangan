@@ -57,13 +57,23 @@ export default function Footer() {
     });
   };
   let moveImage = (e) => {
-    gsap.to(hoverImageRef.current, {
-      opacity: 1,
-      clipPath: "inset(0% 0%)",
-      x: e.clientX - 324,
-      y: e.clientY - 324,
-      duration: 0.5,
-    });
+    if (window.innerWidth >= 992) {
+      gsap.to(hoverImageRef.current, {
+        opacity: 1,
+        clipPath: "inset(0% 0%)",
+        x: e.clientX - 324,
+        y: e.clientY - 324,
+        duration: 0.5,
+      });
+    } else {
+      gsap.to(hoverImageRef.current, {
+        opacity: 1,
+        clipPath: "inset(0% 0%)",
+        x: e.clientX - 324,
+        y: e.clientY - 400,
+        duration: 0.5,
+      });
+    }
   };
 
   return (
