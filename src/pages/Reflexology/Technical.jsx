@@ -37,6 +37,7 @@ export default function Technical() {
     });
 
     gsap.registerPlugin(ScrollTrigger, SplitText);
+
     let ctx = gsap.context(() => {
       if (widthSize >= 992) {
         let tl = gsap.timeline({
@@ -220,7 +221,6 @@ export default function Technical() {
       );
     } else {
       //
-
       let splitDescAncestral = new SplitText(Ancestral2Desc1Ref.current, {
         type: "lines",
       });
@@ -244,45 +244,44 @@ export default function Technical() {
         clipPath: "inset(0% 0% 100% 0%)",
       });
 
-      let descTl = gsap.timeline({
-        scrollTrigger: {
-          trigger: Ancestral2TitleRef.current,
-          start: "top 70%",
-          end: "bottom 0%",
-        },
-      });
-
-      descTl.to(Ancestral2TitleRef.current, {
+      gsap.to(Ancestral2TitleRef.current, {
         opacity: 1,
         y: 0,
         clipPath: "inset(0% 0% 0% 0%)",
         duration: 1.5,
         ease: "Expo.easeOut",
+        scrollTrigger: {
+          trigger: Ancestral2TitleRef.current,
+          start: "top 75%",
+          end: "bottom 0%",
+        },
       });
-      descTl.to(
-        splitDescAncestral.lines,
-        {
-          opacity: 1,
-          y: 0,
-          clipPath: "inset(0% 0% 0% 0%)",
-          duration: 2,
-          ease: "Expo.easeOut",
-          stagger: 0.1,
+      gsap.to(splitDescAncestral.lines, {
+        opacity: 1,
+        y: 0,
+        clipPath: "inset(0% 0% 0% 0%)",
+        duration: 2,
+        ease: "Expo.easeOut",
+        stagger: 0.1,
+        scrollTrigger: {
+          trigger: splitDescAncestral.lines,
+          start: "top 75%",
+          end: "bottom 0%",
         },
-        "<0"
-      );
-      descTl.to(
-        splitDesc2Ancestral.lines,
-        {
-          opacity: 1,
-          y: 0,
-          clipPath: "inset(0% 0% 0% 0%)",
-          duration: 2,
-          ease: "Expo.easeOut",
-          stagger: 0.1,
+      });
+      gsap.to(splitDesc2Ancestral.lines, {
+        opacity: 1,
+        y: 0,
+        clipPath: "inset(0% 0% 0% 0%)",
+        duration: 2,
+        ease: "Expo.easeOut",
+        stagger: 0.1,
+        scrollTrigger: {
+          trigger: splitDesc2Ancestral.lines,
+          start: "top 75%",
+          end: "bottom 0%",
         },
-        "<0.5"
-      );
+      });
 
       gsap.to(image1Techno2Ref.current, {
         clipPath: "inset(0% 0% 0% 0%)",
@@ -311,108 +310,118 @@ export default function Technical() {
   return (
     <>
       {widthSize >= 992 ? (
-        <div ref={scope} className="container-fluid Technical">
-          <div ref={borderTopRef} className="border_top_technical"></div>
-          <div
-            ref={stickyRowRef}
-            className="row stickyRow justify-content-start"
-          >
-            <div className="col-12 col-lg-5 position-relative">
-              <div className="wrapper_Technical_title">
-                <p className="Technical_title">Technical</p>
-              </div>
-              <div
-                ref={borderRightRef}
-                className="border_right_Technical"
-              ></div>
-            </div>
-            <div className="col-12 col-lg-2 position-relative">
-              <div ref={borderLeftRef} className="border_left_Technical"></div>
-              <div className="wrapper_btn_Technical">
-                <Btn
-                  firstText="makean appointment"
-                  secondText="take a break"
-                  borderColor="#000"
-                />
-              </div>
-            </div>
-          </div>
-          <div className="row justify-content-end">
+        <>
+          <div ref={scope} className="container-fluid Technical">
+            <div ref={borderTopRef} className="border_top_technical"></div>
             <div
-              ref={borderBottomRef}
-              className="border_bottom_technical"
-            ></div>
-            <div className="col-12 col-lg-5">
-              <div className="wrapper_Reflexzones">
-                <p ref={ReflexzonesTitleRef} className="Reflexzones_title">
-                  Reflex zones
-                </p>
-                <p ref={ReflexzonesDescRef} className="Reflexzones_desc1">
-                  THIS ALTERNATIVE CARE TECHNIQUE IS PRACTICED BY DIGITAL
-                  PRESSURE ON __ THE ENTIRE FOOT, IN ORDER TO DETECT AND RELEASE
-                  TENSION. REFLEXOLOGY __AIMS TO MOBILIZE THE BODY'S
-                  SELF-HEALING PROCESS WHICH REBALANCES A __ PHYSICAL, EMOTIONAL
-                  OR ENERGETIC DISORDER.
-                </p>
-                <p ref={ReflexzonesDesc2Ref} className="Reflexzones_desc2">
-                  The reflex zones of the foot are massaged according to a very
-                  precise protocol linked to __ the fact that each part of the
-                  body is represented at a specific place on the foot, called
-                  the __ reflex zone. This is the miniature projection of this
-                  part. The tensions present and the __ texture of the skin
-                  indicate the places on which it will be necessary to insist.
-                  Nevertheless, __ during each session the entire reflex zones
-                  will be treated.
-                </p>
+              ref={stickyRowRef}
+              className="row stickyRow justify-content-start"
+            >
+              <div className="col-12 col-lg-5 position-relative">
+                <div className="wrapper_Technical_title">
+                  <p className="Technical_title">Technical</p>
+                </div>
+                <div
+                  ref={borderRightRef}
+                  className="border_right_Technical"
+                ></div>
               </div>
-              <div className="wrapper_image1_technical">
-                <img
-                  src="https://uploads-ssl.webflow.com/5bc989248743153705f137da/5feca1ebc46ece50791c880e_feet-map-01-p-800.jpeg"
-                  alt="https://uploads-ssl.webflow.com/5bc989248743153705f137da/5feca1ebc46ece50791c880e_feet-map-01-p-800.jpeg"
-                />
+              <div className="col-12 col-lg-2 position-relative">
+                <div
+                  ref={borderLeftRef}
+                  className="border_left_Technical"
+                ></div>
+                <div className="wrapper_btn_Technical">
+                  <Btn
+                    firstText="makean appointment"
+                    secondText="take a break"
+                    borderColor="#000"
+                  />
+                </div>
               </div>
-              <div className="wrapper_image2_technical">
-                <img
-                  src="https://uploads-ssl.webflow.com/5bc989248743153705f137da/5feca3329c74e6ab9561347a_feet-map-02-p-800.jpeg"
-                  alt="https://uploads-ssl.webflow.com/5bc989248743153705f137da/5feca3329c74e6ab9561347a_feet-map-02-p-800.jpeg"
-                />
-              </div>
-              <div className="wrapper_image3_technical">
-                <img
-                  src="https://uploads-ssl.webflow.com/5bc989248743153705f137da/5feca347aac908296c5fbeae_feet-map-03-p-800.jpeg"
-                  alt="https://uploads-ssl.webflow.com/5bc989248743153705f137da/5feca347aac908296c5fbeae_feet-map-03-p-800.jpeg"
-                />
-              </div>
-              <div className="wrapper_image4_technical">
-                <img
-                  src="https://uploads-ssl.webflow.com/5bc989248743153705f137da/5feca35bd91ad311edfd674a_feet-map-04-p-800.jpeg"
-                  alt="https://uploads-ssl.webflow.com/5bc989248743153705f137da/5feca35bd91ad311edfd674a_feet-map-04-p-800.jpeg"
-                />
-              </div>
-              <div className="wrapper_Ancestral">
-                <p ref={AncestralTitleRef} className="Ancestral_title">
-                  Ancestral method
-                </p>
-                <p ref={AncestralDesc1Ref} className="Ancestral_desc1">
-                  THE CHINESE AND EGYPTIANS, OVER 2000 BC, USED A FORM OF
-                  REFLEXOLOGY DURING ANTIQUITY. IN CHINA, THE IDEOGRAM “FOOT”
-                  LITERALLY MEANS “PART OF THE BODY THAT SAFEGUARDS HEALTH”. IT
-                  WAS
-                </p>
-                <p ref={AncestralDesc2Ref} className="Ancestral_desc2">
-                  in 1917 that Zone therapy, or relieving pain at home appeared
-                  , Fitzgerald's discovery which led him to establish a map of
-                  the “connected” regions of the body. Reflexology is also based
-                  on the work of Eunice Ingham (1889-1974), American nurse and
-                  physiotherapist.
-                </p>
+            </div>
+            <div className="row justify-content-end">
+              <div
+                ref={borderBottomRef}
+                className="border_bottom_technical"
+              ></div>
+              <div className="col-12 col-lg-5">
+                <div className="wrapper_Reflexzones">
+                  <p ref={ReflexzonesTitleRef} className="Reflexzones_title">
+                    Reflex zones
+                  </p>
+                  <p ref={ReflexzonesDescRef} className="Reflexzones_desc1">
+                    THIS ALTERNATIVE CARE TECHNIQUE IS PRACTICED BY DIGITAL
+                    PRESSURE ON __ THE ENTIRE FOOT, IN ORDER TO DETECT AND
+                    RELEASE TENSION. REFLEXOLOGY __AIMS TO MOBILIZE THE BODY'S
+                    SELF-HEALING PROCESS WHICH REBALANCES A __ PHYSICAL,
+                    EMOTIONAL OR ENERGETIC DISORDER.
+                  </p>
+                  <p ref={ReflexzonesDesc2Ref} className="Reflexzones_desc2">
+                    The reflex zones of the foot are massaged according to a
+                    very precise protocol linked to __ the fact that each part
+                    of the body is represented at a specific place on the foot,
+                    called the __ reflex zone. This is the miniature projection
+                    of this part. The tensions present and the __ texture of the
+                    skin indicate the places on which it will be necessary to
+                    insist. Nevertheless, __ during each session the entire
+                    reflex zones will be treated.
+                  </p>
+                </div>
+                <div className="wrapper_image1_technical">
+                  <img
+                    src="https://uploads-ssl.webflow.com/5bc989248743153705f137da/5feca1ebc46ece50791c880e_feet-map-01-p-800.jpeg"
+                    alt="https://uploads-ssl.webflow.com/5bc989248743153705f137da/5feca1ebc46ece50791c880e_feet-map-01-p-800.jpeg"
+                  />
+                </div>
+                <div className="wrapper_image2_technical">
+                  <img
+                    src="https://uploads-ssl.webflow.com/5bc989248743153705f137da/5feca3329c74e6ab9561347a_feet-map-02-p-800.jpeg"
+                    alt="https://uploads-ssl.webflow.com/5bc989248743153705f137da/5feca3329c74e6ab9561347a_feet-map-02-p-800.jpeg"
+                  />
+                </div>
+                <div className="wrapper_image3_technical">
+                  <img
+                    src="https://uploads-ssl.webflow.com/5bc989248743153705f137da/5feca347aac908296c5fbeae_feet-map-03-p-800.jpeg"
+                    alt="https://uploads-ssl.webflow.com/5bc989248743153705f137da/5feca347aac908296c5fbeae_feet-map-03-p-800.jpeg"
+                  />
+                </div>
+                <div className="wrapper_image4_technical">
+                  <img
+                    src="https://uploads-ssl.webflow.com/5bc989248743153705f137da/5feca35bd91ad311edfd674a_feet-map-04-p-800.jpeg"
+                    alt="https://uploads-ssl.webflow.com/5bc989248743153705f137da/5feca35bd91ad311edfd674a_feet-map-04-p-800.jpeg"
+                  />
+                </div>
+                <div className="wrapper_Ancestral">
+                  <p ref={AncestralTitleRef} className="Ancestral_title">
+                    Ancestral method
+                  </p>
+                  <p ref={AncestralDesc1Ref} className="Ancestral_desc1">
+                    THE CHINESE AND EGYPTIANS, OVER 2000 BC, USED A FORM OF
+                    REFLEXOLOGY DURING ANTIQUITY. IN CHINA, THE IDEOGRAM “FOOT”
+                    LITERALLY MEANS “PART OF THE BODY THAT SAFEGUARDS HEALTH”.
+                    IT WAS
+                  </p>
+                  <p ref={AncestralDesc2Ref} className="Ancestral_desc2">
+                    in 1917 that Zone therapy, or relieving pain at home
+                    appeared , Fitzgerald's discovery which led him to establish
+                    a map of the “connected” regions of the body. Reflexology is
+                    also based on the work of Eunice Ingham (1889-1974),
+                    American nurse and physiotherapist.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        </>
       ) : (
         <div className="container-fluid Technical2">
           <div className="row">
+            <div className="col-12">
+              <div className="wrapper_Technical2_title">
+                <p className="Technical2_title">Technical</p>
+              </div>
+            </div>
             <div className="col-12">
               <div className="wrapper_Reflexzones2">
                 <p ref={Reflexzones2TitleRef} className="Reflexzones2_title">

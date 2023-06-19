@@ -509,8 +509,19 @@
 .Technical2 {
   position: relative;
   margin-top: 22rem;
+  .wrapper_Technical2_title {
+    margin-top: 12%;
+    .Technical2_title {
+      font-size: 12vw;
+      font-family: "Playfair Display", serif;
+      color: #000;
+      text-align: center;
+      font-weight: 500;
+    }
+  }
   .wrapper_Reflexzones2 {
     padding-left: 1rem;
+    margin-top: 5rem;
     .Reflexzones2_title {
       font-size: 6vw;
       color: #000;
