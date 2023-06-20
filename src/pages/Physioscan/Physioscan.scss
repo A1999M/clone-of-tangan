@@ -116,9 +116,7 @@
       }
     }
     .wrapper_btn_GoalsPhysio {
-      position: relative;
-      left: -15.6rem;
-      top: 8%;
+      margin-top: 16rem;
     }
   }
   .wrapper_scan {
@@ -253,6 +251,65 @@
   }
 }
 // end GoalsPhysio styles
+
+.GoalsPhysio2 {
+  .wrapper_item_GoalsPhysio2 {
+    position: relative;
+    padding-left: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 5rem;
+    padding-bottom: 3rem;
+    .title_item_GoalsPhysio2 {
+      font-size: 8vw;
+      color: #000;
+      font-weight: 100;
+      font-family: "Playfair Display", serif;
+    }
+    .desc_item_GoalsPhysio2 {
+      font-size: 12px;
+      font-family: "Montserrat", sans-serif;
+      color: #000;
+      width: 53vw;
+      line-height: 20px;
+    }
+  }
+  .border_bottemItem_GoalsPhysio2 {
+    width: 0vw;
+    height: 1px;
+    background-color: #000;
+  }
+  .wrapper_titleGoalsPhysio2 {
+    .title_GoalsPhysio2 {
+      font-size: 13vw;
+      text-align: center;
+      text-transform: capitalize;
+    }
+  }
+  .wrapper_item_goals2 {
+    position: relative;
+    padding-left: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 5rem;
+    padding-bottom: 3rem;
+    .title_itemGoals {
+      font-size: 8vw;
+      color: #000;
+      font-weight: 100;
+      font-family: "Playfair Display", serif;
+    }
+    .desc_itemGoals {
+      font-size: 12px;
+      font-family: "Montserrat", sans-serif;
+      color: #000;
+      width: 53vw;
+      line-height: 20px;
+    }
+  }
+}
 
 // start take care styles
 .takeCare {

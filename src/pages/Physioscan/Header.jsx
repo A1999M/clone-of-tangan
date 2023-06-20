@@ -5,8 +5,6 @@ import SplitText from "../../plugins/SplitText";
 import "./Physioscan.scss";
 
 export default function Header() {
-  let [widthSize, setWidthSize] = useState(window.innerWidth);
-
   let scopeRef = useRef(null);
   let titleHeaderRef = useRef(null);
   let wrapperHeaderImageRef = useRef(null);
