@@ -94,7 +94,7 @@
       opacity: 0;
       .big_title {
         font-size: 15vw;
-        padding-top: 15rem;
+        padding-top: 25rem;
         font-family: "Playfair Display", serif;
         color: #f5f5f5;
         text-transform: uppercase;
@@ -102,7 +102,38 @@
       }
     }
   }
-  // end responsive TakeCare styles
+  // end responsive TakeCare
+
+  // start responsive techni2 styles
+  .TechnicalPhysio2 {
+    margin-top: 25rem;
+    .wrapper_item_TechnoPhysio2 {
+      padding-left: 2;
+      margin-top: 4rem;
+      padding-bottom: 1rem;
+      .title_item_TechnoPhysio2 {
+        font-size: 6vw;
+        line-height: 35px;
+        margin-bottom: 1rem;
+      }
+      .desc_item_TechnoPhysio2 {
+        font-size: 11px;
+        line-height: 22px;
+        margin-top: 1.5rem;
+      }
+    }
+    .image_Vibration_techno2 {
+      margin-top: 0rem;
+      min-width: 100%;
+      min-height: 50vh;
+    }
+    .image_Investigate_techno2 {
+      margin-top: 0rem;
+      min-width: 100%;
+      min-height: 50vh;
+    }
+  }
+  // end responsive techno2 styles
 }
 @media (min-width: 476px) {
   // start responsive header of reflexology
@@ -209,6 +240,37 @@
     }
   }
   // end responsive TakeCare styles
+
+  // start responsive techni2 styles
+  .TechnicalPhysio2 {
+    margin-top: 20rem;
+    .wrapper_item_TechnoPhysio2 {
+      padding-left: 2;
+      margin-top: 2rem;
+      padding-bottom: 1rem;
+      .title_item_TechnoPhysio2 {
+        font-size: 6vw;
+        line-height: 62px;
+        margin-bottom: 0rem;
+      }
+      .desc_item_TechnoPhysio2 {
+        font-size: 11px;
+        line-height: 22px;
+        margin-top: 1.5rem;
+      }
+    }
+    .image_Vibration_techno2 {
+      margin-top: 0rem;
+      min-width: 100%;
+      min-height: 75vh;
+    }
+    .image_Investigate_techno2 {
+      margin-top: 0rem;
+      min-width: 100%;
+      min-height: 75vh;
+    }
+  }
+  // end responsive techno2 styles
 }
 @media (min-width: 576px) {
   // start responsive header of reflexology
@@ -272,7 +334,7 @@
       margin-top: 5rem;
       padding-bottom: 3rem;
       .title_item_GoalsPhysio2 {
-        font-size: 8vw;
+        font-size: 6vw;
       }
       .desc_item_GoalsPhysio2 {
         font-size: 11px;
@@ -315,6 +377,35 @@
     }
   }
   // end responsive TakeCare styles
+
+  // start responsive techni2 styles
+  .TechnicalPhysio2 {
+    margin-top: 20rem;
+    .wrapper_item_TechnoPhysio2 {
+      padding-left: 2;
+      margin-top: 2rem;
+      padding-bottom: 2rem;
+      .title_item_TechnoPhysio2 {
+        font-size: 5vw;
+        line-height: 62px;
+        margin-bottom: 0rem;
+      }
+      .desc_item_TechnoPhysio2 {
+        font-size: 11px;
+        line-height: 22px;
+        margin-top: 1.5rem;
+      }
+    }
+    .image_Vibration_techno2 {
+      min-width: 100%;
+      min-height: 75vh;
+    }
+    .image_Investigate_techno2 {
+      min-width: 100%;
+      min-height: 75vh;
+    }
+  }
+  // end responsive techno2 styles
 }
 @media (min-width: 768px) {
   // start responsive header of reflexology
@@ -353,7 +444,7 @@
         line-height: 5rem;
         top: -15%;
         font-size: 7.5vw;
-        left: 15%;
+        left: 10%;
       }
       .desc_header_image {
         width: 37vw;
@@ -368,7 +459,7 @@
 
   // start responsive GoalsPhysio styles
   .GoalsPhysio2 {
-    margin-top: 12rem;
+    margin-top: 14rem;
     .wrapper_titleGoalsPhysio2 {
       .title_GoalsPhysio2 {
         font-size: 15vw;
@@ -383,7 +474,7 @@
       margin-top: 5rem;
       padding-bottom: 3rem;
       .title_item_GoalsPhysio2 {
-        font-size: 8vw;
+        font-size: 6vw;
       }
       .desc_item_GoalsPhysio2 {
         font-size: 12px;
@@ -421,6 +512,35 @@
     }
   }
   // end responsive TakeCare styles
+
+  // start responsive techni2 styles
+  .TechnicalPhysio2 {
+    margin-top: 20rem;
+    .wrapper_item_TechnoPhysio2 {
+      padding-left: 2;
+      margin-top: 4rem;
+      padding-bottom: 1rem;
+      .title_item_TechnoPhysio2 {
+        font-size: 5vw;
+        line-height: 62px;
+        margin-bottom: 1rem;
+      }
+      .desc_item_TechnoPhysio2 {
+        font-size: 11px;
+        line-height: 22px;
+        margin-top: 2.5rem;
+      }
+    }
+    .image_Vibration_techno2 {
+      min-width: 100%;
+      min-height: 75vh;
+    }
+    .image_Investigate_techno2 {
+      min-width: 100%;
+      min-height: 75vh;
+    }
+  }
+  // end responsive techno2 styles
 }
 @media (min-width: 992px) {
   // start responsive header of reflexology
@@ -456,10 +576,10 @@
       width: 100%;
       height: 78vh;
       .title_header_image {
-        line-height: 5.5rem;
+        line-height: 5rem;
         top: -15%;
-        font-size: 6.5vw;
-        left: 15%;
+        font-size: 7vw;
+        left: 10%;
       }
       .desc_header_image {
         width: 30vw;
@@ -602,6 +722,84 @@
     }
   }
   // end responsive TakeCare styles
+
+  // start responsive TechnicalPhysio styles
+  .TechnicalPhysio {
+    margin-top: 3rem;
+    .sticky_TechnicalPhysio {
+      .border_left_TechnicalPhysio {
+        top: 0;
+        right: 0rem;
+      }
+      .border_right_TechnicalPhysioo {
+        top: 0;
+        right: 0rem;
+      }
+      .wrapper_title_TechnicalPhysio {
+        margin-top: 42%;
+        .title_TechnicalPhysio {
+          font-size: 7vw;
+          clip-path: inset(100% 0% 0% 0%);
+        }
+      }
+      .wrapper_btn_TechnicalPhysio {
+        margin-top: 15rem;
+      }
+    }
+    .wrapper_TechnicalPhysioItems {
+      margin-top: 3rem;
+      padding-left: 1rem;
+      width: 100%;
+      padding-bottom: 3rem;
+      .TechnicalPhysioItems_title {
+        font-size: 3vw;
+        line-height: 46px;
+      }
+      .TechnicalPhysioItems_desc {
+        width: 70%;
+        margin-top: 0rem;
+        span {
+          font-size: 11px;
+          margin-top: 2rem;
+          line-height: 20px;
+          &:nth-child(2) {
+            margin-top: 2rem;
+          }
+          &:nth-child(3) {
+            margin-top: 2rem;
+          }
+          &:nth-child(4) {
+            margin-top: 2rem;
+          }
+        }
+      }
+      .TechnicalPhysioItems_border {
+        bottom: 0rem;
+        left: -27px;
+      }
+    }
+    .wrapper_image_Vibration {
+      width: 473px;
+      height: 470px;
+      margin-left: -1.8rem;
+      img {
+        height: 100%;
+      }
+    }
+    .wrapper_image_Investigate {
+      height: 470px;
+      margin-top: 0;
+      margin-left: -1.8rem;
+      img {
+        height: 100%;
+      }
+    }
+    .border_bottom_TechnicalPhysio {
+      bottom: 0rem;
+      left: 0rem;
+    }
+  }
+  // end responsive TechnicalPhysio styles
 }
 @media (min-width: 1200px) {
   // start responsive header of reflexology
@@ -783,6 +981,78 @@
     }
   }
   // end responsive TakeCare styles
+
+  // start responsive TechnicalPhysio styles
+  .TechnicalPhysio {
+    margin-top: 3rem;
+    .sticky_TechnicalPhysio {
+      .border_left_TechnicalPhysio {
+        top: 0;
+        right: 0rem;
+      }
+      .border_right_TechnicalPhysioo {
+        top: 0;
+        right: 0rem;
+      }
+      .wrapper_title_TechnicalPhysio {
+        margin-top: 42%;
+        .title_TechnicalPhysio {
+          font-size: 7vw;
+          clip-path: inset(100% 0% 0% 0%);
+        }
+      }
+      .wrapper_btn_TechnicalPhysio {
+        margin-top: 15rem;
+      }
+    }
+    .wrapper_TechnicalPhysioItems {
+      margin-top: 3rem;
+      padding-left: 1rem;
+      width: 100%;
+      padding-bottom: 3rem;
+      .TechnicalPhysioItems_title {
+        font-size: 3vw;
+        line-height: 46px;
+      }
+      .TechnicalPhysioItems_desc {
+        width: 70%;
+        margin-top: 2rem;
+        span {
+          font-size: 12px;
+          margin-top: 0rem;
+          line-height: 21px;
+          &:nth-child(2) {
+            margin-top: 2rem;
+          }
+          &:nth-child(3) {
+            margin-top: 2rem;
+          }
+          &:nth-child(4) {
+            margin-top: 2rem;
+          }
+        }
+      }
+      .TechnicalPhysioItems_border {
+        bottom: 0rem;
+        left: -27px;
+      }
+    }
+    .wrapper_image_Vibration {
+      width: 690px;
+      height: 550px;
+      margin-left: -1.8rem;
+    }
+    .wrapper_image_Investigate {
+      height: 530px;
+      margin-top: 0;
+      margin-left: -1.8rem;
+    }
+    .border_bottom_TechnicalPhysio {
+      bottom: 0rem;
+      left: 0rem;
+    }
+  }
+  // end responsive TechnicalPhysio styles
 }
 @media (min-width: 1400px) {
   // start responsive header of reflexology
@@ -962,4 +1232,75 @@
     }
   }
   // end responsive TakeCare styles
+
+  // start responsive TechnicalPhysio styles
+  .TechnicalPhysio {
+    margin-top: 3rem;
+    .sticky_TechnicalPhysio {
+      .border_left_TechnicalPhysio {
+        top: 0;
+        right: 0rem;
+      }
+      .border_right_TechnicalPhysioo {
+        top: 0;
+        right: 0rem;
+      }
+      .wrapper_title_TechnicalPhysio {
+        margin-top: 42%;
+        .title_TechnicalPhysio {
+          font-size: 7vw;
+          clip-path: inset(100% 0% 0% 0%);
+        }
+      }
+      .wrapper_btn_TechnicalPhysio {
+        margin-top: 15rem;
+      }
+    }
+    .wrapper_TechnicalPhysioItems {
+      margin-top: 3rem;
+      padding-left: 1rem;
+      width: 100%;
+      padding-bottom: 3rem;
+      .TechnicalPhysioItems_title {
+        font-size: 3vw;
+      }
+      .TechnicalPhysioItems_desc {
+        width: 70%;
+        margin-top: 2rem;
+        span {
+          font-size: 14px;
+          margin-top: 2rem;
+          line-height: 1.4rem;
+          &:nth-child(2) {
+            margin-top: 2rem;
+          }
+          &:nth-child(3) {
+            margin-top: 2rem;
+          }
+          &:nth-child(4) {
+            margin-top: 2rem;
+          }
+        }
+      }
+      .TechnicalPhysioItems_border {
+        bottom: 0rem;
+        left: -27px;
+      }
+    }
+    .wrapper_image_Vibration {
+      width: 690px;
+      height: 650px;
+      margin-left: -1.8rem;
+    }
+    .wrapper_image_Investigate {
+      height: 604px;
+      margin-top: 0;
+      margin-left: -1.8rem;
+    }
+    .border_bottom_TechnicalPhysio {
+      bottom: 4.3rem;
+      left: 0rem;
+    }
+  }
+  // end responsive TechnicalPhysio styles
 }

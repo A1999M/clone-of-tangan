@@ -91,7 +91,7 @@ export default function TakeCare() {
             trigger: bigTitleRef.current,
             start: "top 100%",
             end: "bottom 0%",
-            scrub: 2,
+            scrub: 1,
             id: "bigTitleTrigger",
           },
         }
