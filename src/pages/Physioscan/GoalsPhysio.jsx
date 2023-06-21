@@ -31,6 +31,7 @@ export default function GoalsPhysio() {
   let ReinformTitleRef = useRef(null);
   let ReinformDescRef = useRef(null);
   let ReinformBorder = useRef(null);
+  let imgReinform2Ref = useRef(null);
 
   useEffect(() => {
     window.addEventListener("resize", () => {
@@ -272,6 +273,24 @@ export default function GoalsPhysio() {
           },
           "<0.2"
         );
+      } else {
+        gsap.set(imgReinform2Ref.current, {
+          scale: 2,
+          opacity: 0,
+          clipPath: "inset(100% 0% 0% 0%)",
+        });
+        gsap.to(imgReinform2Ref.current, {
+          opacity: 1,
+          clipPath: "inset(0% 0% 0% 0%)",
+          scale: 1,
+          duration: 1.5,
+          ease: "Expo.easeOut",
+          scrollTrigger: {
+            trigger: imgReinform2Ref.current,
+            start: "center 90%",
+            end: "bottom 0%",
+          },
+        });
       }
     }, GoalsPhysioRef);
 
@@ -421,6 +440,12 @@ export default function GoalsPhysio() {
                 OF THE BODY (CELLS, TISSUES, ORGANS) YOU CONTRIBUTE TO THE
                 RESTORATION OF GENERAL HOMEOSTASIS."
             />
+            <div className="col-12 px-0 overflow-hidden">
+              <div
+                ref={imgReinform2Ref}
+                className="image_Reinform_goals2"
+              ></div>
+            </div>
           </div>
         </div>
       )}
