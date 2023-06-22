@@ -134,6 +134,38 @@
     }
   }
   // end responsive techno2 styles
+  // start responsive footer of physio
+  .Footer_Physio {
+    margin-top: 10rem;
+    height: 82vh;
+    .wrapper_title_footer {
+      width: 100%;
+      .next_page {
+        font-size: 20px;
+        margin-top: 6rem;
+      }
+      a {
+        .title_footer {
+          margin-top: 2rem;
+          .title1 {
+            font-size: 14vw;
+            line-height: 5rem;
+          }
+          .title2 {
+            font-size: 14vw;
+            line-height: 5rem;
+          }
+        }
+      }
+      .hover_title_footer {
+        top: 0;
+        left: 10rem;
+        width: 200px;
+        height: 280px;
+      }
+    }
+  }
+  // end responsive footer of physio
 }
 @media (min-width: 476px) {
   // start responsive header of reflexology
@@ -271,6 +303,39 @@
     }
   }
   // end responsive techno2 styles
+
+  // start responsive footer of physio
+  .Footer_Physio {
+    margin-top: 17rem;
+    height: 80vh;
+    .wrapper_title_footer {
+      width: 100%;
+      .next_page {
+        font-size: 20px;
+        margin-top: 6rem;
+      }
+      a {
+        .title_footer {
+          margin-top: 2rem;
+          .title1 {
+            font-size: 14vw;
+            line-height: 5rem;
+          }
+          .title2 {
+            font-size: 14vw;
+            line-height: 5rem;
+          }
+        }
+      }
+      .hover_title_footer {
+        top: 0;
+        left: 10rem;
+        width: 200px;
+        height: 280px;
+      }
+    }
+  }
+  // end responsive footer of physio
 }
 @media (min-width: 576px) {
   // start responsive header of reflexology
@@ -322,7 +387,7 @@
   }
   // end responsive header of reflexology
 
-  // start responsive GoalsPhysio styles
+  // start responsive GoalsPhysio
   .GoalsPhysio2 {
     margin-top: 10rem;
     .wrapper_item_GoalsPhysio2 {
@@ -352,9 +417,9 @@
       min-height: 68vh;
     }
   }
-  // end responsive GoalsPhysio styles
+  // end responsive GoalsPhysio
 
-  // start responsive TakeCare styles
+  // start responsive TakeCare
   .takeCare {
     padding-top: 20rem;
     margin-top: 1rem;
@@ -376,9 +441,9 @@
       }
     }
   }
-  // end responsive TakeCare styles
+  // end responsive TakeCare
 
-  // start responsive techni2 styles
+  // start responsive techni2
   .TechnicalPhysio2 {
     margin-top: 20rem;
     .wrapper_item_TechnoPhysio2 {
@@ -405,7 +470,40 @@
       min-height: 75vh;
     }
   }
-  // end responsive techno2 styles
+  // end responsive techno2
+
+  // start responsive footer of physio
+  .Footer_Physio {
+    margin-top: 15rem;
+    height: 80vh;
+    .wrapper_title_footer {
+      width: 100%;
+      .next_page {
+        font-size: 20px;
+        margin-top: 5rem;
+      }
+      a {
+        .title_footer {
+          margin-top: 2rem;
+          .title1 {
+            font-size: 13vw;
+            line-height: 6rem;
+          }
+          .title2 {
+            font-size: 13vw;
+            line-height: 6rem;
+          }
+        }
+      }
+      .hover_title_footer {
+        top: 0;
+        left: 10rem;
+        width: 200px;
+        height: 280px;
+      }
+    }
+  }
+  // end responsive footer of physio
 }
 @media (min-width: 768px) {
   // start responsive header of reflexology
@@ -513,7 +611,7 @@
   }
   // end responsive TakeCare styles
 
-  // start responsive techni2 styles
+  // start responsive techni2
   .TechnicalPhysio2 {
     margin-top: 20rem;
     .wrapper_item_TechnoPhysio2 {
@@ -540,7 +638,40 @@
       min-height: 75vh;
     }
   }
-  // end responsive techno2 styles
+  // end responsive techno2
+
+  // start responsive footer of physio
+  .Footer_Physio {
+    margin-top: 15rem;
+    height: 80vh;
+    .wrapper_title_footer {
+      width: 100%;
+      .next_page {
+        font-size: 20px;
+        margin-top: 4rem;
+      }
+      a {
+        .title_footer {
+          margin-top: 2rem;
+          .title1 {
+            font-size: 12vw;
+            line-height: 7rem;
+          }
+          .title2 {
+            font-size: 12vw;
+            line-height: 7rem;
+          }
+        }
+      }
+      .hover_title_footer {
+        top: 0;
+        left: 10rem;
+        width: 200px;
+        height: 324px;
+      }
+    }
+  }
+  // end responsive footer of physio
 }
 @media (min-width: 992px) {
   // start responsive header of reflexology
@@ -800,6 +931,38 @@
     }
   }
   // end responsive TechnicalPhysio styles
+  // start responsive footer of physio
+  .Footer_Physio {
+    margin-top: 25rem;
+    height: 80vh;
+    .wrapper_title_footer {
+      width: 100%;
+      .next_page {
+        font-size: 20px;
+        margin-top: 1rem;
+      }
+      a {
+        .title_footer {
+          margin-top: 1rem;
+          .title1 {
+            font-size: 11vw;
+            line-height: 9rem;
+          }
+          .title2 {
+            font-size: 11vw;
+            line-height: 9rem;
+          }
+        }
+      }
+      .hover_title_footer {
+        top: 0;
+        left: 10rem;
+        width: 200px;
+        height: 324px;
+      }
+    }
+  }
+  // end responsive footer of physio
 }
 @media (min-width: 1200px) {
   // start responsive header of reflexology
@@ -1053,6 +1216,39 @@
     }
   }
   // end responsive TechnicalPhysio styles
+
+  // start responsive footer of physio
+  .Footer_Physio {
+    margin-top: 25rem;
+    height: 80vh;
+    .wrapper_title_footer {
+      width: 100%;
+      .next_page {
+        font-size: 20px;
+        margin-top: 0rem;
+      }
+      a {
+        .title_footer {
+          margin-top: 2rem;
+          .title1 {
+            font-size: 10vw;
+            line-height: 10rem;
+          }
+          .title2 {
+            font-size: 10vw;
+            line-height: 10rem;
+          }
+        }
+      }
+      .hover_title_footer {
+        top: 0;
+        left: 10rem;
+        width: 200px;
+        height: 324px;
+      }
+    }
+  }
+  // end responsive footer of physio
 }
 @media (min-width: 1400px) {
   // start responsive header of reflexology
@@ -1233,7 +1429,7 @@
   }
   // end responsive TakeCare styles
 
-  // start responsive TechnicalPhysio styles
+  // start responsive TechnicalPhysio
   .TechnicalPhysio {
     margin-top: 3rem;
     .sticky_TechnicalPhysio {
@@ -1302,5 +1498,37 @@
       left: 0rem;
     }
   }
-  // end responsive TechnicalPhysio styles
+  // end responsive TechnicalPhysio
+
+  // start responsive footer of physio
+  .Footer_Physio {
+    margin-top: 35rem;
+    height: 80vh;
+    .wrapper_title_footer {
+      width: 100%;
+      .next_page {
+        font-size: 20px;
+      }
+      a {
+        .title_footer {
+          margin-top: 0;
+          .title1 {
+            font-size: 10vw;
+            line-height: 12rem;
+          }
+          .title2 {
+            font-size: 10vw;
+            line-height: 12rem;
+          }
+        }
+      }
+      .hover_title_footer {
+        top: 0;
+        left: 10rem;
+        width: 200px;
+        height: 324px;
+      }
+    }
+  }
+  // end responsive footer of physio
 }

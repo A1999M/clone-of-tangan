@@ -81,13 +81,23 @@ export default function FooterPhysio() {
     });
   };
   let moveImage = (e) => {
-    gsap.to(hoverimageRef.current, {
-      opacity: 1,
-      clipPath: "inset(0% 0%)",
-      x: e.clientX - 324,
-      y: e.clientY - 324,
-      duration: 0.5,
-    });
+    if (window.innerWidth >= 992) {
+      gsap.to(hoverimageRef.current, {
+        opacity: 1,
+        clipPath: "inset(0% 0%)",
+        x: e.clientX - 324,
+        y: e.clientY - 324,
+        duration: 0.5,
+      });
+    } else {
+      gsap.to(hoverimageRef.current, {
+        opacity: 1,
+        clipPath: "inset(0% 0%)",
+        x: e.clientX - 324,
+        y: e.clientY - 280,
+        duration: 0.5,
+      });
+    }
   };
 
   return (

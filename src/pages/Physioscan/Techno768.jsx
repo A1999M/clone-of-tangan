@@ -51,7 +51,6 @@ export default function Techno768({ title, desc, desc2, desc3, desc4 }) {
         trigger: titleRef.current,
         start: "top 80%",
         end: "bottom 0%",
-        markers: true,
       },
     });
 
