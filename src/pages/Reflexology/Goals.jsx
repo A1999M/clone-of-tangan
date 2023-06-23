@@ -110,7 +110,9 @@ export default function Goals() {
             <div ref={stickyRef} className="row sticky justify-content-start">
               <div className="col-12 col-lg-5 position-relative">
                 <div className="wrapper_goals_title">
-                  <p className="goals_title">Goals</p>
+                  <p data-mix="true" className="goals_title">
+                    Goals
+                  </p>
                 </div>
                 <div
                   ref={borderRightGoalsRef}

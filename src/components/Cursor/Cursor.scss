@@ -1,0 +1,14 @@
+.custom_cursor {
+  width: 20px;
+  height: 20px;
+  background-color: black;
+  border-radius: 50%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2000;
+  transform: translate(-50%, -50%);
+  user-select: none;
+  pointer-events: none;
+  // mix-blend-mode: luminosity;
+}

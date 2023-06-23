@@ -319,7 +319,9 @@ export default function Technical() {
             >
               <div className="col-12 col-lg-5 position-relative">
                 <div className="wrapper_Technical_title">
-                  <p className="Technical_title">Technical</p>
+                  <p data-mix="true" className="Technical_title">
+                    Technical
+                  </p>
                 </div>
                 <div
                   ref={borderRightRef}
