@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import Tangan from "./pages/Tangan/Tangan";
+import Reflexology from "./pages/Reflexology";
+import Physioscan from "./pages/Physioscan";
+import { Route, Routes, useLocation } from "react-router-dom";
+import { BubblyContainer } from "react-bubbly-transitions";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./components/App.scss";
 
-function App() {
+export default function App() {
+  let location = useLocation();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <BubblyContainer />
+      <Routes location={location}>
+        <Route path="/" element={<Reflexology />} />
+        <Route path="/physioscan" element={<Physioscan />} />
+        <Route path="/tangan" element={<Tangan />} />
+      </Routes>
+    </>
   );
 }
-
-export default App;
