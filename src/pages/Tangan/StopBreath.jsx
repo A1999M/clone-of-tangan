@@ -14,41 +14,78 @@ export default function StopBreath() {
     gsap.registerPlugin(ScrollTrigger, SplitText);
     let splitTitle = new SplitText(titleStopBreath.current, { type: "lines" });
 
-    let tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: titleStopBreath.current,
-        start: "top 50%",
-        end: "bottom 10%",
-      },
-    });
+    if (window.innerWidth < 992) {
+      let tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: titleStopBreath.current,
+          start: "top 70%",
+          end: "bottom 10%",
+        },
+      });
+      tl.fromTo(
+        splitTitle.lines,
+        {
+          opacity: 0,
+          y: 200,
+          clipPath: "inset(0% 0% 100% 0%)",
+          perspective: 100,
+          rotate: "27deg",
+          transformOrigin: "0% 100%",
+        },
+        {
+          opacity: 1,
+          perspective: 0,
+          rotate: 0,
+          y: 0,
+          clipPath: "inset(0% 0% 0% 0%)",
+          duration: 1.2,
+          stagger: 0.04,
+          ease: "Expo.easeOut",
+        }
+      );
+      tl.fromTo(
+        descStopBreath.current,
+        { opacity: 0, y: 50 },
+        { opacity: 1, duration: 1.3, y: 0, ease: "Expo.easeOut" },
+        "<0.3"
+      );
+    } else {
+      let tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: titleStopBreath.current,
+          start: "top 50%",
+          end: "bottom 10%",
+        },
+      });
 
-    tl.fromTo(
-      splitTitle.lines,
-      {
-        opacity: 0,
-        y: 200,
-        clipPath: "inset(0% 0% 100% 0%)",
-        perspective: 100,
-        rotate: "27deg",
-        transformOrigin: "0% 100%",
-      },
-      {
-        opacity: 1,
-        perspective: 0,
-        rotate: 0,
-        y: 0,
-        clipPath: "inset(0% 0% 0% 0%)",
-        duration: 1.2,
-        stagger: 0.04,
-        ease: "Expo.easeOut",
-      }
-    );
-    tl.fromTo(
-      descStopBreath.current,
-      { opacity: 0, y: 50 },
-      { opacity: 1, duration: 1.3, y: 0, ease: "Expo.easeOut" },
-      "<0.3"
-    );
+      tl.fromTo(
+        splitTitle.lines,
+        {
+          opacity: 0,
+          y: 200,
+          clipPath: "inset(0% 0% 100% 0%)",
+          perspective: 100,
+          rotate: "27deg",
+          transformOrigin: "0% 100%",
+        },
+        {
+          opacity: 1,
+          perspective: 0,
+          rotate: 0,
+          y: 0,
+          clipPath: "inset(0% 0% 0% 0%)",
+          duration: 1.2,
+          stagger: 0.04,
+          ease: "Expo.easeOut",
+        }
+      );
+      tl.fromTo(
+        descStopBreath.current,
+        { opacity: 0, y: 50 },
+        { opacity: 1, duration: 1.3, y: 0, ease: "Expo.easeOut" },
+        "<0.3"
+      );
+    }
   });
 
   return (

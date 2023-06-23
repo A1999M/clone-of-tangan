@@ -116,9 +116,7 @@
       }
     }
     .wrapper_btn_GoalsPhysio {
-      position: relative;
-      left: -15.6rem;
-      top: 8%;
+      margin-top: 16rem;
     }
   }
   .wrapper_scan {
@@ -254,23 +252,88 @@
 }
 // end GoalsPhysio styles
 
+.GoalsPhysio2 {
+  .wrapper_item_GoalsPhysio2 {
+    position: relative;
+    padding-left: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 5rem;
+    padding-bottom: 3rem;
+    .title_item_GoalsPhysio2 {
+      font-size: 8vw;
+      color: #000;
+      font-weight: 100;
+      font-family: "Playfair Display", serif;
+    }
+    .desc_item_GoalsPhysio2 {
+      font-size: 12px;
+      font-family: "Montserrat", sans-serif;
+      color: #000;
+      width: 53vw;
+      line-height: 20px;
+    }
+  }
+  .border_bottemItem_GoalsPhysio2 {
+    width: 0vw;
+    height: 1px;
+    background-color: #000;
+  }
+  .wrapper_titleGoalsPhysio2 {
+    .title_GoalsPhysio2 {
+      font-size: 13vw;
+      text-align: center;
+      text-transform: capitalize;
+    }
+  }
+  .wrapper_item_goals2 {
+    position: relative;
+    padding-left: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 5rem;
+    padding-bottom: 3rem;
+    .title_itemGoals {
+      font-size: 8vw;
+      color: #000;
+      font-weight: 100;
+      font-family: "Playfair Display", serif;
+    }
+    .desc_itemGoals {
+      font-size: 12px;
+      font-family: "Montserrat", sans-serif;
+      color: #000;
+      width: 53vw;
+      line-height: 20px;
+    }
+  }
+  .image_Reinform_goals2 {
+    min-width: 100%;
+    min-height: 70vh;
+    background-image: url(https://uploads-ssl.webflow.com/5bc989248743153705f137da/604223488bf2e87510398bb4_physioscan__01.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
 // start take care styles
 .takeCare {
+  padding-top: 20rem;
+  margin-top: 1rem;
   .wrapper_big_image {
-    position: relative;
+    background-image: url(https://uploads-ssl.webflow.com/5bc989248743153705f137da/6042232983a6c94ed2016f2f_bg_take-care.jpg);
     width: 100vw;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: left;
     height: 100vh;
-    .big_image {
-      position: absolute;
-      top: 20rem;
-      left: -2rem;
-      object-fit: cover;
-      opacity: 0;
-    }
+    opacity: 0;
     .big_title {
-      position: absolute;
-      top: 45rem;
       font-size: 15vw;
+      padding-top: 15rem;
       font-family: "Playfair Display", serif;
       color: #f5f5f5;
       text-transform: uppercase;
@@ -282,7 +345,7 @@
 
 // start TechnicalPhysio styles
 .TechnicalPhysio {
-  margin-top: 60rem;
+  margin-top: 3rem;
   .sticky_TechnicalPhysio {
     .border_left_TechnicalPhysio {
       position: absolute;
@@ -312,53 +375,22 @@
       }
     }
     .wrapper_btn_TechnicalPhysio {
-      position: relative;
-      left: -15.6rem;
-      top: 8%;
+      margin-top: 15rem;
     }
   }
-  .wrapper_Physioquanta {
-    padding-left: 1rem;
-    width: 100%;
-    position: relative;
-    margin-top: 3rem;
-    padding-bottom: 3rem;
-    .Physioquanta_title {
-      font-size: 3vw;
-      color: #000;
-      font-weight: 100;
-      font-family: "Playfair Display", serif;
-    }
-    .Physioquanta_desc {
-      width: 70%;
-      font-size: 14px;
-      font-family: "Montserrat", sans-serif;
-      color: #000;
-      margin-top: 2rem;
-      line-height: 1.4rem;
-    }
-    .Physioquanta_border {
-      position: absolute;
-      bottom: 0rem;
-      left: -27px;
-      width: 0%;
-      height: 1px;
-      background-color: #000;
-    }
-  }
-  .wrapper_Vibration {
+  .wrapper_TechnicalPhysioItems {
     margin-top: 3rem;
     padding-left: 1rem;
     width: 100%;
     position: relative;
     padding-bottom: 3rem;
-    .Vibration_title {
+    .TechnicalPhysioItems_title {
       font-size: 3vw;
       color: #000;
       font-weight: 100;
       font-family: "Playfair Display", serif;
     }
-    .Vibration_desc {
+    .TechnicalPhysioItems_desc {
       width: 70%;
       margin-top: 2rem;
       span {
@@ -379,48 +411,7 @@
         }
       }
     }
-    .Vibration_border {
-      position: absolute;
-      bottom: 0rem;
-      left: -27px;
-      width: 0%;
-      height: 1px;
-      background-color: #000;
-    }
-    .wrapper_image_Vibration {
-      width: 690px;
-      height: 650px;
-      overflow: hidden;
-      position: absolute;
-      left: -26px;
-      margin-top: 3rem;
-      .image_Vibration {
-        width: 100%;
-        height: 100%;
-      }
-    }
-  }
-  .wrapper_Energy {
-    margin-top: 39rem;
-    padding-left: 1rem;
-    width: 100%;
-    position: relative;
-    padding-bottom: 3rem;
-    .Energy_title {
-      font-size: 3vw;
-      color: #000;
-      font-weight: 100;
-      font-family: "Playfair Display", serif;
-    }
-    .Energy_desc {
-      width: 70%;
-      font-size: 14px;
-      font-family: "Montserrat", sans-serif;
-      color: #000;
-      margin-top: 2rem;
-      line-height: 1.4rem;
-    }
-    .Energy_border {
+    .TechnicalPhysioItems_border {
       position: absolute;
       bottom: 0rem;
       left: -27px;
@@ -429,49 +420,21 @@
       background-color: #000;
     }
   }
-  .wrapper_Investigate {
-    margin-top: 3rem;
-    padding-left: 1rem;
-    width: 100%;
-    position: relative;
-    padding-bottom: 3rem;
-    .Investigate_title {
-      font-size: 3vw;
-      color: #000;
-      font-weight: 100;
-      font-family: "Playfair Display", serif;
-    }
-    .Investigate_desc {
-      width: 70%;
-      font-size: 14px;
-      font-family: "Montserrat", sans-serif;
-      color: #000;
-      margin-top: 2rem;
-      line-height: 1.4rem;
-    }
-    .Investigate_border {
-      position: absolute;
-      bottom: 0rem;
-      left: -27px;
-      width: 0%;
-      height: 1px;
-      background-color: #000;
-    }
-    .wrapper_image_Investigate {
-      height: 604px;
-      overflow: hidden;
-      position: absolute;
-      left: -26px;
-      margin-top: 3rem;
-      // .image_Investigate {
-      //   width: 100%;
-      //   height: 100%;
-      // }
-    }
+  .wrapper_image_Vibration {
+    width: 690px;
+    height: 650px;
+    overflow: hidden;
+    margin-left: -1.8rem;
+  }
+  .wrapper_image_Investigate {
+    height: 604px;
+    overflow: hidden;
+    margin-top: 0;
+    margin-left: -1.8rem;
   }
   .border_bottom_TechnicalPhysio {
     position: absolute;
-    bottom: -33.5rem;
+    bottom: 4.3rem;
     left: 0rem;
     width: 100vw;
     height: 1px;
@@ -479,6 +442,57 @@
   }
 }
 // end TechnicalPhysio styles
+
+.TechnicalPhysio2 {
+  margin-top: 10rem;
+  .wrapper_item_TechnoPhysio2 {
+    position: relative;
+    padding-left: 2rem;
+    margin-top: 4rem;
+    padding-bottom: 3rem;
+    .title_item_TechnoPhysio2 {
+      font-size: 8vw;
+      color: #000;
+      font-weight: 100;
+      font-family: "Playfair Display", serif;
+    }
+    .desc_item_TechnoPhysio2 {
+      font-size: 12px;
+      font-family: "Montserrat", sans-serif;
+      color: #000;
+      line-height: 20px;
+      margin-top: 2rem;
+    }
+  }
+  .border_bottemItem_GoalsPhysio2 {
+    width: 0vw;
+    height: 1px;
+    background-color: #000;
+  }
+  .image_Vibration_techno2 {
+    min-width: 100%;
+    min-height: 75vh;
+    background-image: url(https://uploads-ssl.webflow.com/5bc989248743153705f137da/6042235f79a7104cc84ed500_physioscan_02-p-1080.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .image_Investigate_techno2 {
+    min-width: 100%;
+    min-height: 75vh;
+    background-image: url(https://uploads-ssl.webflow.com/5bc989248743153705f137da/60422374863caf2a190d9315_physioscan_03-p-1080.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .wrapper_titleTechnicalPhysio22 {
+    .title_TechnicalPhysio2 {
+      font-size: 13vw;
+      text-align: center;
+      text-transform: capitalize;
+    }
+  }
+}
 
 // start footer section styles
 .Footer_Physio {

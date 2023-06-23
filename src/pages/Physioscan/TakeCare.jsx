@@ -12,21 +12,37 @@ export default function TakeCare() {
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
       let hiddenGoals = () => {
-        gsap.to(document.querySelector(".GoalsPhysio"), {
-          opacity: 0,
-          duration: 0.3,
-        });
+        if (window.innerWidth >= 992) {
+          gsap.to(document.querySelector(".GoalsPhysio"), {
+            opacity: 0,
+            duration: 0.3,
+          });
+        } else {
+          gsap.to(document.querySelector(".GoalsPhysio2"), {
+            opacity: 0,
+            duration: 0.3,
+          });
+        }
+
         gsap.to(scopeRef.current, {
           visibility: "visible",
           duration: 0.1,
         });
       };
       let showGoals = () => {
-        gsap.to(document.querySelector(".GoalsPhysio"), {
-          opacity: 1,
-          visibility: "visible",
-          duration: 0.3,
-        });
+        if (window.innerWidth >= 992) {
+          gsap.to(document.querySelector(".GoalsPhysio"), {
+            opacity: 1,
+            visibility: "visible",
+            duration: 0.3,
+          });
+        } else {
+          gsap.to(document.querySelector(".GoalsPhysio2"), {
+            opacity: 1,
+            visibility: "visible",
+            duration: 0.3,
+          });
+        }
         gsap.to(scopeRef.current, {
           visibility: "hidden",
           duration: 0.1,
@@ -67,15 +83,15 @@ export default function TakeCare() {
     let ctx = gsap.context(() => {
       gsap.fromTo(
         bigTitleRef.current,
-        { x: "65rem" },
+        { x: "205rem" },
         {
-          duration: 30,
+          duration: 100,
           x: "-30rem",
           scrollTrigger: {
             trigger: bigTitleRef.current,
             start: "top 100%",
             end: "bottom 0%",
-            scrub: 10,
+            scrub: 1,
             id: "bigTitleTrigger",
           },
         }
@@ -111,13 +127,7 @@ export default function TakeCare() {
       <div ref={scopeRef} className="container-fluid takeCare">
         <div className="row">
           <div className="col-12">
-            <div className="wrapper_big_image">
-              <img
-                ref={bigImageRef}
-                className="big_image"
-                src="https://uploads-ssl.webflow.com/5bc989248743153705f137da/6042232983a6c94ed2016f2f_bg_take-care.jpg"
-                alt="https://uploads-ssl.webflow.com/5bc989248743153705f137da/6042232983a6c94ed2016f2f_bg_take-care.jpg"
-              />
+            <div ref={bigImageRef} className="wrapper_big_image">
               <p ref={bigTitleRef} className="big_title">
                 take care
               </p>

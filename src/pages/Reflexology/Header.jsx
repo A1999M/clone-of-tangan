@@ -21,6 +21,10 @@ export default function Header() {
         type: "lines",
       });
 
+      for (const title of splitTitleHeader.lines) {
+        title.setAttribute("data-mix", "true");
+      }
+
       gsap.set(priceReflexology.current, {
         y: -80,
         clipPath: "inset(100% 0% 0% 0%)",
@@ -161,7 +165,11 @@ export default function Header() {
             </p>
           </div>
           <div ref={scopeRef} className="col-12 px-0 scope">
-            <div ref={HeaderImageRef} className="header_image"></div>
+            <div
+              data-mix="true"
+              ref={HeaderImageRef}
+              className="header_image"
+            ></div>
           </div>
         </div>
         <div className="row">

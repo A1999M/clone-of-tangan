@@ -1,10 +1,11 @@
-import React, { useLayoutEffect, useRef, useState } from "react";
+import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SplitText from "../../plugins/SplitText";
 import { motion } from "framer-motion";
 import StickyItems from "../../components/StickyItems";
 import "./Tangan.scss";
+import { useLocation } from "react-router-dom";
 
 export default function Techniques() {
   let techniquessRef = useRef();
@@ -39,6 +40,16 @@ export default function Techniques() {
   let endTriggerTech = useRef();
   let [enterBorder, setEnterBorder] = useState(false);
   let [width, setWidth] = useState(window.innerWidth);
+
+  let { pathname } = useLocation();
+
+  useEffect(() => {
+    document.documentElement.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "instant",
+    });
+  }, [pathname]);
 
   useLayoutEffect(() => {
     window.addEventListener("resize", () => {

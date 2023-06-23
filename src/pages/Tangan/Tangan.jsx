@@ -27,13 +27,7 @@ export default function Tangan() {
   return (
     <>
       {/* NavBar home page */}
-      <div className="container-fluid">
-        <div className="row">
-          <div className="col-12">
-            <NavBar />
-          </div>
-        </div>
-      </div>
+      <NavBar />
       {/* header home page */}
       <Header />
       {/* stop breath home page */}
@@ -42,8 +36,6 @@ export default function Tangan() {
       <ImagesSection />
       {/* Techniques section home page */}
       <Techniques />
-      {/* MyPatients section home page */}
-      {/* <MyPatients /> */}
       {/* better health section home page */}
       <BetterHealth />
     </>

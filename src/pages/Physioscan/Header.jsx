@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import SplitText from "../../plugins/SplitText";
@@ -145,7 +145,7 @@ export default function Header() {
   });
 
   return (
-    <div>
+    <>
       <div className="container-fluid header_physioscan">
         <div className="row">
           <div className="col-12">
@@ -187,6 +187,6 @@ export default function Header() {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
