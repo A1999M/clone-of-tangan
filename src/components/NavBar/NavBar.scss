@@ -11,6 +11,18 @@
     padding: 0 2rem;
     opacity: 0;
     li {
+      a {
+        color: black;
+        text-decoration: none;
+        font-family: "Montserrat", sans-serif;
+        margin: 0.5rem 1rem;
+        padding: 0.6rem 0rem;
+        font-size: 15px;
+        font-weight: 600;
+        display: inline-block;
+        transition: all 0.35s;
+        position: relative;
+      }
       button {
         color: black;
         text-decoration: none;
@@ -22,6 +34,7 @@
         display: inline-block;
         transition: all 0.35s;
         position: relative;
+        user-select: none;
         &::before {
           position: absolute;
           z-index: -1;

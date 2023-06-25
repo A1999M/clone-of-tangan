@@ -21,7 +21,7 @@ export default function Header() {
           opacity: 1,
           backgroundSize: "150%",
           duration: 2,
-          delay: 0.4,
+          delay: 0.6,
           ease: "Expo.easeOut",
         });
         tl.to(

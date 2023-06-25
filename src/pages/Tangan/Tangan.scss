@@ -468,7 +468,7 @@ $title_home_header_color: #f5f5f5;
       z-index: -1;
       height: 380px;
       width: 100%;
-      margin-top: 18rem;
+      margin-top: 15rem;
       overflow: hidden;
       .bgImage2 {
         background-image: url("https://uploads-ssl.webflow.com/5bc989248743153705f137da/604100ee99552d6f4f7efd38_home__thumb__massage.jpg");
@@ -502,7 +502,7 @@ $title_home_header_color: #f5f5f5;
       z-index: -1;
       height: 380px;
       width: 100%;
-      margin-top: 18rem;
+      margin-top: 15rem;
       overflow: hidden;
       .bgImage3 {
         width: 100%;
@@ -617,161 +617,10 @@ $title_home_header_color: #f5f5f5;
 
 // end sticky section styles
 
-// start MyPatients section styles
-.MyPatients {
-  margin-top: 10rem;
-  .wrapper_MyPatients_title {
-    margin-left: 3rem;
-    .title_myPatients {
-      font-size: 6vw;
-      line-height: 7.5rem;
-      font-style: italic;
-      color: black;
-      font-weight: 500;
-      letter-spacing: -2px;
-      word-spacing: -8px;
-      font-family: "Playfair Display", serif;
-    }
-    .border_b_myPatients {
-      width: 43%;
-      height: 1px;
-      margin-top: 7rem;
-      background-color: black;
-    }
-  }
-  .wrapper_MyPatients_btn {
-    position: relative;
-    top: -12rem;
-    right: 5rem;
-  }
-  .wrapper_number_slider {
-    width: 100%;
-    height: 36px;
-    overflow: hidden;
-    position: relative;
-    left: 3.5rem;
-    line-height: 55px;
-    span {
-      font-family: "Playfair Display", serif;
-      font-size: 30px;
-      font-weight: 500;
-    }
-    .current_slider_number {
-      position: absolute;
-      top: -1rem;
-      left: 0rem;
-    }
-    .constant_number {
-      position: absolute;
-      top: -1rem;
-      left: 5rem;
-    }
-    .between_line {
-      width: 30px;
-      height: 2px;
-      background-color: #000;
-      position: absolute;
-      top: 16px;
-      left: 40px;
-    }
-  }
-  .wrapper_title_slider {
-    margin-top: 6rem;
-    overflow: hidden;
-    position: relative;
-    height: 35px;
-    width: 100%;
-    .current_title_slider {
-      position: absolute;
-      top: 0.2rem;
-      left: 50%;
-      font-size: 1.2vw;
-      font-family: "Playfair Display", serif;
-      color: rgba(0, 0, 0, 0.8);
-      text-align: center;
-    }
-  }
-  .wrapper_slider_btns {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    margin-top: 5.5rem;
-    .next_btn {
-      width: 45px;
-      height: 45px;
-      border: 1px solid black;
-      border-radius: 50%;
-      border-color: rgba(0, 0, 0, 0.3);
-      margin: 0 1rem;
-      text-align: center;
-      transition: all 0.3s;
-      &:hover {
-        border-color: black;
-      }
-      span {
-        font-size: 20px;
-        transform: rotate(90deg);
-        display: inline-block;
-        vertical-align: -11px;
-        margin-right: 7px;
-      }
-    }
-    .prev_btn {
-      width: 45px;
-      text-align: center;
-      height: 45px;
-      border: 1px solid black;
-      border-radius: 50%;
-      border-color: rgba(0, 0, 0, 0.3);
-      margin: 0 1rem;
-      cursor: pointer;
-      transition: all 0.3s;
-      &:hover {
-        border-color: black;
-      }
-      span {
-        font-size: 20px;
-        transform: rotate(-90deg);
-        display: inline-block;
-        vertical-align: -11px;
-        margin-left: 5px;
-      }
-      cursor: pointer;
-    }
-  }
-  .wrapper_desc_slider {
-    position: relative;
-    top: -5rem;
-    padding: 0 3rem;
-    overflow: hidden;
-    height: 385px;
-    .current_desc_slider {
-      color: black;
-      opacity: 0.8;
-      text-transform: capitalize;
-      font-family: "Playfair Display", serif;
-      font-weight: 400;
-      letter-spacing: -2px;
-      font-style: italic;
-      word-spacing: -1px;
-      font-size: 3.2vw;
-      line-height: 4.3rem;
-    }
-    .border_desc_slider {
-      width: 100%;
-      height: 1px;
-      background-color: black;
-      position: absolute;
-      left: 0rem;
-      top: 23.5rem;
-    }
-  }
-}
-// end MyPatients section styles
-
 // start better health section styles
 .better_health {
   margin-top: 8rem;
+  padding-bottom: 3rem;
   .wrapper_logo5 {
     text-align: center;
   }

@@ -19,6 +19,7 @@ export default function Header() {
   useEffect(() => {
     let ctx = gsap.context(() => {
       gsap.registerPlugin(ScrollTrigger, SplitText);
+      ScrollTrigger.refresh();
 
       gsap.set(pricePhysioscanRef.current, {
         y: -80,
@@ -39,7 +40,7 @@ export default function Header() {
         y: 0,
         opacity: 1,
         clipPath: "inset(0% 0% 0% 0%)",
-        delay: 0.5,
+        delay: 0.7,
       });
       gsap.to(title1Ref.current, {
         opacity: 1,
@@ -47,21 +48,21 @@ export default function Header() {
         clipPath: "inset(0% 0% 0% 0%)",
         duration: 1.5,
         ease: "Expo.easeOut",
-        delay: 0.5,
+        delay: 0.7,
       });
       gsap.to(title2Ref.current, {
         opacity: 1,
         y: 0,
         duration: 1.5,
         clipPath: "inset(0% 0% 0% 0%)",
-        delay: 0.5,
+        delay: 0.7,
         ease: "Expo.easeOut",
       });
       gsap.to(wrapperHeaderImageRef.current, {
         y: 0,
         opacity: 1,
         duration: 1.5,
-        delay: 0.5,
+        delay: 0.7,
         ease: "Expo.easeOut",
       });
 
@@ -141,6 +142,7 @@ export default function Header() {
       ScrollTrigger.getById("stickySection").kill();
       ScrollTrigger.getById("titleSticky").kill();
       ctx.revert();
+      ScrollTrigger.refresh();
     };
   });
 

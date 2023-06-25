@@ -14,6 +14,8 @@ export default function Header() {
   let priceReflexology = useRef(null);
 
   useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    ScrollTrigger.update();
     let ctx = gsap.context(() => {
       gsap.registerPlugin(ScrollTrigger, SplitText);
 
@@ -45,28 +47,28 @@ export default function Header() {
         y: 0,
         clipPath: "inset(0% 0% 0% 0%)",
         ease: "Expo.easeOut",
-        delay: 0.5,
+        delay: 0.7,
       });
       gsap.to(splitTitleHeader.lines[0], {
         y: 0,
         clipPath: "inset(0% 0% 0% 0%)",
         duration: 1.5,
         ease: "Expo.easeOut",
-        delay: 0.5,
+        delay: 0.7,
       });
       gsap.to(splitTitleHeader.lines[1], {
         y: 0,
         duration: 1.5,
         clipPath: "inset(0% 0% 0% 0%)",
         ease: "Expo.easeOut",
-        delay: 0.5,
+        delay: 0.7,
       });
       gsap.to(HeaderImageRef.current, {
         y: 0,
         duration: 1.5,
         ease: "Expo.easeOut",
         opacity: 1,
-        delay: 0.5,
+        delay: 0.7,
       });
 
       gsap.to(HeaderImageRef.current, {

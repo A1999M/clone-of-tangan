@@ -11,6 +11,8 @@ export default function ImagesSection() {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
+    ScrollTrigger.refresh();
+
     if (window.innerWidth <= 500) {
       gsap.to(rightImageRef.current, {
         clipPath: "inset(0% 0% 0% 0%)",
@@ -45,6 +47,7 @@ export default function ImagesSection() {
         trigger: rightImageRef.current,
         start: "center 90%",
         end: "bottom 0%",
+        id: "triggerRightImage",
       },
     });
     gsap.to(leftImageRef.current, {
@@ -56,8 +59,15 @@ export default function ImagesSection() {
         trigger: leftImageRef.current,
         start: "+=550 80%",
         end: "bottom 0%",
+        id: "triggerLeftImage",
       },
     });
+
+    return () => {
+      ScrollTrigger.getById("triggerRightImage").kill();
+      ScrollTrigger.getById("triggerLeftImage").kill();
+      ScrollTrigger.refresh();
+    };
   });
 
   return (
