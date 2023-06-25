@@ -125,13 +125,9 @@ export default function NavBar() {
               <div className="container_Navbar">
                 <ul ref={wrapperNavRef} className="wrapper_nav">
                   <li className="mai_page">
-                    <BubblyLink
-                      colorStart="#000"
-                      colorEnd="#f5f5f5"
-                      to="/tangan"
-                    >
+                    <a className="tangan_link" href="/tangan">
                       TANGAN
-                    </BubblyLink>
+                    </a>
                   </li>
                   <li>
                     <BubblyLink colorStart="#000" colorEnd="#f5f5f5" to="/">

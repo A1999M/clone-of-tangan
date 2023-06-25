@@ -1,4 +1,4 @@
-import React, { useEffect, useLayoutEffect } from "react";
+import React, { useEffect, useLayoutEffect, useState } from "react";
 import NavBar from "../../components/NavBar";
 import Header from "./Header";
 import Goals from "./Goals";
@@ -8,7 +8,9 @@ import gsap from "gsap";
 import Footer from "./Footer";
 import "./Reflexology.scss";
 
-export default function Reflexology() {
+function Reflexology() {
+  let [isLoaded, setIsLoaded] = useState(false);
+
   useEffect(() => {
     document.documentElement.scrollTo({
       top: 0,
@@ -18,6 +20,7 @@ export default function Reflexology() {
   });
 
   useLayoutEffect(() => {
+    setIsLoaded(true);
     gsap.to(document.body, {
       duration: 0.1,
       backgroundColor: "#f5f5f5",
@@ -41,3 +44,5 @@ export default function Reflexology() {
     </>
   );
 }
+
+export default Reflexology;

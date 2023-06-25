@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
-import { NavLink } from "react-router-dom";
+import { BubblyLink } from "react-bubbly-transitions";
 import "./Reflexology.scss";
 
 export default function Footer() {
@@ -83,7 +83,7 @@ export default function Footer() {
           <div className="col-12">
             <div className="wrapper_title_footer">
               <p className="next_page">Next treatment</p>
-              <NavLink to="/physioscan">
+              <BubblyLink colorStart="#000" colorEnd="#f5f5f5" to="/physioscan">
                 <span
                   ref={titleFooterRef}
                   onMouseEnter={hoverON}
@@ -93,7 +93,7 @@ export default function Footer() {
                 >
                   PHYSIOSCAN
                 </span>
-              </NavLink>
+              </BubblyLink>
               <img
                 ref={hoverImageRef}
                 className="hover_title_footer"

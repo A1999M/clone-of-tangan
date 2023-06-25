@@ -56,6 +56,7 @@ export default function Techniques() {
       setWidth(window.innerWidth);
     });
     gsap.registerPlugin(ScrollTrigger);
+    ScrollTrigger.refresh();
     gsap.to(document.body, {
       backgroundColor: "#000",
       duration: 0.35,
@@ -65,6 +66,7 @@ export default function Techniques() {
         endTrigger: endTriggerTech.current,
         start: "top 50%",
         end: "bottom 30%",
+        id: "bodyDarker",
         toggleActions: "play none restart reverse",
       },
     });
@@ -102,6 +104,7 @@ export default function Techniques() {
         trigger: triggerTitleTop.current,
         start: "top 70%",
         end: "bottom 0%",
+        id: "trigger1",
       },
     });
     gsap.to(splitBottomTitle.chars, {
@@ -117,6 +120,7 @@ export default function Techniques() {
         trigger: triggerTitleBottom.current,
         start: "top 30%",
         end: "bottom 0%",
+        id: "trigger2",
         // markers: true,
       },
     });
@@ -611,6 +615,15 @@ export default function Techniques() {
           "<0"
         );
       };
+      let leaveImage3 = () => {
+        gsap.to(title03.current, {
+          opacity: 0,
+          y: -140,
+          clipPath: "inset(0% 0% 100% 0%)",
+          duration: 0.4,
+          ease: "Expo.easeOut",
+        });
+      };
 
       gsap.registerPlugin(ScrollTrigger, SplitText);
       let tl = gsap.timeline({
@@ -619,27 +632,16 @@ export default function Techniques() {
           endTrigger: descRef.current,
           start: "top 70%",
           end: "bottom 0%",
+          id: "trigger3",
         },
       });
-      // gsap.to(document.body, {
-      //   backgroundColor: "#000",
-      //   duration: 0.35,
-      //   ease: "ease",
-      //   scrollTrigger: {
-      //     trigger: techniquessRef.current,
-      //     endTrigger: techniquessRef.current,
-      //     start: "top 50%",
-      //     toggleActions: "play none restart reverse",
-      //   },
-      // });
       let ctx = gsap.context(() => {
         gsap.to(triggerStickyRef.current, {
-          duration: 0.5,
           scrollTrigger: {
             trigger: triggerStickyRef.current,
             endTrigger: imageScroll3.current,
             start: "top 0%",
-            end: "bottom 120%",
+            end: "bottom 126%",
             pin: true,
             // markers: {
             //   startColor: "#fff",
@@ -718,6 +720,7 @@ export default function Techniques() {
         scrollTrigger: {
           trigger: borderRef.current,
           start: "top 0%",
+          id: "trigger4",
           end: "bottom 0%",
         },
       });
@@ -729,6 +732,7 @@ export default function Techniques() {
           trigger: TopBorder1Ref.current,
           start: "top 65%",
           end: "top 0%",
+          id: "trigger5",
           toggleActions: "restart reverse restart reverse",
         },
       });
@@ -739,6 +743,7 @@ export default function Techniques() {
           trigger: TopBorder2Ref.current,
           start: "top 65%",
           end: "top 0%",
+          id: "trigger6",
           toggleActions: "restart reverse restart reverse",
           // markers: {
           //   startColor: "#fff",
@@ -754,6 +759,7 @@ export default function Techniques() {
           trigger: TopBorder3Ref.current,
           start: "top 65%",
           end: "top 0%",
+          id: "trigger7",
           toggleActions: "restart reverse restart reverse",
           // markers: {
           //   startColor: "#fff",
@@ -772,9 +778,10 @@ export default function Techniques() {
         scrollTrigger: {
           trigger: imageScroll1.current,
           start: "center 73%",
-          end: "+=200 10%",
+          end: "+=200 15%",
           toggleActions: "restart reverse restart reverse",
           onEnter: enterImage1,
+          id: "trigger8",
           onLeave: leaveImage1,
           onEnterBack: enterBackImage1,
         },
@@ -790,6 +797,7 @@ export default function Techniques() {
           start: "center 80%",
           end: "+=200 20%",
           toggleActions: "play reverse restart reverse",
+          id: "trigger9",
           onLeave: leaveImage2,
           onEnterBack: enterBackImage2,
           onLeaveBack: leaveBackImage2,
@@ -804,13 +812,26 @@ export default function Techniques() {
         scrollTrigger: {
           trigger: imageScroll3.current,
           start: "top 15%",
+          id: "trigger10",
           end: "bottom 0%",
           onEnterBack: enterBackImage3,
+          onLeave: leaveImage3,
           toggleActions: "restart reverse restart reverse",
         },
       });
-      return () => ctx.revert();
+      ScrollTrigger.update();
+      return () => {
+        ctx.revert();
+        ScrollTrigger.refresh();
+      };
     }
+
+    return () => {
+      ScrollTrigger.getById("bodyDarker").kill();
+      ScrollTrigger.getById("trigger1").kill();
+      ScrollTrigger.getById("trigger2").kill();
+      ScrollTrigger.refresh();
+    };
 
     // // // // //
   });

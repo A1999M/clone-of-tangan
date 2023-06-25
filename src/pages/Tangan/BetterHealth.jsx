@@ -13,6 +13,7 @@ export default function BetterHealth() {
   useLayoutEffect(() => {
     let techniquessSection = document.querySelector(".techniquess");
     gsap.registerPlugin(ScrollTrigger, SplitText);
+    ScrollTrigger.refresh();
 
     gsap.set(logoRef.current, {
       opacity: 0,
@@ -25,7 +26,9 @@ export default function BetterHealth() {
         trigger: logoRef.current,
         start: "top 40%",
         end: "bottom 0%",
+        id: "trigger1",
         toggleActions: "restart reverse restart reverse",
+        // markers: true,
       },
     });
 
@@ -72,6 +75,7 @@ export default function BetterHealth() {
         trigger: betterHealthRef.current,
         start: "top 70%",
         end: "bottom 5%",
+        id: "trigger2",
         onEnter: hiddenTechniques,
         onEnterBack: hiddenTechniques,
         onLeave: leaveTechniques,
@@ -129,6 +133,10 @@ export default function BetterHealth() {
       },
       "<0.5"
     );
+    return () => {
+      ScrollTrigger.update();
+      ScrollTrigger.refresh();
+    };
   });
 
   return (
